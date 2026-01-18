@@ -17,902 +17,211 @@
 
   <div id="main" class="main-content" aria-hidden="true">
     <header class="site-header">
-      <div class="logo-mark">
-        <img src="assets/logo.svg" alt="Logo 42+" class="logo-small">
-        <span class="logo-text">42+ Extension</span>
+      <div class="site-header-inner">
+        <div class="logo-mark">
+          <img src="assets/logo.svg" alt="Logo 42+" class="logo-small">
+          <span class="logo-text">Intra+ Reloaded</span>
+        </div>
+        <nav class="site-nav" aria-label="Navigation principale">
+          <a href="#overview">Aperçu</a>
+          <a href="#presence">Présence</a>
+          <a href="#objectif">Objectif</a>
+          <a href="#events">Events</a>
+          <a href="#trombi">Trombinoscope</a>
+          <a href="#games">Jeux</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a class="btn btn-ghost btn-small" href="#contact">Installer</a>
       </div>
-      <nav class="site-nav" aria-label="Navigation principale">
-        <a href="#features">Features</a>
-        <a href="#showroom">Showroom</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-      </nav>
     </header>
 
     <main>
-      <section class="hero" aria-labelledby="hero-title">
+      <section id="overview" class="hero story-hero">
         <div class="hero-content">
-          <p class="eyebrow">Extension web • Productivité augmentée</p>
-          <h1 id="hero-title">Un cockpit élégant pour booster votre expérience 42+</h1>
+          <p class="eyebrow">Extension Intra+ Reloaded</p>
+          <h1>Tout ce que l'Intra devrait afficher, en clair et en un seul regard.</h1>
           <p class="hero-text">
-            42+ transforme l'interface en une suite d'outils clairs, rapides et personnalisables.
-            Accédez à vos infos clés, automatisez les routines et gardez un écran propre.
+            Intra+ Reloaded restructure votre tableau de bord, met en avant vos stats utiles et sublime chaque module
+            sans surcharger l'interface. Une expérience sobre, rapide et taillée pour le daily.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-gradient" href="#contact">Installer</a>
-            <a class="btn btn-ghost" href="#showroom">Voir la démo</a>
+            <a class="btn btn-gradient" href="#contact">Installer l'extension</a>
+            <a class="btn btn-ghost" href="#presence">Voir les modules</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-value">7</span>
+              <span class="hero-stat-label">modules visuels clés</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-value">100%</span>
+              <span class="hero-stat-label">données locales</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-value">0</span>
+              <span class="hero-stat-label">bruit inutile</span>
+            </div>
           </div>
         </div>
-        <div class="hero-panel reveal">
-          <div class="panel-card">
-            <div class="panel-row">
-              <span class="panel-dot"></span>
-              <span class="panel-dot"></span>
-              <span class="panel-dot"></span>
-            </div>
-            <h3>Dashboard 42+</h3>
-            <p>Widgets live, raccourcis intelligents et focus mode pour rester efficace.</p>
-            <div class="panel-bar"></div>
-            <div class="panel-bar"></div>
-            <div class="panel-bar short"></div>
-          </div>
+        <div class="hero-media" data-parallax>
+          <figure class="media-frame reveal">
+            <img src="pictures/screenshots/Inta+General001.png" alt="Interface générale et paramètres Intra+">
+            <figcaption>Vue générale et configuration en un seul panneau.</figcaption>
+          </figure>
         </div>
       </section>
 
-      <section id="features" class="section">
+      <section id="presence" class="story-section">
         <div class="section-header">
-          <h2>Features</h2>
-          <p>Des modules pensés pour gagner du temps sans casser le flow.</p>
+          <p class="section-kicker">Présence &amp; progression</p>
+          <h2>Des métriques lisibles, prêtes à décider.</h2>
+          <p>Suivez votre rythme au mois, à la semaine et au jour sans fouiller dans les pages.</p>
         </div>
-        <div class="features-grid">
-          <article class="feature-card reveal">
-            <span class="feature-icon" aria-hidden="true"></span>
-            <h3>Tableau de bord intelligent</h3>
-            <p>Vue compacte des stats, deadlines et events avec filtres rapides.</p>
-          </article>
-          <article class="feature-card reveal">
-            <span class="feature-icon" aria-hidden="true"></span>
-            <h3>Automations contextuelles</h3>
-            <p>Actions en un clic pour ouvrir les bons liens et préparer vos sessions.</p>
-          </article>
-          <article class="feature-card reveal">
-            <span class="feature-icon" aria-hidden="true"></span>
-            <h3>Mode focus épuré</h3>
-            <p>Réduction du bruit visuel avec une esthétique sobre et lisible.</p>
-          </article>
+        <article class="story-card reveal">
+          <div class="story-content">
+            <h3>Courbe mensuelle en un regard</h3>
+            <p>Une lecture directe des tendances, avec des repères clairs pour chaque mois.</p>
+            <ul class="story-list">
+              <li>Heures et minutes détaillées</li>
+              <li>Points clés visibles immédiatement</li>
+              <li>Affichage fidèle à l'extension</li>
+            </ul>
+          </div>
+          <div class="story-media">
+            <figure class="media-frame">
+              <img src="pictures/screenshots/HoursCurve001.png" alt="Courbe mensuelle de présence">
+            </figure>
+          </div>
+        </article>
+        <article class="story-card reveal reverse">
+          <div class="story-content">
+            <h3>Semaines comparées</h3>
+            <p>Visualisez votre cadence avec les barres hebdomadaires et les totaux cumulés.</p>
+            <ul class="story-list">
+              <li>Résumé hebdo automatique</li>
+              <li>Comparaison multi-semaines</li>
+              <li>Synthèse claire en bas de bloc</li>
+            </ul>
+          </div>
+          <div class="story-media">
+            <figure class="media-frame">
+              <img src="pictures/screenshots/WeeksAddition001.png" alt="Comparatif hebdomadaire de présence">
+            </figure>
+          </div>
+        </article>
+      </section>
+
+      <section id="objectif" class="story-section">
+        <div class="section-header">
+          <p class="section-kicker">Objectif</p>
+          <h2>France Travail, sans friction.</h2>
+          <p>Le suivi d'objectif se lit en deux secondes, avec les infos qui comptent.</p>
+        </div>
+        <article class="story-card reveal">
+          <div class="story-content">
+            <h3>Objectifs et progression instantanés</h3>
+            <p>Affichage dédié, barre de progression et estimations de rythme en un seul bloc.</p>
+            <ul class="story-list">
+              <li>Reste à faire calculé automatiquement</li>
+              <li>Moyenne par jour ouvré</li>
+              <li>Lecture claire, sans scrolling</li>
+            </ul>
+          </div>
+          <div class="story-media">
+            <figure class="media-frame">
+              <img src="pictures/screenshots/FranceTravail+Hours001.png" alt="Bloc objectif France Travail">
+            </figure>
+          </div>
+        </article>
+      </section>
+
+      <section id="events" class="story-section">
+        <div class="section-header">
+          <p class="section-kicker">Events &amp; examens</p>
+          <h2>Tout votre planning enrichi.</h2>
+          <p>Ajout direct au calendrier, statuts d'inscription et prochains examens visibles immédiatement.</p>
+        </div>
+        <div class="image-duo">
+          <figure class="media-frame reveal">
+            <img src="pictures/screenshots/Events001.png" alt="Liste des événements enrichie">
+          </figure>
+          <figure class="media-frame reveal">
+            <img src="pictures/screenshots/NextExam001.png" alt="Bloc prochain examen">
+          </figure>
+        </div>
+        <div class="story-callout reveal">
+          <div class="callout-title">Accès direct</div>
+          <p>Les actions sont au bon endroit : Google Calendar, ICS et statuts intégrés.</p>
         </div>
       </section>
 
-      <section id="showroom" class="section showroom">
+      <section id="games" class="story-section">
         <div class="section-header">
-          <h2>Showroom</h2>
-          <p>Les modules Intra+ en version interactive, directement inspirés de l’extension.</p>
+          <p class="section-kicker">Pause intelligente</p>
+          <h2>Mini-jeux intégrés, sans sortir du flow.</h2>
+          <p>Breakout, Tetris et Snake sont accessibles instantanément depuis l'Intra.</p>
         </div>
-        <div class="showroom-grid">
-          <article class="showroom-card reveal card-general" data-feature-card="general">
-            <div class="card-heading">
-              <h3>Général &amp; Dashboard</h3>
-              <p>Paramètres centraux, export/import et confidentialité.</p>
+        <article class="story-card reveal">
+          <div class="story-content">
+            <h3>Bibliothèque de jeux intégrée</h3>
+            <p>Une interface légère pour relancer la concentration entre deux sessions.</p>
+            <ul class="story-list">
+              <li>Onglets rapides</li>
+              <li>Scoreboard intégré</li>
+              <li>Design cohérent avec l'extension</li>
+            </ul>
+          </div>
+          <div class="story-media">
+            <figure class="media-frame">
+              <img src="pictures/screenshots/VideoGames001.png" alt="Bibliothèque de mini-jeux">
+            </figure>
+          </div>
+        </article>
+      </section>
+
+      <section id="trombi" class="story-section">
+        <div class="section-header">
+          <p class="section-kicker">Trombinoscope</p>
+          <h2>Les profils, propres et rapides à consulter.</h2>
+          <p>Un affichage net pour parcourir les élèves et retrouver un visage en un clin d'oeil.</p>
+        </div>
+        <div class="trombi-demo reveal">
+          <div class="trombi-bar">
+            <div>
+              <div class="trombi-title">Trombinoscope</div>
+              <div class="trombi-subtitle">Tous les élèves classés de A à Z.</div>
             </div>
-            <div class="demo-panel demo-general">
-              <div class="demo-top">
-                <span class="demo-tag">Paramètres Intra+</span>
-                <span class="demo-tab" aria-hidden="true">↗</span>
-              </div>
-              <div class="demo-stat sensitive">12h 48m • 3 objectifs</div>
-              <div class="demo-actions">
-                <span>Export</span>
-                <span>Import</span>
-                <span>Reset</span>
-              </div>
+            <div class="trombi-pills">
+              <span class="trombi-pill">Recherche</span>
+              <span class="trombi-pill">Tri</span>
+              <span class="trombi-pill">129 élèves</span>
             </div>
-            <div class="feature-controls">
-              <label class="toggle">
-                <span class="toggle-text">Activer Intra+</span>
-                <input type="checkbox" data-feature-toggle="enabled" checked>
-              </label>
-              <label class="toggle">
-                <span class="toggle-text">Nouvel onglet</span>
-                <input type="checkbox" data-feature-toggle="openInNewTab">
-              </label>
-              <label class="toggle">
-                <span class="toggle-text">Masquer les stats sensibles</span>
-                <input type="checkbox" data-feature-toggle="hideSensitive">
-              </label>
-            </div>
-          </article>
-          <article class="showroom-card reveal card-home" data-feature-card="home">
-            <div class="card-heading">
-              <h3>Accueil</h3>
-              <p>Events enrichis, boutons calendrier et prochain examen.</p>
-            </div>
-            <div class="demo-panel demo-home home-demo">
-              <div class="home-events">
-                <div class="home-events-head">
-                  <div>
-                    <div class="home-events-title">Events (7)</div>
-                    <div class="home-events-sub">janv. 2026</div>
-                  </div>
-                  <div class="home-events-meta">01:18:07:08</div>
-                </div>
-                <article class="home-event-card">
-                  <div class="home-event-date">
-                    <span class="month">janv.</span>
-                    <span class="day">20</span>
-                  </div>
-                  <div class="home-event-body">
-                    <div class="home-event-tags">
-                      <span class="event-tag">Conference</span>
-                      <span class="event-tag event-tag-alt">Complet</span>
-                      <span class="event-tag event-tag-success">Inscrit(e)</span>
-                    </div>
-                    <div class="event-title">Droit &amp; Code : Avocate spécialisée dans l'IT</div>
-                    <div class="event-meta">1 heure • 20 janv. 2026 • 15h00 • Amphi • 50/50</div>
-                  </div>
-                  <div class="event-actions">
-                    <button class="event-action-btn" type="button" aria-label="Ajouter à Google Calendar">GC</button>
-                    <button class="event-action-btn" type="button" aria-label="Exporter ICS">ICS</button>
-                  </div>
-                </article>
-                <article class="home-event-card">
-                  <div class="home-event-date">
-                    <span class="month">janv.</span>
-                    <span class="day">21</span>
-                  </div>
-                  <div class="home-event-body">
-                    <div class="home-event-tags">
-                      <span class="event-tag event-tag-violet">Meet-up</span>
-                    </div>
-                    <div class="event-title">Women+</div>
-                    <div class="event-meta">45 minutes • 21 janv. 2026 • 15h30 • Espace chill</div>
-                  </div>
-                  <div class="event-actions">
-                    <button class="event-action-btn" type="button" aria-label="Ajouter à Google Calendar">GC</button>
-                    <button class="event-action-btn" type="button" aria-label="Exporter ICS">ICS</button>
-                  </div>
-                </article>
-                <article class="home-event-card">
-                  <div class="home-event-date">
-                    <span class="month">janv.</span>
-                    <span class="day">23</span>
-                  </div>
-                  <div class="home-event-body">
-                    <div class="home-event-tags">
-                      <span class="event-tag event-tag-pink">Hackathon</span>
-                    </div>
-                    <div class="event-title">Hackathon Nature en Ville</div>
-                    <div class="event-meta">2 jours • 23 janv. 2026 • 18h00 • La Belle de Mai • 10/15</div>
-                  </div>
-                  <div class="event-actions">
-                    <button class="event-action-btn" type="button" aria-label="Ajouter à Google Calendar">GC</button>
-                    <button class="event-action-btn" type="button" aria-label="Exporter ICS">ICS</button>
-                  </div>
-                </article>
-              </div>
-              <div class="home-exam-card">
-                <div class="home-exam-head">
-                  <span class="home-exam-title">Prochain examen</span>
-                  <span class="home-exam-status">Inscrit(e)</span>
-                </div>
-                <div class="home-exam-name">Exam - Programming Fundamentals</div>
-                <div class="home-exam-grid">
-                  <div class="home-exam-row"><span>Date</span><span>23 janv. 2026</span></div>
-                  <div class="home-exam-row"><span>Heure</span><span>09h00 - 12h00</span></div>
-                  <div class="home-exam-row"><span>Lieu</span><span>Cluster 1</span></div>
-                  <div class="home-exam-row"><span>Participants</span><span>36 / 100</span></div>
-                </div>
-              </div>
-            </div>
-            <div class="feature-controls">
-              <label class="toggle">
-                <span class="toggle-text">Events personnalisés</span>
-                <input type="checkbox" data-feature-toggle="customEvents" checked>
-              </label>
-              <label class="toggle">
-                <span class="toggle-text">Boutons Google Calendar</span>
-                <input type="checkbox" data-feature-toggle="calendarButtons" checked>
-              </label>
-              <label class="toggle">
-                <span class="toggle-text">Bloc prochain examen</span>
-                <input type="checkbox" data-feature-toggle="nextExam" checked>
-              </label>
-            </div>
-          </article>
-          <article class="showroom-card reveal card-attendance" data-feature-card="attendance">
-            <div class="card-heading">
-              <h3>Attendance</h3>
-              <p>Courbes, totaux et suivi d’objectif France Travail.</p>
-            </div>
-            <div class="demo-panel demo-attendance attendance-demo">
-              <div class="attendance-layout">
-                <div class="attendance-main">
-                  <div id="iPlusAtt-heatmap" class="att-card att-heatmap">
-                    <div class="att-card-head">
-                      <div class="att-card-title">Présence journalière</div>
-                      <div class="att-card-nav">
-                        <button class="att-nav-btn" type="button" aria-label="Mois précédent">‹</button>
-                        <button class="att-nav-btn" type="button" aria-label="Mois suivant">›</button>
-                      </div>
-                    </div>
-                    <div class="att-heatmap-months">
-                      <span>août</span>
-                      <span>sept.</span>
-                      <span>oct.</span>
-                      <span>nov.</span>
-                      <span>déc.</span>
-                      <span>2026</span>
-                    </div>
-                    <div class="att-heatmap-grid">
-                      <div class="att-heatmap-days">
-                        <span>L</span>
-                        <span>M</span>
-                        <span>M</span>
-                        <span>J</span>
-                        <span>V</span>
-                        <span>S</span>
-                        <span>D</span>
-                      </div>
-                      <div class="att-heatmap-cells" data-heatmap-grid></div>
-                    </div>
-                    <div class="att-heatmap-legend">
-                      <span>Moins</span>
-                      <div class="att-heatmap-legend-cells">
-                        <span class="legend-cell level-0"></span>
-                        <span class="legend-cell level-1"></span>
-                        <span class="legend-cell level-2"></span>
-                        <span class="legend-cell level-3"></span>
-                        <span class="legend-cell level-4"></span>
-                      </div>
-                      <span>Plus</span>
-                    </div>
-                  </div>
-                  <div id="iPlusAtt-monthly" class="att-card att-monthly">
-                    <div class="att-card-head">
-                      <div class="att-card-title">Courbe mensuelle (heures + minutes)</div>
-                    </div>
-                    <div class="iPlusAttMonthly-chart"></div>
-                    <div class="iPlusAttMonthly-today">Temps de présence aujourd'hui : 8h 44m.</div>
-                  </div>
-                  <div id="iPlusAtt-weekly" class="att-card att-weekly">
-                    <div class="att-card-head">
-                      <div class="att-card-title">Présence hebdomadaire</div>
-                      <div class="att-card-nav">
-                        <button class="att-nav-btn" type="button" aria-label="Semaine précédente">‹</button>
-                        <button class="att-nav-btn" type="button" aria-label="Semaine suivante">›</button>
-                      </div>
-                    </div>
-                    <div class="att-weekly-subtitle">Cette semaine : 78 heures 38 minutes</div>
-                    <div class="att-weekly-chart" data-weekly-chart></div>
-                    <div class="att-weekly-summary">
-                      <div class="att-weekly-summary-title">Synthèse hebdomadaire</div>
-                      <div class="att-weekly-row"><span>Cette semaine</span><span>78h 38m</span></div>
-                      <div class="att-weekly-row"><span>S-1</span><span>75h 35m</span></div>
-                      <div class="att-weekly-row"><span>S-2</span><span>77h 53m</span></div>
-                      <div class="att-weekly-row"><span>S-3</span><span>54h 18m</span></div>
-                      <div class="att-weekly-row att-weekly-total"><span>Total cumulé</span><span>286h 24m</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="attendance-side">
-                  <div id="iPlusAtt-profile" class="att-card att-profile">
-                    <div class="att-profile-top">
-                      <div class="att-profile-avatar">
-                        <img src="pictures/009.jpg" alt="Portrait de Boris Hanicotte">
-                        <span class="att-profile-level">LEVEL 2</span>
-                      </div>
-                      <div class="att-profile-info">
-                        <div class="att-profile-name">bhanicot</div>
-                        <div class="att-profile-fullname">Boris Hanicotte</div>
-                      </div>
-                    </div>
-                    <div class="att-profile-progress">
-                      <div class="att-profile-bar" aria-hidden="true">
-                        <span class="att-profile-segment is-filled"></span>
-                        <span class="att-profile-segment is-filled"></span>
-                        <span class="att-profile-segment is-filled"></span>
-                        <span class="att-profile-segment is-filled"></span>
-                        <span class="att-profile-segment is-filled"></span>
-                        <span class="att-profile-segment is-filled"></span>
-                        <span class="att-profile-segment"></span>
-                        <span class="att-profile-segment"></span>
-                        <span class="att-profile-segment"></span>
-                        <span class="att-profile-segment"></span>
-                      </div>
-                      <div class="att-profile-progress-meta">58/100</div>
-                    </div>
-                    <div class="att-profile-buddies">
-                      <div class="att-profile-buddies-title">Level Buddies</div>
-                      <div class="att-profile-buddy-list">
-                        <div class="att-profile-buddy">
-                          <img src="pictures/001.jpg" alt="Portrait de Alice Dupont">
-                          <span class="att-profile-buddy-level">2</span>
-                        </div>
-                        <div class="att-profile-buddy">
-                          <img src="pictures/002.jpg" alt="Portrait de Kamel Saïd">
-                          <span class="att-profile-buddy-level">2</span>
-                        </div>
-                        <div class="att-profile-buddy">
-                          <img src="pictures/003.jpg" alt="Portrait de Léa Martin">
-                          <span class="att-profile-buddy-level">2</span>
-                        </div>
-                        <div class="att-profile-buddy">
-                          <img src="pictures/004.jpg" alt="Portrait de Rami Nasser">
-                          <span class="att-profile-buddy-level">3</span>
-                        </div>
-                        <div class="att-profile-buddy">
-                          <img src="pictures/005.jpg" alt="Portrait de Sarah Benali">
-                          <span class="att-profile-buddy-level">3</span>
-                        </div>
-                        <div class="att-profile-buddy">
-                          <img src="pictures/006.jpg" alt="Portrait de Hugo Petit">
-                          <span class="att-profile-buddy-level">3</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="att-info-row">
-                    <div class="att-info-card">
-                      <div class="att-info-title">Position</div>
-                      <div class="att-info-pill">c1r16s3.marseille.42.school</div>
-                    </div>
-                    <div class="att-info-card">
-                      <div class="att-info-title">Programme</div>
-                      <div class="att-info-pill">Common core</div>
-                    </div>
-                  </div>
-                  <div id="iPlusAtt-goal" class="att-card att-goal">
-                    <div class="iPlusAttGoal-head">
-                      <span class="iPlusAttGoal-title">Objectif 300h • ULTIMATE</span>
-                      <div class="iPlusAttGoal-title-right">
-                        <span class="iPlusAttGoal-stars" aria-hidden="true">★ ★</span>
-                        <span class="iPlusAttGoal-logo" aria-label="France Travail">France Travail</span>
-                      </div>
-                    </div>
-                    <div class="iPlusAttGoal-bar"><div class="iPlusAttGoal-fill"></div></div>
-                    <div class="iPlusAttGoal-label">201h 04m / 300h (67.02%) — 21 jours • ULTIMATE</div>
-                    <div class="iPlusAttGoal-meta">Jours restants : 14 • Heures restantes : 98h 56m • Moyenne/jour : 7h 04m</div>
-                    <div class="iPlusAttGoal-meta">Jours ouvrés restants : 10 • Moyenne/jour ouvré : 9h 54m</div>
-                  </div>
-                  <div id="iPlusAtt-daily" class="att-card att-daily">
-                    <div class="iPlusAttDaily-header">
-                      <div>Heures par jour (mois)</div>
-                      <label class="iPlusAttDaily-toggle">
-                        <span>Mois</span>
-                        <select id="iPlusAtt-daily-select">
-                          <option value="2026-01">01/2026</option>
-                        </select>
-                      </label>
-                    </div>
-                    <div id="iPlusAtt-daily-chart" class="iPlusAttDaily-chart"></div>
-                    <div class="iPlusAttDaily-meta">
-                      <label class="iPlusAttDaily-toggle">
-                        <input type="checkbox" id="iPlusAtt-daily-zero">
-                        <span>Ignorer les jours à 0h</span>
-                      </label>
-                      <span id="iPlusAtt-daily-meta">Moyenne : 11h 10m • Jours comptés : 18</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="feature-controls">
-              <label class="toggle">
-                <span class="toggle-text">Résumé hebdomadaire</span>
-                <input type="checkbox" data-feature-toggle="weeklySummary" checked>
-              </label>
-              <label class="toggle">
-                <span class="toggle-text">Courbe mensuelle</span>
-                <input type="checkbox" data-feature-toggle="monthlyCurve" checked>
-              </label>
-              <label class="toggle">
-                <span class="toggle-text">Heures par jour (mois)</span>
-                <input type="checkbox" data-feature-toggle="dailyBars" checked>
-              </label>
-              <label class="toggle">
-                <span class="toggle-text">Présence du jour</span>
-                <input type="checkbox" data-feature-toggle="todayPresence" checked>
-              </label>
-              <label class="toggle">
-                <span class="toggle-text">Bloc objectif France Travail</span>
-                <input type="checkbox" data-feature-toggle="ftGoal">
-              </label>
-            </div>
-          </article>
-          <article class="showroom-card reveal card-games" data-feature-card="games" data-game-card>
-            <div class="card-heading">
-              <h3>Mini-jeux</h3>
-              <p>Breakout, Tetris, Snake + scoreboard intégré.</p>
-            </div>
-            <div class="demo-panel demo-games">
-              <div class="game-library">
-                <div class="game-library-head">
-                  <div>
-                    <div class="game-library-title">Bibliothèque de jeux</div>
-                    <div class="game-library-sub">Choisis un jeu pour ouvrir la fenêtre.</div>
-                  </div>
-                  <div class="game-library-meta">Pause express</div>
-                </div>
-                <div class="game-library-grid">
-                  <button class="game-tile is-active" type="button" data-game-tab="breakout" data-game-label="Breakout — casse briques" aria-pressed="true">
-                    <span class="game-tile-icon"></span>
-                    <span class="game-tile-name">Breakout</span>
-                    <span class="game-tile-desc">Casse briques</span>
-                  </button>
-                  <button class="game-tile" type="button" data-game-tab="tetris" data-game-label="Tetris — empile et nettoie les lignes" aria-pressed="false">
-                    <span class="game-tile-icon"></span>
-                    <span class="game-tile-name">Tetris</span>
-                    <span class="game-tile-desc">Empile et nettoie les lignes</span>
-                  </button>
-                  <button class="game-tile" type="button" data-game-tab="snake" data-game-label="Snake — collecte et grandis" aria-pressed="false">
-                    <span class="game-tile-icon"></span>
-                    <span class="game-tile-name">Snake</span>
-                    <span class="game-tile-desc">Collecte et grandis</span>
-                  </button>
-                </div>
-                <div class="game-library-screen" data-game-screen>Breakout — casse briques</div>
-                <div class="game-scores" data-score-list>
-                  <div class="score-row">
-                    <span>Breakout</span>
-                    <span data-score>3200</span>
-                  </div>
-                  <div class="score-row">
-                    <span>Tetris</span>
-                    <span data-score>1780</span>
-                  </div>
-                  <div class="score-row">
-                    <span>Snake</span>
-                    <span data-score>950</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="feature-controls">
-              <label class="toggle">
-                <span class="toggle-text">Mini-jeux de pause</span>
-                <input type="checkbox" data-feature-toggle="ftMiniGame">
-              </label>
-              <div class="feature-actions">
-                <button class="btn btn-ghost btn-small" type="button" data-feature-action="clearHighScores">Supprimer les high scores</button>
-                <span class="action-status" data-action-status aria-live="polite"></span>
-              </div>
-            </div>
-          </article>
-          <article class="showroom-card reveal card-clusters" data-feature-card="clusters">
-            <div class="card-heading">
-              <h3>Cluster Map+</h3>
-              <p>Nouvelle carte + disposition en colonnes séparées.</p>
-            </div>
-            <div class="demo-panel demo-clusters cluster-demo" id="iPlusCluster-root">
-              <div class="ic-header">
-                <div class="ic-title">Clusters</div>
-                <label class="ic-search">
-                  <span>Recherche</span>
-                  <input type="text" placeholder="Login ou nom/prénom">
-                </label>
-                <button class="ic-refresh" type="button">Rafraîchir</button>
-              </div>
-              <div class="ic-summary">
-                <span class="ic-pill">12 / 100 occupés</span>
-                <span class="ic-pill">88 libres</span>
-                <span class="ic-pill">12% rempli</span>
-              </div>
-              <div class="ic-card">
-                <div class="ic-card-head">
-                  <div class="ic-card-title">Cluster 1</div>
-                  <div class="ic-card-stats">
-                    <span class="ic-pill">12 / 100 occupés</span>
-                    <span class="ic-pill">88 libres</span>
-                    <span class="ic-pill">12% rempli</span>
-                  </div>
-                </div>
-                <div class="ic-section">Bloc 1</div>
-                <div class="ic-table">
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r1s1</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r1s2</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r1s3</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r1s4</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r1s5</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r1s6</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r1s7</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r1s8</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r2s1</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r2s2</span></div>
-                  <div class="ic-seat ic-seat-occupied"><span class="ic-seat-user">yarmand</span><span class="ic-seat-host">c1r2s3</span></div>
-                  <div class="ic-seat ic-seat-occupied"><span class="ic-seat-user">apeguet</span><span class="ic-seat-host">c1r2s4</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r2s5</span></div>
-                  <div class="ic-seat ic-seat-occupied"><span class="ic-seat-user">ilintago</span><span class="ic-seat-host">c1r2s6</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r2s7</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r2s8</span></div>
-                </div>
-                <div class="ic-section">Bloc 2</div>
-                <div class="ic-table">
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r3s1</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r3s2</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r3s3</span></div>
-                  <div class="ic-seat ic-seat-occupied"><span class="ic-seat-user">mberraho</span><span class="ic-seat-host">c1r3s4</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r3s5</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r3s6</span></div>
-                  <div class="ic-seat ic-seat-self"><span class="ic-seat-user">bhanicot</span><span class="ic-seat-host">c1r3s7</span></div>
-                  <div class="ic-seat ic-seat-occupied"><span class="ic-seat-user">wboussah</span><span class="ic-seat-host">c1r3s8</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r4s1</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r4s2</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r4s3</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r4s4</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r4s5</span></div>
-                  <div class="ic-seat ic-seat-occupied"><span class="ic-seat-user">sizen</span><span class="ic-seat-host">c1r4s6</span></div>
-                  <div class="ic-seat ic-seat-occupied"><span class="ic-seat-user">jenicola</span><span class="ic-seat-host">c1r4s7</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r4s8</span></div>
-                </div>
-              </div>
-              <div class="ic-card">
-                <div class="ic-card-head">
-                  <div class="ic-card-title">Cluster 2</div>
-                  <div class="ic-card-stats">
-                    <span class="ic-pill">0 / 50 occupés</span>
-                    <span class="ic-pill">50 libres</span>
-                    <span class="ic-pill">0% rempli</span>
-                  </div>
-                </div>
-                <div class="ic-section">Bloc 1</div>
-                <div class="ic-table">
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r1s1</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r1s2</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r1s3</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r1s4</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r1s5</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r1s6</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r1s7</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r1s8</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r2s1</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r2s2</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r2s3</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r2s4</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r2s5</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r2s6</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r2s7</span></div>
-                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r2s8</span></div>
-                </div>
-              </div>
-              <div class="ic-summary-footer">
-                Clusters combinés 12 / 150 occupés (8%) • C1: 12/100 • C2: 0/50 • Libres: 138
-              </div>
-            </div>
-            <div class="feature-controls">
-              <label class="toggle">
-                <span class="toggle-text">Cluster Map+</span>
-                <input type="checkbox" data-feature-toggle="clusterMapPlus">
-              </label>
-              <label class="toggle">
-                <span class="toggle-text">Colonnes séparées</span>
-                <input type="checkbox" data-feature-toggle="splitColumns" checked>
-              </label>
-            </div>
-          </article>
-          <article class="showroom-card reveal card-trombi" data-feature-card="trombinoscope">
-            <div class="card-heading">
-              <h3>Trombinoscope</h3>
-              <p>Cache rapide, menu dédié et rafraîchissement à la demande.</p>
-            </div>
-            <div class="demo-panel demo-trombi trombi-demo">
-              <div class="trombi-header">
-                <div class="trombi-brand">
-                  <div class="trombi-logo-wrap">
-                    <img src="assets/logo.svg" alt="Logo 42+" class="trombi-logo">
-                  </div>
-                  <div>
-                    <div class="trombi-title">Trombinoscope</div>
-                    <div class="trombi-subtitle">Tous les élèves classés de A à Z.</div>
-                  </div>
-                  <span class="trombi-menu-pill">Menu</span>
-                </div>
-                <button class="trombi-refresh" type="button">Rafraîchir</button>
-              </div>
-              <div class="trombi-toolbar">
-                <label class="trombi-field">
-                  <span>Recherche</span>
-                  <input type="text" placeholder="Nom, prénom ou username">
-                </label>
-                <label class="trombi-field">
-                  <span>Tri</span>
-                  <select>
-                    <option>Prénom</option>
-                    <option>Nom</option>
-                    <option>Login</option>
-                  </select>
-                </label>
-                <button class="trombi-sort" type="button">A → Z</button>
-                <div class="trombi-meta">
-                  <span>129 élèves</span>
-                  <span>Mis à jour : 16/01/2026 21:22:26</span>
-                </div>
-              </div>
-              <div class="iPlusTrombi-grid" data-avatar-list>
-                <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Alice Dupont</div>
-                  <div class="iPlusTrombi-card-inner">
-                    <div class="iPlusTrombi-avatar">
-                      <img src="pictures/001.jpg" alt="Portrait de Alice Dupont">
-                    </div>
-                    <div class="iPlusTrombi-info">
-                      <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">User ID</span>
-                        <span class="iPlusTrombi-info-value">adupont</span>
-                      </div>
-                      <span class="iPlusTrombi-username">GitHub: adupont</span>
-                      <span class="iPlusTrombi-tag">Marseille</span>
-                    </div>
-                  </div>
-                </article>
-                <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Kamel Saïd</div>
-                  <div class="iPlusTrombi-card-inner">
-                    <div class="iPlusTrombi-avatar">
-                      <img src="pictures/002.jpg" alt="Portrait de Kamel Saïd">
-                    </div>
-                    <div class="iPlusTrombi-info">
-                      <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">User ID</span>
-                        <span class="iPlusTrombi-info-value">ksaid</span>
-                      </div>
-                      <span class="iPlusTrombi-username">GitHub: ksaid</span>
-                      <span class="iPlusTrombi-tag">Marseille</span>
-                    </div>
-                  </div>
-                </article>
-                <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Léa Martin</div>
-                  <div class="iPlusTrombi-card-inner">
-                    <div class="iPlusTrombi-avatar">
-                      <img src="pictures/003.jpg" alt="Portrait de Léa Martin">
-                    </div>
-                    <div class="iPlusTrombi-info">
-                      <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">User ID</span>
-                        <span class="iPlusTrombi-info-value">lmartin</span>
-                      </div>
-                      <span class="iPlusTrombi-username">GitHub: lmartin</span>
-                      <span class="iPlusTrombi-tag">Paris</span>
-                    </div>
-                  </div>
-                </article>
-                <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Rami Nasser</div>
-                  <div class="iPlusTrombi-card-inner">
-                    <div class="iPlusTrombi-avatar">
-                      <img src="pictures/004.jpg" alt="Portrait de Rami Nasser">
-                    </div>
-                    <div class="iPlusTrombi-info">
-                      <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">User ID</span>
-                        <span class="iPlusTrombi-info-value">rnasser</span>
-                      </div>
-                      <span class="iPlusTrombi-username">GitHub: rnasser</span>
-                      <span class="iPlusTrombi-tag">Lyon</span>
-                    </div>
-                  </div>
-                </article>
-                <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Sarah Benali</div>
-                  <div class="iPlusTrombi-card-inner">
-                    <div class="iPlusTrombi-avatar">
-                      <img src="pictures/005.jpg" alt="Portrait de Sarah Benali">
-                    </div>
-                    <div class="iPlusTrombi-info">
-                      <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">User ID</span>
-                        <span class="iPlusTrombi-info-value">sbenali</span>
-                      </div>
-                      <span class="iPlusTrombi-username">GitHub: sbenali</span>
-                      <span class="iPlusTrombi-tag">Marseille</span>
-                    </div>
-                  </div>
-                </article>
-                <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Hugo Petit</div>
-                  <div class="iPlusTrombi-card-inner">
-                    <div class="iPlusTrombi-avatar">
-                      <img src="pictures/006.jpg" alt="Portrait de Hugo Petit">
-                    </div>
-                    <div class="iPlusTrombi-info">
-                      <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">User ID</span>
-                        <span class="iPlusTrombi-info-value">hpetit</span>
-                      </div>
-                      <span class="iPlusTrombi-username">GitHub: hpetit</span>
-                      <span class="iPlusTrombi-tag">Paris</span>
-                    </div>
-                  </div>
-                </article>
-                <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Nour Amrani</div>
-                  <div class="iPlusTrombi-card-inner">
-                    <div class="iPlusTrombi-avatar">
-                      <img src="pictures/007.jpg" alt="Portrait de Nour Amrani">
-                    </div>
-                    <div class="iPlusTrombi-info">
-                      <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">User ID</span>
-                        <span class="iPlusTrombi-info-value">namrani</span>
-                      </div>
-                      <span class="iPlusTrombi-username">GitHub: namrani</span>
-                      <span class="iPlusTrombi-tag">Lille</span>
-                    </div>
-                  </div>
-                </article>
-                <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Lucas Morel</div>
-                  <div class="iPlusTrombi-card-inner">
-                    <div class="iPlusTrombi-avatar">
-                      <img src="pictures/008.jpg" alt="Portrait de Lucas Morel">
-                    </div>
-                    <div class="iPlusTrombi-info">
-                      <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">User ID</span>
-                        <span class="iPlusTrombi-info-value">lmorel</span>
-                      </div>
-                      <span class="iPlusTrombi-username">GitHub: lmorel</span>
-                      <span class="iPlusTrombi-tag">Bordeaux</span>
-                    </div>
-                  </div>
-                </article>
-                <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Ines Caron</div>
-                  <div class="iPlusTrombi-card-inner">
-                    <div class="iPlusTrombi-avatar">
-                      <img src="pictures/009.jpg" alt="Portrait de Ines Caron">
-                    </div>
-                    <div class="iPlusTrombi-info">
-                      <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">User ID</span>
-                        <span class="iPlusTrombi-info-value">icaron</span>
-                      </div>
-                      <span class="iPlusTrombi-username">GitHub: icaron</span>
-                      <span class="iPlusTrombi-tag">Nice</span>
-                    </div>
-                  </div>
-                </article>
-                <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Julien Moreau</div>
-                  <div class="iPlusTrombi-card-inner">
-                    <div class="iPlusTrombi-avatar">
-                      <img src="pictures/010.jpg" alt="Portrait de Julien Moreau">
-                    </div>
-                    <div class="iPlusTrombi-info">
-                      <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">User ID</span>
-                        <span class="iPlusTrombi-info-value">jmoreau</span>
-                      </div>
-                      <span class="iPlusTrombi-username">GitHub: jmoreau</span>
-                      <span class="iPlusTrombi-tag">Paris</span>
-                    </div>
-                  </div>
-                </article>
-                <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Karim Haddad</div>
-                  <div class="iPlusTrombi-card-inner">
-                    <div class="iPlusTrombi-avatar">
-                      <img src="pictures/011.jpg" alt="Portrait de Karim Haddad">
-                    </div>
-                    <div class="iPlusTrombi-info">
-                      <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">User ID</span>
-                        <span class="iPlusTrombi-info-value">khaddad</span>
-                      </div>
-                      <span class="iPlusTrombi-username">GitHub: khaddad</span>
-                      <span class="iPlusTrombi-tag">Lyon</span>
-                    </div>
-                  </div>
-                </article>
-                <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Lina Girard</div>
-                  <div class="iPlusTrombi-card-inner">
-                    <div class="iPlusTrombi-avatar">
-                      <img src="pictures/012.jpg" alt="Portrait de Lina Girard">
-                    </div>
-                    <div class="iPlusTrombi-info">
-                      <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">User ID</span>
-                        <span class="iPlusTrombi-info-value">lgirard</span>
-                      </div>
-                      <span class="iPlusTrombi-username">GitHub: lgirard</span>
-                      <span class="iPlusTrombi-tag">Toulouse</span>
-                    </div>
-                  </div>
-                </article>
-                <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Maya Lefevre</div>
-                  <div class="iPlusTrombi-card-inner">
-                    <div class="iPlusTrombi-avatar">
-                      <img src="pictures/013.jpg" alt="Portrait de Maya Lefevre">
-                    </div>
-                    <div class="iPlusTrombi-info">
-                      <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">User ID</span>
-                        <span class="iPlusTrombi-info-value">mlefevre</span>
-                      </div>
-                      <span class="iPlusTrombi-username">GitHub: mlefevre</span>
-                      <span class="iPlusTrombi-tag">Lille</span>
-                    </div>
-                  </div>
-                </article>
-                <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Noah Petit</div>
-                  <div class="iPlusTrombi-card-inner">
-                    <div class="iPlusTrombi-avatar">
-                      <img src="pictures/014.jpg" alt="Portrait de Noah Petit">
-                    </div>
-                    <div class="iPlusTrombi-info">
-                      <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">User ID</span>
-                        <span class="iPlusTrombi-info-value">npetit</span>
-                      </div>
-                      <span class="iPlusTrombi-username">GitHub: npetit</span>
-                      <span class="iPlusTrombi-tag">Nantes</span>
-                    </div>
-                  </div>
-                </article>
-                <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Omar Benkhaled</div>
-                  <div class="iPlusTrombi-card-inner">
-                    <div class="iPlusTrombi-avatar">
-                      <img src="pictures/015.jpg" alt="Portrait de Omar Benkhaled">
-                    </div>
-                    <div class="iPlusTrombi-info">
-                      <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">User ID</span>
-                        <span class="iPlusTrombi-info-value">obenkhaled</span>
-                      </div>
-                      <span class="iPlusTrombi-username">GitHub: obenkhaled</span>
-                      <span class="iPlusTrombi-tag">Grenoble</span>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <span class="action-status" data-action-status aria-live="polite"></span>
-            </div>
-            <div class="feature-controls">
-              <label class="toggle">
-                <span class="toggle-text">Afficher dans le menu</span>
-                <input type="checkbox" data-feature-toggle="showInMenu" checked>
-              </label>
-              <div class="feature-actions">
-                <button class="btn btn-ghost btn-small" type="button" data-feature-action="refreshCache">Rafraîchir le cache</button>
-                <button class="btn btn-ghost btn-small" type="button" data-feature-action="clearCache">Vider le cache</button>
-              </div>
-            </div>
-          </article>
-          <article class="showroom-card reveal card-tools" data-feature-card="tools">
-            <div class="card-heading">
-              <h3>Outils</h3>
-              <p>Bannière RTM, overlay annuaire et Chronos amélioré.</p>
-            </div>
-            <div class="demo-panel demo-tools">
-              <div class="rtm-banner">RTM • Trafic fluide • Ligne 1</div>
-              <div class="directory-overlay">Annuaire Marseille · Accès rapide</div>
-              <div class="chronos-card">Chronos • Timeline enrichie</div>
-            </div>
-            <div class="feature-controls">
-              <label class="toggle">
-                <span class="toggle-text">Bannière trafic RTM</span>
-                <input type="checkbox" data-feature-toggle="rtmBanner">
-              </label>
-              <label class="toggle">
-                <span class="toggle-text">Overlay annuaire personnalisé</span>
-                <input type="checkbox" data-feature-toggle="directoryOverlay">
-              </label>
-              <label class="toggle">
-                <span class="toggle-text">Amélioration Chronos</span>
-                <input type="checkbox" data-feature-toggle="chronosEnhancer">
-              </label>
-            </div>
-          </article>
+          </div>
+          <div class="trombi-grid">
+            <div class="trombi-card"><img src="pictures/samples-of-people/001-m.jpg" alt="Portrait d'un élève"></div>
+            <div class="trombi-card"><img src="pictures/samples-of-people/002-m.jpg" alt="Portrait d'un élève"></div>
+            <div class="trombi-card"><img src="pictures/samples-of-people/003-m.jpg" alt="Portrait d'un élève"></div>
+            <div class="trombi-card"><img src="pictures/samples-of-people/004-m.jpg" alt="Portrait d'un élève"></div>
+            <div class="trombi-card"><img src="pictures/samples-of-people/005-f.jpg" alt="Portrait d'une élève"></div>
+            <div class="trombi-card"><img src="pictures/samples-of-people/006-m.jpg" alt="Portrait d'un élève"></div>
+            <div class="trombi-card"><img src="pictures/samples-of-people/007-m.jpg" alt="Portrait d'un élève"></div>
+            <div class="trombi-card"><img src="pictures/samples-of-people/008-f.jpg" alt="Portrait d'une élève"></div>
+            <div class="trombi-card"><img src="pictures/samples-of-people/009-f.jpg" alt="Portrait d'une élève"></div>
+            <div class="trombi-card"><img src="pictures/samples-of-people/010-f.jpg" alt="Portrait d'une élève"></div>
+            <div class="trombi-card"><img src="pictures/samples-of-people/011-f.jpg" alt="Portrait d'une élève"></div>
+            <div class="trombi-card"><img src="pictures/samples-of-people/012-f.jpg" alt="Portrait d'une élève"></div>
+            <div class="trombi-card"><img src="pictures/samples-of-people/013-m.jpg" alt="Portrait d'un élève"></div>
+            <div class="trombi-card"><img src="pictures/samples-of-people/014-f.jpg" alt="Portrait d'une élève"></div>
+            <div class="trombi-card"><img src="pictures/samples-of-people/015-m.jpg" alt="Portrait d'un élève"></div>
+          </div>
         </div>
       </section>
 
       <section id="faq" class="section faq">
         <div class="section-header">
-          <h2>FAQ</h2>
-          <p>Les réponses aux questions les plus fréquentes.</p>
+          <p class="section-kicker">FAQ</p>
+          <h2>Questions fréquentes</h2>
+          <p>Les réponses aux points essentiels avant d'installer l'extension.</p>
         </div>
         <div class="faq-list">
           <details class="faq-item reveal">
@@ -924,19 +233,20 @@
             <p>Les préférences sont conservées localement dans le navigateur pour rester privées.</p>
           </details>
           <details class="faq-item reveal">
-            <summary>Puis-je personnaliser les widgets ?</summary>
-            <p>Chaque module peut être activé, déplacé ou masqué selon votre routine.</p>
+            <summary>Peut-on activer seulement certains modules ?</summary>
+            <p>Chaque module peut être activé, déplacé ou masqué selon vos besoins.</p>
           </details>
         </div>
       </section>
 
       <section id="contact" class="section contact">
         <div class="section-header">
-          <h2>Contact</h2>
-          <p>Une question ou une collaboration ? Parlons-en.</p>
+          <p class="section-kicker">Contact</p>
+          <h2>Accéder à l'extension</h2>
+          <p>Une question, une démo complète ou une collaboration ? Parlons-en.</p>
         </div>
         <div class="contact-card reveal">
-          <p>Écrivez-nous pour obtenir une démo complète ou un accès anticipé.</p>
+          <p>Contactez-nous pour obtenir une démo détaillée ou rejoindre la liste des bêta testeurs.</p>
           <div class="contact-actions">
             <a class="btn btn-gradient" href="mailto:hello@42plus.app">Nous écrire</a>
             <a class="btn btn-ghost" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
