@@ -223,6 +223,12 @@ main {
   max-width: 600px;
 }
 
+.hero-note {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  max-width: 560px;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
