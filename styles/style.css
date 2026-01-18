@@ -373,6 +373,19 @@ main {
   gap: 24px;
 }
 
+.trombi-shot {
+  display: flex;
+  justify-content: center;
+}
+
+.trombi-shot .media-frame {
+  width: min(1520px, 100%);
+}
+
+#trombi {
+  width: min(1520px, 100% - (var(--gutter) * 2));
+}
+
 .story-callout {
   margin-top: 24px;
   padding: 18px 22px;
