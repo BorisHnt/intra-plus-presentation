@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Site vitrine moderne pour l'extension 42+ : fonctionnalités, showroom et FAQ.">
+  <title>42+ Extension | Présentation</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <section id="splash" class="splash" aria-label="Écran d'accueil">
+    <div class="splash-content">
+      <img src="assets/logo.png" alt="Logo 42+" class="splash-logo">
+      <button id="enter-btn" class="btn btn-gradient" type="button">Présentation</button>
+    </div>
+  </section>
+
+  <div id="main" class="main-content" aria-hidden="true">
+    <header class="site-header">
+      <div class="logo-mark">
+        <img src="assets/logo.png" alt="Logo 42+" class="logo-small">
+        <span class="logo-text">42+ Extension</span>
+      </div>
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="#features">Features</a>
+        <a href="#showroom">Showroom</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">Extension web • Productivité augmentée</p>
+          <h1 id="hero-title">Un cockpit élégant pour booster votre expérience 42+</h1>
+          <p class="hero-text">
+            42+ transforme l'interface en une suite d'outils clairs, rapides et personnalisables.
+            Accédez à vos infos clés, automatisez les routines et gardez un écran propre.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-gradient" href="#contact">Installer</a>
+            <a class="btn btn-ghost" href="#showroom">Voir la démo</a>
+          </div>
+        </div>
+        <div class="hero-panel reveal">
+          <div class="panel-card">
+            <div class="panel-row">
+              <span class="panel-dot"></span>
+              <span class="panel-dot"></span>
+              <span class="panel-dot"></span>
+            </div>
+            <h3>Dashboard 42+</h3>
+            <p>Widgets live, raccourcis intelligents et focus mode pour rester efficace.</p>
+            <div class="panel-bar"></div>
+            <div class="panel-bar"></div>
+            <div class="panel-bar short"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="section-header">
+          <h2>Features</h2>
+          <p>Des modules pensés pour gagner du temps sans casser le flow.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card reveal">
+            <span class="feature-icon" aria-hidden="true"></span>
+            <h3>Tableau de bord intelligent</h3>
+            <p>Vue compacte des stats, deadlines et events avec filtres rapides.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon" aria-hidden="true"></span>
+            <h3>Automations contextuelles</h3>
+            <p>Actions en un clic pour ouvrir les bons liens et préparer vos sessions.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-icon" aria-hidden="true"></span>
+            <h3>Mode focus épuré</h3>
+            <p>Réduction du bruit visuel avec une esthétique sobre et lisible.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="showroom" class="section showroom">
+        <div class="section-header">
+          <h2>Showroom</h2>
+          <p>Quelques aperçus des interfaces retravaillées et des composants clés.</p>
+        </div>
+        <div class="showroom-grid">
+          <figure class="shot reveal">
+            <div class="shot-frame">
+              <span>Vue profil repensée</span>
+            </div>
+            <figcaption>Profil enrichi et mise en avant des métriques.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <div class="shot-frame alt">
+              <span>Dashboard instantané</span>
+            </div>
+            <figcaption>Widgets et raccourcis actions priorisés.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <div class="shot-frame">
+              <span>Mode focus</span>
+            </div>
+            <figcaption>Interface zen pour les sessions longues.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="faq" class="section faq">
+        <div class="section-header">
+          <h2>FAQ</h2>
+          <p>Les réponses aux questions les plus fréquentes.</p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>Est-ce compatible avec toutes les pages 42 ?</summary>
+            <p>Oui, l'extension détecte les pages principales et adapte l'interface en conséquence.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Les données sont-elles stockées localement ?</summary>
+            <p>Les préférences sont conservées localement dans le navigateur pour rester privées.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Puis-je personnaliser les widgets ?</summary>
+            <p>Chaque module peut être activé, déplacé ou masqué selon votre routine.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="section-header">
+          <h2>Contact</h2>
+          <p>Une question ou une collaboration ? Parlons-en.</p>
+        </div>
+        <div class="contact-card reveal">
+          <p>Écrivez-nous pour obtenir une démo complète ou un accès anticipé.</p>
+          <div class="contact-actions">
+            <a class="btn btn-gradient" href="mailto:hello@42plus.app">Nous écrire</a>
+            <a class="btn btn-ghost" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2024 42+ Extension. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="#">Licence</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
