@@ -186,33 +186,308 @@
           <p>Un affichage net pour parcourir les élèves et retrouver un visage en un clin d'oeil.</p>
         </div>
         <div class="trombi-demo reveal">
-          <div class="trombi-bar">
-            <div>
-              <div class="trombi-title">Trombinoscope</div>
-              <div class="trombi-subtitle">Tous les élèves classés de A à Z.</div>
+          <div class="trombi-header">
+            <div class="trombi-brand">
+              <div class="trombi-logo">
+                <img src="assets/logo.svg" alt="Logo 42+">
+              </div>
+              <div>
+                <div class="trombi-title">Trombinoscope</div>
+                <div class="trombi-subtitle">Tous les élèves classés de A à Z.</div>
+              </div>
             </div>
-            <div class="trombi-pills">
-              <span class="trombi-pill">Recherche</span>
-              <span class="trombi-pill">Tri</span>
-              <span class="trombi-pill">129 élèves</span>
+            <button class="trombi-refresh" type="button">Rafraîchir</button>
+          </div>
+          <div class="trombi-toolbar">
+            <label class="trombi-field">
+              <span>Recherche</span>
+              <input type="text" placeholder="Nom, prénom ou username">
+            </label>
+            <label class="trombi-field">
+              <span>Tri</span>
+              <select>
+                <option>Prénom</option>
+                <option>Nom</option>
+                <option>Login</option>
+              </select>
+            </label>
+            <button class="trombi-sort" type="button">A → Z</button>
+            <div class="trombi-meta">
+              <span>129 élèves</span>
+              <span>Mis à jour : 16/01/2026 21:22:26</span>
             </div>
           </div>
           <div class="trombi-grid">
-            <div class="trombi-card"><img src="pictures/samples-of-people/001-m.jpg" alt="Portrait d'un élève"></div>
-            <div class="trombi-card"><img src="pictures/samples-of-people/002-m.jpg" alt="Portrait d'un élève"></div>
-            <div class="trombi-card"><img src="pictures/samples-of-people/003-m.jpg" alt="Portrait d'un élève"></div>
-            <div class="trombi-card"><img src="pictures/samples-of-people/004-m.jpg" alt="Portrait d'un élève"></div>
-            <div class="trombi-card"><img src="pictures/samples-of-people/005-f.jpg" alt="Portrait d'une élève"></div>
-            <div class="trombi-card"><img src="pictures/samples-of-people/006-m.jpg" alt="Portrait d'un élève"></div>
-            <div class="trombi-card"><img src="pictures/samples-of-people/007-m.jpg" alt="Portrait d'un élève"></div>
-            <div class="trombi-card"><img src="pictures/samples-of-people/008-f.jpg" alt="Portrait d'une élève"></div>
-            <div class="trombi-card"><img src="pictures/samples-of-people/009-f.jpg" alt="Portrait d'une élève"></div>
-            <div class="trombi-card"><img src="pictures/samples-of-people/010-f.jpg" alt="Portrait d'une élève"></div>
-            <div class="trombi-card"><img src="pictures/samples-of-people/011-f.jpg" alt="Portrait d'une élève"></div>
-            <div class="trombi-card"><img src="pictures/samples-of-people/012-f.jpg" alt="Portrait d'une élève"></div>
-            <div class="trombi-card"><img src="pictures/samples-of-people/013-m.jpg" alt="Portrait d'un élève"></div>
-            <div class="trombi-card"><img src="pictures/samples-of-people/014-f.jpg" alt="Portrait d'une élève"></div>
-            <div class="trombi-card"><img src="pictures/samples-of-people/015-m.jpg" alt="Portrait d'un élève"></div>
+            <article class="trombi-card">
+              <div class="trombi-card-title">Adrien Morel</div>
+              <div class="trombi-card-body">
+                <div class="trombi-avatar">
+                  <img src="pictures/samples-of-people/001-m.jpg" alt="Portrait d'Adrien Morel">
+                </div>
+                <div class="trombi-info">
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">User ID</span>
+                    <span class="trombi-info-value">amorel</span>
+                  </div>
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">GitHub</span>
+                    <span class="trombi-info-value">amorel</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="trombi-card">
+              <div class="trombi-card-title">Yannis Leblanc</div>
+              <div class="trombi-card-body">
+                <div class="trombi-avatar">
+                  <img src="pictures/samples-of-people/002-m.jpg" alt="Portrait de Yannis Leblanc">
+                </div>
+                <div class="trombi-info">
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">User ID</span>
+                    <span class="trombi-info-value">yleblanc</span>
+                  </div>
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">GitHub</span>
+                    <span class="trombi-info-value">yleblanc</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="trombi-card">
+              <div class="trombi-card-title">Hugo Petit</div>
+              <div class="trombi-card-body">
+                <div class="trombi-avatar">
+                  <img src="pictures/samples-of-people/003-m.jpg" alt="Portrait de Hugo Petit">
+                </div>
+                <div class="trombi-info">
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">User ID</span>
+                    <span class="trombi-info-value">hpetit</span>
+                  </div>
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">GitHub</span>
+                    <span class="trombi-info-value">hpetit</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="trombi-card">
+              <div class="trombi-card-title">Rami Nasser</div>
+              <div class="trombi-card-body">
+                <div class="trombi-avatar">
+                  <img src="pictures/samples-of-people/004-m.jpg" alt="Portrait de Rami Nasser">
+                </div>
+                <div class="trombi-info">
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">User ID</span>
+                    <span class="trombi-info-value">rnasser</span>
+                  </div>
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">GitHub</span>
+                    <span class="trombi-info-value">rnasser</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="trombi-card">
+              <div class="trombi-card-title">Sarah Benali</div>
+              <div class="trombi-card-body">
+                <div class="trombi-avatar">
+                  <img src="pictures/samples-of-people/005-f.jpg" alt="Portrait de Sarah Benali">
+                </div>
+                <div class="trombi-info">
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">User ID</span>
+                    <span class="trombi-info-value">sbenali</span>
+                  </div>
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">GitHub</span>
+                    <span class="trombi-info-value">sbenali</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="trombi-card">
+              <div class="trombi-card-title">Lucas Morel</div>
+              <div class="trombi-card-body">
+                <div class="trombi-avatar">
+                  <img src="pictures/samples-of-people/006-m.jpg" alt="Portrait de Lucas Morel">
+                </div>
+                <div class="trombi-info">
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">User ID</span>
+                    <span class="trombi-info-value">lmorel</span>
+                  </div>
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">GitHub</span>
+                    <span class="trombi-info-value">lmorel</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="trombi-card">
+              <div class="trombi-card-title">Karim Haddad</div>
+              <div class="trombi-card-body">
+                <div class="trombi-avatar">
+                  <img src="pictures/samples-of-people/007-m.jpg" alt="Portrait de Karim Haddad">
+                </div>
+                <div class="trombi-info">
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">User ID</span>
+                    <span class="trombi-info-value">khaddad</span>
+                  </div>
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">GitHub</span>
+                    <span class="trombi-info-value">khaddad</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="trombi-card">
+              <div class="trombi-card-title">Lina Girard</div>
+              <div class="trombi-card-body">
+                <div class="trombi-avatar">
+                  <img src="pictures/samples-of-people/008-f.jpg" alt="Portrait de Lina Girard">
+                </div>
+                <div class="trombi-info">
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">User ID</span>
+                    <span class="trombi-info-value">lgirard</span>
+                  </div>
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">GitHub</span>
+                    <span class="trombi-info-value">lgirard</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="trombi-card">
+              <div class="trombi-card-title">Ines Caron</div>
+              <div class="trombi-card-body">
+                <div class="trombi-avatar">
+                  <img src="pictures/samples-of-people/009-f.jpg" alt="Portrait de Ines Caron">
+                </div>
+                <div class="trombi-info">
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">User ID</span>
+                    <span class="trombi-info-value">icaron</span>
+                  </div>
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">GitHub</span>
+                    <span class="trombi-info-value">icaron</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="trombi-card">
+              <div class="trombi-card-title">Léa Martin</div>
+              <div class="trombi-card-body">
+                <div class="trombi-avatar">
+                  <img src="pictures/samples-of-people/010-f.jpg" alt="Portrait de Léa Martin">
+                </div>
+                <div class="trombi-info">
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">User ID</span>
+                    <span class="trombi-info-value">lmartin</span>
+                  </div>
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">GitHub</span>
+                    <span class="trombi-info-value">lmartin</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="trombi-card">
+              <div class="trombi-card-title">Maya Lefevre</div>
+              <div class="trombi-card-body">
+                <div class="trombi-avatar">
+                  <img src="pictures/samples-of-people/011-f.jpg" alt="Portrait de Maya Lefevre">
+                </div>
+                <div class="trombi-info">
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">User ID</span>
+                    <span class="trombi-info-value">mlefevre</span>
+                  </div>
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">GitHub</span>
+                    <span class="trombi-info-value">mlefevre</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="trombi-card">
+              <div class="trombi-card-title">Nour Amrani</div>
+              <div class="trombi-card-body">
+                <div class="trombi-avatar">
+                  <img src="pictures/samples-of-people/012-f.jpg" alt="Portrait de Nour Amrani">
+                </div>
+                <div class="trombi-info">
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">User ID</span>
+                    <span class="trombi-info-value">namrani</span>
+                  </div>
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">GitHub</span>
+                    <span class="trombi-info-value">namrani</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="trombi-card">
+              <div class="trombi-card-title">Omar Benkhaled</div>
+              <div class="trombi-card-body">
+                <div class="trombi-avatar">
+                  <img src="pictures/samples-of-people/013-m.jpg" alt="Portrait d'Omar Benkhaled">
+                </div>
+                <div class="trombi-info">
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">User ID</span>
+                    <span class="trombi-info-value">obenkhaled</span>
+                  </div>
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">GitHub</span>
+                    <span class="trombi-info-value">obenkhaled</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="trombi-card">
+              <div class="trombi-card-title">Camille Dumas</div>
+              <div class="trombi-card-body">
+                <div class="trombi-avatar">
+                  <img src="pictures/samples-of-people/014-f.jpg" alt="Portrait de Camille Dumas">
+                </div>
+                <div class="trombi-info">
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">User ID</span>
+                    <span class="trombi-info-value">cdumas</span>
+                  </div>
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">GitHub</span>
+                    <span class="trombi-info-value">cdumas</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="trombi-card">
+              <div class="trombi-card-title">Julien Moreau</div>
+              <div class="trombi-card-body">
+                <div class="trombi-avatar">
+                  <img src="pictures/samples-of-people/015-m.jpg" alt="Portrait de Julien Moreau">
+                </div>
+                <div class="trombi-info">
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">User ID</span>
+                    <span class="trombi-info-value">jmoreau</span>
+                  </div>
+                  <div class="trombi-info-block">
+                    <span class="trombi-info-label">GitHub</span>
+                    <span class="trombi-info-value">jmoreau</span>
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
