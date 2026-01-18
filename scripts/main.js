@@ -61,6 +61,46 @@ if (prefersReducedMotion || !('IntersectionObserver' in window)) {
   revealElements.forEach((element) => revealObserver.observe(element));
 }
 
+const clusterShot = document.querySelector('[data-cluster-shot]');
+
+if (clusterShot) {
+  const clusterSources = [
+    'pictures/screenshots/ClusterDemo001.png',
+    'pictures/screenshots/ClusterDemo002.png',
+    'pictures/screenshots/ClusterDemo003.png',
+    'pictures/screenshots/ClusterDemo004.png',
+    'pictures/screenshots/ClusterDemo005.png',
+  ];
+
+  clusterSources.forEach((src) => {
+    const preload = new Image();
+    preload.src = src;
+  });
+
+  const fadeDuration = prefersReducedMotion ? 0 : 250;
+  const intervalDuration = 5000;
+  let clusterIndex = 0;
+
+  const swapClusterShot = () => {
+    const nextIndex = (clusterIndex + 1) % clusterSources.length;
+
+    if (fadeDuration === 0) {
+      clusterShot.src = clusterSources[nextIndex];
+      clusterIndex = nextIndex;
+      return;
+    }
+
+    clusterShot.classList.add('is-fading');
+    window.setTimeout(() => {
+      clusterShot.src = clusterSources[nextIndex];
+      clusterShot.classList.remove('is-fading');
+      clusterIndex = nextIndex;
+    }, fadeDuration);
+  };
+
+  window.setInterval(swapClusterShot, intervalDuration);
+}
+
 const parallaxItems = document.querySelectorAll('[data-parallax]');
 
 if (!prefersReducedMotion && parallaxItems.length) {

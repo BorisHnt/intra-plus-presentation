@@ -361,6 +361,16 @@ main {
   width: 100%;
 }
 
+.cluster-shot {
+  opacity: 1;
+  transition: opacity 250ms ease;
+  will-change: opacity;
+}
+
+.cluster-shot.is-fading {
+  opacity: 0;
+}
+
 .media-frame figcaption {
   margin-top: 12px;
   font-size: 0.8rem;
@@ -936,7 +946,8 @@ main {
   .main-content,
   .reveal,
   .btn,
-  .hero-media .media-frame {
+  .hero-media .media-frame,
+  .cluster-shot {
     transition: none !important;
     animation: none !important;
   }
