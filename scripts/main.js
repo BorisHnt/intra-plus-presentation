@@ -61,3 +61,85 @@ if (prefersReducedMotion || !('IntersectionObserver' in window)) {
 
   revealElements.forEach((element) => revealObserver.observe(element));
 }
+
+const setupFeatureToggles = () => {
+  const toggles = document.querySelectorAll('[data-feature-toggle]');
+  toggles.forEach((toggle) => {
+    const card = toggle.closest('[data-feature-card]');
+    if (!card) return;
+    const className = `is-${toggle.dataset.featureToggle}`;
+    const applyState = () => {
+      card.classList.toggle(className, toggle.checked);
+    };
+    toggle.addEventListener('change', applyState);
+    applyState();
+  });
+};
+
+const setActionStatus = (card, message) => {
+  const status = card.querySelector('[data-action-status]');
+  if (status) {
+    status.textContent = message;
+  }
+};
+
+const setupFeatureActions = () => {
+  const actionButtons = document.querySelectorAll('[data-feature-action]');
+  actionButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const card = button.closest('[data-feature-card]');
+      if (!card) return;
+      const action = button.dataset.featureAction;
+
+      if (action === 'clearHighScores') {
+        const scoreList = card.querySelector('[data-score-list]');
+        if (scoreList) {
+          scoreList.querySelectorAll('[data-score]').forEach((score) => {
+            score.textContent = '0';
+          });
+        }
+        setActionStatus(card, 'High scores supprimés');
+      }
+
+      if (action === 'clearCache' || action === 'refreshCache') {
+        const avatarList = card.querySelector('[data-avatar-list]');
+        if (!avatarList) return;
+        if (!avatarList.dataset.defaultHtml) {
+          avatarList.dataset.defaultHtml = avatarList.innerHTML;
+        }
+
+        if (action === 'clearCache') {
+          avatarList.innerHTML = '<span class=\"avatar empty\">--</span>';
+          setActionStatus(card, 'Cache vidé');
+        } else {
+          setActionStatus(card, 'Rafraîchissement...');
+          window.setTimeout(() => {
+            avatarList.innerHTML = avatarList.dataset.defaultHtml;
+            setActionStatus(card, 'Cache prêt');
+          }, 900);
+        }
+      }
+    });
+  });
+};
+
+const setupGameTabs = () => {
+  const gameCards = document.querySelectorAll('[data-game-card]');
+  gameCards.forEach((card) => {
+    const tabs = card.querySelectorAll('[data-game-tab]');
+    const screen = card.querySelector('[data-game-screen]');
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach((item) => item.classList.remove('is-active'));
+        tab.classList.add('is-active');
+        if (screen) {
+          screen.textContent = tab.dataset.gameLabel || tab.textContent;
+        }
+      });
+    });
+  });
+};
+
+setupFeatureToggles();
+setupFeatureActions();
+setupGameTabs();

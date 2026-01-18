@@ -86,27 +86,240 @@
       <section id="showroom" class="section showroom">
         <div class="section-header">
           <h2>Showroom</h2>
-          <p>Quelques aperçus des interfaces retravaillées et des composants clés.</p>
+          <p>Les modules Intra+ en version interactive, directement inspirés de l’extension.</p>
         </div>
         <div class="showroom-grid">
-          <figure class="shot reveal">
-            <div class="shot-frame">
-              <span>Vue profil repensée</span>
+          <article class="showroom-card reveal card-general" data-feature-card="general">
+            <div class="card-heading">
+              <h3>Général &amp; Dashboard</h3>
+              <p>Paramètres centraux, export/import et confidentialité.</p>
             </div>
-            <figcaption>Profil enrichi et mise en avant des métriques.</figcaption>
-          </figure>
-          <figure class="shot reveal">
-            <div class="shot-frame alt">
-              <span>Dashboard instantané</span>
+            <div class="demo-panel demo-general">
+              <div class="demo-top">
+                <span class="demo-tag">Paramètres Intra+</span>
+                <span class="demo-tab" aria-hidden="true">↗</span>
+              </div>
+              <div class="demo-stat sensitive">12h 48m • 3 objectifs</div>
+              <div class="demo-actions">
+                <span>Export</span>
+                <span>Import</span>
+                <span>Reset</span>
+              </div>
             </div>
-            <figcaption>Widgets et raccourcis actions priorisés.</figcaption>
-          </figure>
-          <figure class="shot reveal">
-            <div class="shot-frame">
-              <span>Mode focus</span>
+            <div class="feature-controls">
+              <label class="toggle">
+                <span class="toggle-text">Activer Intra+</span>
+                <input type="checkbox" data-feature-toggle="enabled" checked>
+              </label>
+              <label class="toggle">
+                <span class="toggle-text">Nouvel onglet</span>
+                <input type="checkbox" data-feature-toggle="openInNewTab">
+              </label>
+              <label class="toggle">
+                <span class="toggle-text">Masquer les stats sensibles</span>
+                <input type="checkbox" data-feature-toggle="hideSensitive">
+              </label>
             </div>
-            <figcaption>Interface zen pour les sessions longues.</figcaption>
-          </figure>
+          </article>
+          <article class="showroom-card reveal card-home" data-feature-card="home">
+            <div class="card-heading">
+              <h3>Accueil</h3>
+              <p>Events enrichis, boutons calendrier et prochain examen.</p>
+            </div>
+            <div class="demo-panel demo-home">
+              <div class="home-timeline">
+                <div class="home-event">
+                  <span class="event-time">09:00</span>
+                  <span class="event-title">Piscine sync</span>
+                  <span class="event-actions">Google • ICS</span>
+                </div>
+                <div class="home-event">
+                  <span class="event-time">14:30</span>
+                  <span class="event-title">Éval peer review</span>
+                  <span class="event-actions">Google • ICS</span>
+                </div>
+              </div>
+              <div class="home-exam">Prochain examen : 17:30 • Cursus</div>
+            </div>
+            <div class="feature-controls">
+              <label class="toggle">
+                <span class="toggle-text">Events personnalisés</span>
+                <input type="checkbox" data-feature-toggle="customEvents" checked>
+              </label>
+              <label class="toggle">
+                <span class="toggle-text">Boutons Google Calendar</span>
+                <input type="checkbox" data-feature-toggle="calendarButtons" checked>
+              </label>
+              <label class="toggle">
+                <span class="toggle-text">Bloc prochain examen</span>
+                <input type="checkbox" data-feature-toggle="nextExam" checked>
+              </label>
+            </div>
+          </article>
+          <article class="showroom-card reveal card-attendance" data-feature-card="attendance">
+            <div class="card-heading">
+              <h3>Attendance</h3>
+              <p>Courbes, totaux et suivi d’objectif France Travail.</p>
+            </div>
+            <div class="demo-panel demo-attendance">
+              <div class="attendance-chart">
+                <div class="attendance-bars">
+                  <span class="bar" style="--h: 60%"></span>
+                  <span class="bar" style="--h: 75%"></span>
+                  <span class="bar" style="--h: 40%"></span>
+                  <span class="bar" style="--h: 85%"></span>
+                  <span class="bar" style="--h: 55%"></span>
+                </div>
+                <div class="attendance-curve"></div>
+              </div>
+              <div class="attendance-meta">
+                <span class="weekly-summary">+12h semaine</span>
+                <span class="today-presence">Aujourd’hui : 4h20</span>
+              </div>
+              <div class="attendance-goal">Objectif FT : 120 / 150h</div>
+            </div>
+            <div class="feature-controls">
+              <label class="toggle">
+                <span class="toggle-text">Résumé hebdomadaire</span>
+                <input type="checkbox" data-feature-toggle="weeklySummary" checked>
+              </label>
+              <label class="toggle">
+                <span class="toggle-text">Courbe mensuelle</span>
+                <input type="checkbox" data-feature-toggle="monthlyCurve" checked>
+              </label>
+              <label class="toggle">
+                <span class="toggle-text">Heures par jour (mois)</span>
+                <input type="checkbox" data-feature-toggle="dailyBars" checked>
+              </label>
+              <label class="toggle">
+                <span class="toggle-text">Présence du jour</span>
+                <input type="checkbox" data-feature-toggle="todayPresence" checked>
+              </label>
+              <label class="toggle">
+                <span class="toggle-text">Bloc objectif France Travail</span>
+                <input type="checkbox" data-feature-toggle="ftGoal">
+              </label>
+            </div>
+          </article>
+          <article class="showroom-card reveal card-games" data-feature-card="games" data-game-card>
+            <div class="card-heading">
+              <h3>Mini-jeux</h3>
+              <p>Breakout, Tetris, Snake + scoreboard intégré.</p>
+            </div>
+            <div class="demo-panel demo-games">
+              <div class="game-tabs">
+                <button class="game-tab is-active" type="button" data-game-tab="breakout" data-game-label="Breakout — prêt à lancer">Breakout</button>
+                <button class="game-tab" type="button" data-game-tab="tetris" data-game-label="Tetris — stack équilibré">Tetris</button>
+                <button class="game-tab" type="button" data-game-tab="snake" data-game-label="Snake — vitesse 2.0">Snake</button>
+              </div>
+              <div class="game-screen" data-game-screen>Breakout — prêt à lancer</div>
+              <div class="game-scores" data-score-list>
+                <div class="score-row">
+                  <span>Breakout</span>
+                  <span data-score>3200</span>
+                </div>
+                <div class="score-row">
+                  <span>Tetris</span>
+                  <span data-score>1780</span>
+                </div>
+                <div class="score-row">
+                  <span>Snake</span>
+                  <span data-score>950</span>
+                </div>
+              </div>
+            </div>
+            <div class="feature-controls">
+              <label class="toggle">
+                <span class="toggle-text">Mini-jeux de pause</span>
+                <input type="checkbox" data-feature-toggle="ftMiniGame">
+              </label>
+              <div class="feature-actions">
+                <button class="btn btn-ghost btn-small" type="button" data-feature-action="clearHighScores">Supprimer les high scores</button>
+                <span class="action-status" data-action-status aria-live="polite"></span>
+              </div>
+            </div>
+          </article>
+          <article class="showroom-card reveal card-clusters" data-feature-card="clusters">
+            <div class="card-heading">
+              <h3>Cluster Map+</h3>
+              <p>Nouvelle carte + disposition en colonnes séparées.</p>
+            </div>
+            <div class="demo-panel demo-clusters">
+              <span class="cluster-badge">Cluster Map+</span>
+              <div class="cluster-grid">
+                <span class="cluster-node"></span>
+                <span class="cluster-node"></span>
+                <span class="cluster-node"></span>
+                <span class="cluster-node"></span>
+                <span class="cluster-node"></span>
+                <span class="cluster-node"></span>
+              </div>
+            </div>
+            <div class="feature-controls">
+              <label class="toggle">
+                <span class="toggle-text">Cluster Map+</span>
+                <input type="checkbox" data-feature-toggle="clusterMapPlus">
+              </label>
+              <label class="toggle">
+                <span class="toggle-text">Colonnes séparées</span>
+                <input type="checkbox" data-feature-toggle="splitColumns" checked>
+              </label>
+            </div>
+          </article>
+          <article class="showroom-card reveal card-trombi" data-feature-card="trombinoscope">
+            <div class="card-heading">
+              <h3>Trombinoscope</h3>
+              <p>Cache rapide, menu dédié et rafraîchissement à la demande.</p>
+            </div>
+            <div class="demo-panel demo-trombi">
+              <div class="trombi-menu">
+                <span>Menu</span>
+                <span class="trombi-menu-item">Trombinoscope</span>
+              </div>
+              <div class="trombi-avatars" data-avatar-list>
+                <span class="avatar">AD</span>
+                <span class="avatar">KS</span>
+                <span class="avatar">LM</span>
+                <span class="avatar">RN</span>
+              </div>
+              <span class="action-status" data-action-status aria-live="polite"></span>
+            </div>
+            <div class="feature-controls">
+              <label class="toggle">
+                <span class="toggle-text">Afficher dans le menu</span>
+                <input type="checkbox" data-feature-toggle="showInMenu" checked>
+              </label>
+              <div class="feature-actions">
+                <button class="btn btn-ghost btn-small" type="button" data-feature-action="refreshCache">Rafraîchir le cache</button>
+                <button class="btn btn-ghost btn-small" type="button" data-feature-action="clearCache">Vider le cache</button>
+              </div>
+            </div>
+          </article>
+          <article class="showroom-card reveal card-tools" data-feature-card="tools">
+            <div class="card-heading">
+              <h3>Outils</h3>
+              <p>Bannière RTM, overlay annuaire et Chronos amélioré.</p>
+            </div>
+            <div class="demo-panel demo-tools">
+              <div class="rtm-banner">RTM • Trafic fluide • Ligne 1</div>
+              <div class="directory-overlay">Annuaire Marseille · Accès rapide</div>
+              <div class="chronos-card">Chronos • Timeline enrichie</div>
+            </div>
+            <div class="feature-controls">
+              <label class="toggle">
+                <span class="toggle-text">Bannière trafic RTM</span>
+                <input type="checkbox" data-feature-toggle="rtmBanner">
+              </label>
+              <label class="toggle">
+                <span class="toggle-text">Overlay annuaire personnalisé</span>
+                <input type="checkbox" data-feature-toggle="directoryOverlay">
+              </label>
+              <label class="toggle">
+                <span class="toggle-text">Amélioration Chronos</span>
+                <input type="checkbox" data-feature-toggle="chronosEnhancer">
+              </label>
+            </div>
+          </article>
         </div>
       </section>
 
