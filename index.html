@@ -161,22 +161,56 @@
               <h3>Attendance</h3>
               <p>Courbes, totaux et suivi d’objectif France Travail.</p>
             </div>
-            <div class="demo-panel demo-attendance">
-              <div class="attendance-chart">
-                <div class="attendance-bars">
-                  <span class="bar" style="--h: 60%"></span>
-                  <span class="bar" style="--h: 75%"></span>
-                  <span class="bar" style="--h: 40%"></span>
-                  <span class="bar" style="--h: 85%"></span>
-                  <span class="bar" style="--h: 55%"></span>
+            <div class="demo-panel demo-attendance attendance-demo">
+              <div id="iPlusAtt-weekly">
+                <div class="iPlusAttWeekly-title">Résumé hebdomadaire</div>
+                <div class="iPlusAttWeekly-row"><span><strong>Cette semaine</strong></span><span>32h 20m</span></div>
+                <div class="iPlusAttWeekly-row"><span><strong>S-1</strong></span><span>28h 10m</span></div>
+                <div class="iPlusAttWeekly-row"><span><strong>S-2</strong></span><span>30h 45m</span></div>
+                <div class="iPlusAttWeekly-total">Total : 160h 45m</div>
+              </div>
+              <div id="iPlusAtt-monthly">
+                <div class="iPlusAttMonthly-title">Courbe mensuelle (heures + minutes)</div>
+                <div class="iPlusAttMonthly-chart"></div>
+                <div class="iPlusAttMonthly-today">Présence du jour : 4h 20m.</div>
+              </div>
+              <div id="iPlusAtt-goal">
+                <div class="iPlusAttGoal-head">
+                  <span class="iPlusAttGoal-title">Objectif France Travail</span>
+                  <div class="iPlusAttGoal-title-right">
+                    <span class="iPlusAttGoal-stars" aria-hidden="true">★ ★</span>
+                    <span class="iPlusAttGoal-logo" aria-label="France Travail">FT</span>
+                  </div>
                 </div>
-                <div class="attendance-curve"></div>
+                <div class="iPlusAttGoal-bar"><div class="iPlusAttGoal-fill"></div></div>
+                <div class="iPlusAttGoal-label">96h 30m / 140h (68.9%)</div>
+                <div class="iPlusAttGoal-meta iPlusAttGoal-calendar">Jours restants : 12 • Heures restantes : 43h 30m</div>
+                <div class="iPlusAttGoal-meta iPlusAttGoal-working">Jours ouvrés restants : 9 • Moyenne : 4h 50m</div>
+                <div class="iPlusAttGoal-upgrade visible">
+                  <span class="iPlusAttGoal-upgrade-question">Débloquer le mode HARDCORE ?</span>
+                  <button class="iPlusAttGoal-upgrade-btn" type="button">Oui</button>
+                  <button class="iPlusAttGoal-upgrade-btn secondary" type="button">Non</button>
+                </div>
               </div>
-              <div class="attendance-meta">
-                <span class="weekly-summary">+12h semaine</span>
-                <span class="today-presence">Aujourd’hui : 4h20</span>
+              <div id="iPlusAtt-daily">
+                <div class="iPlusAttDaily-header">
+                  <div>Heures par jour</div>
+                  <label class="iPlusAttDaily-toggle">
+                    <span>Mois</span>
+                    <select id="iPlusAtt-daily-select">
+                      <option value="2024-10">10/2024</option>
+                    </select>
+                  </label>
+                </div>
+                <div id="iPlusAtt-daily-chart" class="iPlusAttDaily-chart"></div>
+                <div class="iPlusAttDaily-meta">
+                  <label class="iPlusAttDaily-toggle">
+                    <input type="checkbox" id="iPlusAtt-daily-zero">
+                    <span>Masquer les 0</span>
+                  </label>
+                  <span id="iPlusAtt-daily-meta">Moyenne : 6h 12m • Jours comptés : 18</span>
+                </div>
               </div>
-              <div class="attendance-goal">Objectif FT : 120 / 150h</div>
             </div>
             <div class="feature-controls">
               <label class="toggle">
@@ -244,15 +278,82 @@
               <h3>Cluster Map+</h3>
               <p>Nouvelle carte + disposition en colonnes séparées.</p>
             </div>
-            <div class="demo-panel demo-clusters">
-              <span class="cluster-badge">Cluster Map+</span>
-              <div class="cluster-grid">
-                <span class="cluster-node"></span>
-                <span class="cluster-node"></span>
-                <span class="cluster-node"></span>
-                <span class="cluster-node"></span>
-                <span class="cluster-node"></span>
-                <span class="cluster-node"></span>
+            <div class="demo-panel demo-clusters cluster-demo" id="iPlusCluster-root">
+              <div class="ic-header">
+                <div class="ic-header-main">
+                  <div class="ic-title">Cluster Map+</div>
+                  <div class="ic-meta">
+                    <span>Marseille</span>
+                    <span>•</span>
+                    <span>18/30</span>
+                  </div>
+                </div>
+                <button class="ic-refresh" type="button">Refresh</button>
+              </div>
+              <div class="ic-card">
+                <div class="ic-card-head">
+                  <div class="ic-card-title">Cluster A</div>
+                  <div class="ic-card-stats">
+                    <span class="ic-pill">Libre: 12</span>
+                    <span class="ic-pill">Occupé: 18</span>
+                  </div>
+                </div>
+                <div class="ic-table">
+                  <div class="ic-row">
+                    <div class="ic-seat ic-seat-occupied">
+                      <span class="ic-seat-user">AD</span>
+                      <span class="ic-seat-host">A-01</span>
+                      <div class="ic-tooltip">
+                        <div class="ic-tooltip-row">
+                          <div class="ic-tooltip-avatar placeholder"></div>
+                          <div class="ic-tooltip-text">
+                            <div class="ic-tooltip-name">Alice Dupont</div>
+                            <div class="ic-tooltip-username">@adupont</div>
+                            <div class="ic-tooltip-host">Marseille</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ic-seat ic-seat-self">
+                      <span class="ic-seat-user">YOU</span>
+                      <span class="ic-seat-host">A-02</span>
+                    </div>
+                    <div class="ic-seat ic-seat-free">
+                      <span class="ic-seat-user">FREE</span>
+                      <span class="ic-seat-host">A-03</span>
+                    </div>
+                    <div class="ic-seat ic-seat-occupied">
+                      <span class="ic-seat-user">KS</span>
+                      <span class="ic-seat-host">A-04</span>
+                    </div>
+                    <div class="ic-seat ic-seat-free">
+                      <span class="ic-seat-user">FREE</span>
+                      <span class="ic-seat-host">A-05</span>
+                    </div>
+                  </div>
+                  <div class="ic-row">
+                    <div class="ic-seat ic-seat-occupied">
+                      <span class="ic-seat-user">LM</span>
+                      <span class="ic-seat-host">A-06</span>
+                    </div>
+                    <div class="ic-seat ic-seat-free">
+                      <span class="ic-seat-user">FREE</span>
+                      <span class="ic-seat-host">A-07</span>
+                    </div>
+                    <div class="ic-seat ic-seat-occupied">
+                      <span class="ic-seat-user">RN</span>
+                      <span class="ic-seat-host">A-08</span>
+                    </div>
+                    <div class="ic-seat ic-seat-occupied">
+                      <span class="ic-seat-user">MC</span>
+                      <span class="ic-seat-host">A-09</span>
+                    </div>
+                    <div class="ic-seat ic-seat-free">
+                      <span class="ic-seat-user">FREE</span>
+                      <span class="ic-seat-host">A-10</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="feature-controls">
@@ -271,16 +372,76 @@
               <h3>Trombinoscope</h3>
               <p>Cache rapide, menu dédié et rafraîchissement à la demande.</p>
             </div>
-            <div class="demo-panel demo-trombi">
+            <div class="demo-panel demo-trombi trombi-demo">
               <div class="trombi-menu">
                 <span>Menu</span>
                 <span class="trombi-menu-item">Trombinoscope</span>
               </div>
-              <div class="trombi-avatars" data-avatar-list>
-                <span class="avatar">AD</span>
-                <span class="avatar">KS</span>
-                <span class="avatar">LM</span>
-                <span class="avatar">RN</span>
+              <div class="iPlusTrombi-grid" data-avatar-list>
+                <article class="iPlusTrombi-card is-revealed">
+                  <div class="iPlusTrombi-card-title">Alpha</div>
+                  <div class="iPlusTrombi-card-inner">
+                    <div class="iPlusTrombi-avatar">
+                      <div class="iPlusTrombi-avatar-fallback">AD</div>
+                    </div>
+                    <div class="iPlusTrombi-info">
+                      <div class="iPlusTrombi-info-block">
+                        <span class="iPlusTrombi-info-label">Nom</span>
+                        <span class="iPlusTrombi-info-value">Alice Dupont</span>
+                      </div>
+                      <span class="iPlusTrombi-username">@adupont</span>
+                      <span class="iPlusTrombi-tag">Marseille</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="iPlusTrombi-card is-revealed">
+                  <div class="iPlusTrombi-card-title">Bravo</div>
+                  <div class="iPlusTrombi-card-inner">
+                    <div class="iPlusTrombi-avatar">
+                      <div class="iPlusTrombi-avatar-fallback">KS</div>
+                    </div>
+                    <div class="iPlusTrombi-info">
+                      <div class="iPlusTrombi-info-block">
+                        <span class="iPlusTrombi-info-label">Nom</span>
+                        <span class="iPlusTrombi-info-value">Kamel Saïd</span>
+                      </div>
+                      <span class="iPlusTrombi-username">@ksaid</span>
+                      <span class="iPlusTrombi-tag">Marseille</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="iPlusTrombi-card is-revealed">
+                  <div class="iPlusTrombi-card-title">Charlie</div>
+                  <div class="iPlusTrombi-card-inner">
+                    <div class="iPlusTrombi-avatar">
+                      <div class="iPlusTrombi-avatar-fallback">LM</div>
+                    </div>
+                    <div class="iPlusTrombi-info">
+                      <div class="iPlusTrombi-info-block">
+                        <span class="iPlusTrombi-info-label">Nom</span>
+                        <span class="iPlusTrombi-info-value">Léa Martin</span>
+                      </div>
+                      <span class="iPlusTrombi-username">@lmartin</span>
+                      <span class="iPlusTrombi-tag">Paris</span>
+                    </div>
+                  </div>
+                </article>
+                <article class="iPlusTrombi-card is-revealed">
+                  <div class="iPlusTrombi-card-title">Delta</div>
+                  <div class="iPlusTrombi-card-inner">
+                    <div class="iPlusTrombi-avatar">
+                      <div class="iPlusTrombi-avatar-fallback">RN</div>
+                    </div>
+                    <div class="iPlusTrombi-info">
+                      <div class="iPlusTrombi-info-block">
+                        <span class="iPlusTrombi-info-label">Nom</span>
+                        <span class="iPlusTrombi-info-value">Rami Nasser</span>
+                      </div>
+                      <span class="iPlusTrombi-username">@rnasser</span>
+                      <span class="iPlusTrombi-tag">Lyon</span>
+                    </div>
+                  </div>
+                </article>
               </div>
               <span class="action-status" data-action-status aria-live="polite"></span>
             </div>
