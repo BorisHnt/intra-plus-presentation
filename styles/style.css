@@ -105,8 +105,8 @@ button {
 }
 
 .splash-logo {
-  width: 200px;
-  height: 200px;
+  width: 400px;
+  height: 400px;
   transition: transform 600ms ease, filter 600ms ease, opacity 600ms ease;
 }
 
