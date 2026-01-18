@@ -126,20 +126,82 @@
               <h3>Accueil</h3>
               <p>Events enrichis, boutons calendrier et prochain examen.</p>
             </div>
-            <div class="demo-panel demo-home">
-              <div class="home-timeline">
-                <div class="home-event">
-                  <span class="event-time">09:00</span>
-                  <span class="event-title">Piscine sync</span>
-                  <span class="event-actions">Google • ICS</span>
+            <div class="demo-panel demo-home home-demo">
+              <div class="home-events">
+                <div class="home-events-head">
+                  <div>
+                    <div class="home-events-title">Events (7)</div>
+                    <div class="home-events-sub">janv. 2026</div>
+                  </div>
+                  <div class="home-events-meta">01:18:07:08</div>
                 </div>
-                <div class="home-event">
-                  <span class="event-time">14:30</span>
-                  <span class="event-title">Éval peer review</span>
-                  <span class="event-actions">Google • ICS</span>
+                <article class="home-event-card">
+                  <div class="home-event-date">
+                    <span class="month">janv.</span>
+                    <span class="day">20</span>
+                  </div>
+                  <div class="home-event-body">
+                    <div class="home-event-tags">
+                      <span class="event-tag">Conference</span>
+                      <span class="event-tag event-tag-alt">Complet</span>
+                      <span class="event-tag event-tag-success">Inscrit(e)</span>
+                    </div>
+                    <div class="event-title">Droit &amp; Code : Avocate spécialisée dans l'IT</div>
+                    <div class="event-meta">1 heure • 20 janv. 2026 • 15h00 • Amphi • 50/50</div>
+                  </div>
+                  <div class="event-actions">
+                    <button class="event-action-btn" type="button" aria-label="Ajouter à Google Calendar">GC</button>
+                    <button class="event-action-btn" type="button" aria-label="Exporter ICS">ICS</button>
+                  </div>
+                </article>
+                <article class="home-event-card">
+                  <div class="home-event-date">
+                    <span class="month">janv.</span>
+                    <span class="day">21</span>
+                  </div>
+                  <div class="home-event-body">
+                    <div class="home-event-tags">
+                      <span class="event-tag event-tag-violet">Meet-up</span>
+                    </div>
+                    <div class="event-title">Women+</div>
+                    <div class="event-meta">45 minutes • 21 janv. 2026 • 15h30 • Espace chill</div>
+                  </div>
+                  <div class="event-actions">
+                    <button class="event-action-btn" type="button" aria-label="Ajouter à Google Calendar">GC</button>
+                    <button class="event-action-btn" type="button" aria-label="Exporter ICS">ICS</button>
+                  </div>
+                </article>
+                <article class="home-event-card">
+                  <div class="home-event-date">
+                    <span class="month">janv.</span>
+                    <span class="day">23</span>
+                  </div>
+                  <div class="home-event-body">
+                    <div class="home-event-tags">
+                      <span class="event-tag event-tag-pink">Hackathon</span>
+                    </div>
+                    <div class="event-title">Hackathon Nature en Ville</div>
+                    <div class="event-meta">2 jours • 23 janv. 2026 • 18h00 • La Belle de Mai • 10/15</div>
+                  </div>
+                  <div class="event-actions">
+                    <button class="event-action-btn" type="button" aria-label="Ajouter à Google Calendar">GC</button>
+                    <button class="event-action-btn" type="button" aria-label="Exporter ICS">ICS</button>
+                  </div>
+                </article>
+              </div>
+              <div class="home-exam-card">
+                <div class="home-exam-head">
+                  <span class="home-exam-title">Prochain examen</span>
+                  <span class="home-exam-status">Inscrit(e)</span>
+                </div>
+                <div class="home-exam-name">Exam - Programming Fundamentals</div>
+                <div class="home-exam-grid">
+                  <div class="home-exam-row"><span>Date</span><span>23 janv. 2026</span></div>
+                  <div class="home-exam-row"><span>Heure</span><span>09h00 - 12h00</span></div>
+                  <div class="home-exam-row"><span>Lieu</span><span>Cluster 1</span></div>
+                  <div class="home-exam-row"><span>Participants</span><span>36 / 100</span></div>
                 </div>
               </div>
-              <div class="home-exam">Prochain examen : 17:30 • Cursus</div>
             </div>
             <div class="feature-controls">
               <label class="toggle">
@@ -162,53 +224,174 @@
               <p>Courbes, totaux et suivi d’objectif France Travail.</p>
             </div>
             <div class="demo-panel demo-attendance attendance-demo">
-              <div id="iPlusAtt-weekly">
-                <div class="iPlusAttWeekly-title">Résumé hebdomadaire</div>
-                <div class="iPlusAttWeekly-row"><span><strong>Cette semaine</strong></span><span>32h 20m</span></div>
-                <div class="iPlusAttWeekly-row"><span><strong>S-1</strong></span><span>28h 10m</span></div>
-                <div class="iPlusAttWeekly-row"><span><strong>S-2</strong></span><span>30h 45m</span></div>
-                <div class="iPlusAttWeekly-total">Total : 160h 45m</div>
-              </div>
-              <div id="iPlusAtt-monthly">
-                <div class="iPlusAttMonthly-title">Courbe mensuelle (heures + minutes)</div>
-                <div class="iPlusAttMonthly-chart"></div>
-                <div class="iPlusAttMonthly-today">Présence du jour : 4h 20m.</div>
-              </div>
-              <div id="iPlusAtt-goal">
-                <div class="iPlusAttGoal-head">
-                  <span class="iPlusAttGoal-title">Objectif France Travail</span>
-                  <div class="iPlusAttGoal-title-right">
-                    <span class="iPlusAttGoal-stars" aria-hidden="true">★ ★</span>
-                    <span class="iPlusAttGoal-logo" aria-label="France Travail">FT</span>
+              <div class="attendance-layout">
+                <div class="attendance-main">
+                  <div id="iPlusAtt-heatmap" class="att-card att-heatmap">
+                    <div class="att-card-head">
+                      <div class="att-card-title">Présence journalière</div>
+                      <div class="att-card-nav">
+                        <button class="att-nav-btn" type="button" aria-label="Mois précédent">‹</button>
+                        <button class="att-nav-btn" type="button" aria-label="Mois suivant">›</button>
+                      </div>
+                    </div>
+                    <div class="att-heatmap-months">
+                      <span>août</span>
+                      <span>sept.</span>
+                      <span>oct.</span>
+                      <span>nov.</span>
+                      <span>déc.</span>
+                      <span>2026</span>
+                    </div>
+                    <div class="att-heatmap-grid">
+                      <div class="att-heatmap-days">
+                        <span>L</span>
+                        <span>M</span>
+                        <span>M</span>
+                        <span>J</span>
+                        <span>V</span>
+                        <span>S</span>
+                        <span>D</span>
+                      </div>
+                      <div class="att-heatmap-cells" data-heatmap-grid></div>
+                    </div>
+                    <div class="att-heatmap-legend">
+                      <span>Moins</span>
+                      <div class="att-heatmap-legend-cells">
+                        <span class="legend-cell level-0"></span>
+                        <span class="legend-cell level-1"></span>
+                        <span class="legend-cell level-2"></span>
+                        <span class="legend-cell level-3"></span>
+                        <span class="legend-cell level-4"></span>
+                      </div>
+                      <span>Plus</span>
+                    </div>
+                  </div>
+                  <div id="iPlusAtt-monthly" class="att-card att-monthly">
+                    <div class="att-card-head">
+                      <div class="att-card-title">Courbe mensuelle (heures + minutes)</div>
+                    </div>
+                    <div class="iPlusAttMonthly-chart"></div>
+                    <div class="iPlusAttMonthly-today">Temps de présence aujourd'hui : 8h 44m.</div>
+                  </div>
+                  <div id="iPlusAtt-weekly" class="att-card att-weekly">
+                    <div class="att-card-head">
+                      <div class="att-card-title">Présence hebdomadaire</div>
+                      <div class="att-card-nav">
+                        <button class="att-nav-btn" type="button" aria-label="Semaine précédente">‹</button>
+                        <button class="att-nav-btn" type="button" aria-label="Semaine suivante">›</button>
+                      </div>
+                    </div>
+                    <div class="att-weekly-subtitle">Cette semaine : 78 heures 38 minutes</div>
+                    <div class="att-weekly-chart" data-weekly-chart></div>
+                    <div class="att-weekly-summary">
+                      <div class="att-weekly-summary-title">Synthèse hebdomadaire</div>
+                      <div class="att-weekly-row"><span>Cette semaine</span><span>78h 38m</span></div>
+                      <div class="att-weekly-row"><span>S-1</span><span>75h 35m</span></div>
+                      <div class="att-weekly-row"><span>S-2</span><span>77h 53m</span></div>
+                      <div class="att-weekly-row"><span>S-3</span><span>54h 18m</span></div>
+                      <div class="att-weekly-row att-weekly-total"><span>Total cumulé</span><span>286h 24m</span></div>
+                    </div>
                   </div>
                 </div>
-                <div class="iPlusAttGoal-bar"><div class="iPlusAttGoal-fill"></div></div>
-                <div class="iPlusAttGoal-label">96h 30m / 140h (68.9%)</div>
-                <div class="iPlusAttGoal-meta iPlusAttGoal-calendar">Jours restants : 12 • Heures restantes : 43h 30m</div>
-                <div class="iPlusAttGoal-meta iPlusAttGoal-working">Jours ouvrés restants : 9 • Moyenne : 4h 50m</div>
-                <div class="iPlusAttGoal-upgrade visible">
-                  <span class="iPlusAttGoal-upgrade-question">Débloquer le mode HARDCORE ?</span>
-                  <button class="iPlusAttGoal-upgrade-btn" type="button">Oui</button>
-                  <button class="iPlusAttGoal-upgrade-btn secondary" type="button">Non</button>
-                </div>
-              </div>
-              <div id="iPlusAtt-daily">
-                <div class="iPlusAttDaily-header">
-                  <div>Heures par jour</div>
-                  <label class="iPlusAttDaily-toggle">
-                    <span>Mois</span>
-                    <select id="iPlusAtt-daily-select">
-                      <option value="2024-10">10/2024</option>
-                    </select>
-                  </label>
-                </div>
-                <div id="iPlusAtt-daily-chart" class="iPlusAttDaily-chart"></div>
-                <div class="iPlusAttDaily-meta">
-                  <label class="iPlusAttDaily-toggle">
-                    <input type="checkbox" id="iPlusAtt-daily-zero">
-                    <span>Masquer les 0</span>
-                  </label>
-                  <span id="iPlusAtt-daily-meta">Moyenne : 6h 12m • Jours comptés : 18</span>
+                <div class="attendance-side">
+                  <div id="iPlusAtt-profile" class="att-card att-profile">
+                    <div class="att-profile-top">
+                      <div class="att-profile-avatar">
+                        <img src="pictures/009.jpg" alt="Portrait de Boris Hanicotte">
+                        <span class="att-profile-level">LEVEL 2</span>
+                      </div>
+                      <div class="att-profile-info">
+                        <div class="att-profile-name">bhanicot</div>
+                        <div class="att-profile-fullname">Boris Hanicotte</div>
+                      </div>
+                    </div>
+                    <div class="att-profile-progress">
+                      <div class="att-profile-bar" aria-hidden="true">
+                        <span class="att-profile-segment is-filled"></span>
+                        <span class="att-profile-segment is-filled"></span>
+                        <span class="att-profile-segment is-filled"></span>
+                        <span class="att-profile-segment is-filled"></span>
+                        <span class="att-profile-segment is-filled"></span>
+                        <span class="att-profile-segment is-filled"></span>
+                        <span class="att-profile-segment"></span>
+                        <span class="att-profile-segment"></span>
+                        <span class="att-profile-segment"></span>
+                        <span class="att-profile-segment"></span>
+                      </div>
+                      <div class="att-profile-progress-meta">58/100</div>
+                    </div>
+                    <div class="att-profile-buddies">
+                      <div class="att-profile-buddies-title">Level Buddies</div>
+                      <div class="att-profile-buddy-list">
+                        <div class="att-profile-buddy">
+                          <img src="pictures/001.jpg" alt="Portrait de Alice Dupont">
+                          <span class="att-profile-buddy-level">2</span>
+                        </div>
+                        <div class="att-profile-buddy">
+                          <img src="pictures/002.jpg" alt="Portrait de Kamel Saïd">
+                          <span class="att-profile-buddy-level">2</span>
+                        </div>
+                        <div class="att-profile-buddy">
+                          <img src="pictures/003.jpg" alt="Portrait de Léa Martin">
+                          <span class="att-profile-buddy-level">2</span>
+                        </div>
+                        <div class="att-profile-buddy">
+                          <img src="pictures/004.jpg" alt="Portrait de Rami Nasser">
+                          <span class="att-profile-buddy-level">3</span>
+                        </div>
+                        <div class="att-profile-buddy">
+                          <img src="pictures/005.jpg" alt="Portrait de Sarah Benali">
+                          <span class="att-profile-buddy-level">3</span>
+                        </div>
+                        <div class="att-profile-buddy">
+                          <img src="pictures/006.jpg" alt="Portrait de Hugo Petit">
+                          <span class="att-profile-buddy-level">3</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="att-info-row">
+                    <div class="att-info-card">
+                      <div class="att-info-title">Position</div>
+                      <div class="att-info-pill">c1r16s3.marseille.42.school</div>
+                    </div>
+                    <div class="att-info-card">
+                      <div class="att-info-title">Programme</div>
+                      <div class="att-info-pill">Common core</div>
+                    </div>
+                  </div>
+                  <div id="iPlusAtt-goal" class="att-card att-goal">
+                    <div class="iPlusAttGoal-head">
+                      <span class="iPlusAttGoal-title">Objectif 300h • ULTIMATE</span>
+                      <div class="iPlusAttGoal-title-right">
+                        <span class="iPlusAttGoal-stars" aria-hidden="true">★ ★</span>
+                        <span class="iPlusAttGoal-logo" aria-label="France Travail">France Travail</span>
+                      </div>
+                    </div>
+                    <div class="iPlusAttGoal-bar"><div class="iPlusAttGoal-fill"></div></div>
+                    <div class="iPlusAttGoal-label">201h 04m / 300h (67.02%) — 21 jours • ULTIMATE</div>
+                    <div class="iPlusAttGoal-meta">Jours restants : 14 • Heures restantes : 98h 56m • Moyenne/jour : 7h 04m</div>
+                    <div class="iPlusAttGoal-meta">Jours ouvrés restants : 10 • Moyenne/jour ouvré : 9h 54m</div>
+                  </div>
+                  <div id="iPlusAtt-daily" class="att-card att-daily">
+                    <div class="iPlusAttDaily-header">
+                      <div>Heures par jour (mois)</div>
+                      <label class="iPlusAttDaily-toggle">
+                        <span>Mois</span>
+                        <select id="iPlusAtt-daily-select">
+                          <option value="2026-01">01/2026</option>
+                        </select>
+                      </label>
+                    </div>
+                    <div id="iPlusAtt-daily-chart" class="iPlusAttDaily-chart"></div>
+                    <div class="iPlusAttDaily-meta">
+                      <label class="iPlusAttDaily-toggle">
+                        <input type="checkbox" id="iPlusAtt-daily-zero">
+                        <span>Ignorer les jours à 0h</span>
+                      </label>
+                      <span id="iPlusAtt-daily-meta">Moyenne : 11h 10m • Jours comptés : 18</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -241,24 +424,45 @@
               <p>Breakout, Tetris, Snake + scoreboard intégré.</p>
             </div>
             <div class="demo-panel demo-games">
-              <div class="game-tabs">
-                <button class="game-tab is-active" type="button" data-game-tab="breakout" data-game-label="Breakout — prêt à lancer">Breakout</button>
-                <button class="game-tab" type="button" data-game-tab="tetris" data-game-label="Tetris — stack équilibré">Tetris</button>
-                <button class="game-tab" type="button" data-game-tab="snake" data-game-label="Snake — vitesse 2.0">Snake</button>
-              </div>
-              <div class="game-screen" data-game-screen>Breakout — prêt à lancer</div>
-              <div class="game-scores" data-score-list>
-                <div class="score-row">
-                  <span>Breakout</span>
-                  <span data-score>3200</span>
+              <div class="game-library">
+                <div class="game-library-head">
+                  <div>
+                    <div class="game-library-title">Bibliothèque de jeux</div>
+                    <div class="game-library-sub">Choisis un jeu pour ouvrir la fenêtre.</div>
+                  </div>
+                  <div class="game-library-meta">Pause express</div>
                 </div>
-                <div class="score-row">
-                  <span>Tetris</span>
-                  <span data-score>1780</span>
+                <div class="game-library-grid">
+                  <button class="game-tile is-active" type="button" data-game-tab="breakout" data-game-label="Breakout — casse briques" aria-pressed="true">
+                    <span class="game-tile-icon"></span>
+                    <span class="game-tile-name">Breakout</span>
+                    <span class="game-tile-desc">Casse briques</span>
+                  </button>
+                  <button class="game-tile" type="button" data-game-tab="tetris" data-game-label="Tetris — empile et nettoie les lignes" aria-pressed="false">
+                    <span class="game-tile-icon"></span>
+                    <span class="game-tile-name">Tetris</span>
+                    <span class="game-tile-desc">Empile et nettoie les lignes</span>
+                  </button>
+                  <button class="game-tile" type="button" data-game-tab="snake" data-game-label="Snake — collecte et grandis" aria-pressed="false">
+                    <span class="game-tile-icon"></span>
+                    <span class="game-tile-name">Snake</span>
+                    <span class="game-tile-desc">Collecte et grandis</span>
+                  </button>
                 </div>
-                <div class="score-row">
-                  <span>Snake</span>
-                  <span data-score>950</span>
+                <div class="game-library-screen" data-game-screen>Breakout — casse briques</div>
+                <div class="game-scores" data-score-list>
+                  <div class="score-row">
+                    <span>Breakout</span>
+                    <span data-score>3200</span>
+                  </div>
+                  <div class="score-row">
+                    <span>Tetris</span>
+                    <span data-score>1780</span>
+                  </div>
+                  <div class="score-row">
+                    <span>Snake</span>
+                    <span data-score>950</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -280,80 +484,97 @@
             </div>
             <div class="demo-panel demo-clusters cluster-demo" id="iPlusCluster-root">
               <div class="ic-header">
-                <div class="ic-header-main">
-                  <div class="ic-title">Cluster Map+</div>
-                  <div class="ic-meta">
-                    <span>Marseille</span>
-                    <span>•</span>
-                    <span>18/30</span>
-                  </div>
-                </div>
-                <button class="ic-refresh" type="button">Refresh</button>
+                <div class="ic-title">Clusters</div>
+                <label class="ic-search">
+                  <span>Recherche</span>
+                  <input type="text" placeholder="Login ou nom/prénom">
+                </label>
+                <button class="ic-refresh" type="button">Rafraîchir</button>
+              </div>
+              <div class="ic-summary">
+                <span class="ic-pill">12 / 100 occupés</span>
+                <span class="ic-pill">88 libres</span>
+                <span class="ic-pill">12% rempli</span>
               </div>
               <div class="ic-card">
                 <div class="ic-card-head">
-                  <div class="ic-card-title">Cluster A</div>
+                  <div class="ic-card-title">Cluster 1</div>
                   <div class="ic-card-stats">
-                    <span class="ic-pill">Libre: 12</span>
-                    <span class="ic-pill">Occupé: 18</span>
+                    <span class="ic-pill">12 / 100 occupés</span>
+                    <span class="ic-pill">88 libres</span>
+                    <span class="ic-pill">12% rempli</span>
                   </div>
                 </div>
+                <div class="ic-section">Bloc 1</div>
                 <div class="ic-table">
-                  <div class="ic-row">
-                    <div class="ic-seat ic-seat-occupied">
-                      <span class="ic-seat-user">AD</span>
-                      <span class="ic-seat-host">A-01</span>
-                      <div class="ic-tooltip">
-                        <div class="ic-tooltip-row">
-                      <img class="ic-tooltip-avatar" src="pictures/009.jpg" alt="Portrait de Alice Dupont">
-                          <div class="ic-tooltip-text">
-                            <div class="ic-tooltip-name">Alice Dupont</div>
-                            <div class="ic-tooltip-username">@adupont</div>
-                            <div class="ic-tooltip-host">Marseille</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="ic-seat ic-seat-self">
-                      <span class="ic-seat-user">YOU</span>
-                      <span class="ic-seat-host">A-02</span>
-                    </div>
-                    <div class="ic-seat ic-seat-free">
-                      <span class="ic-seat-user">FREE</span>
-                      <span class="ic-seat-host">A-03</span>
-                    </div>
-                    <div class="ic-seat ic-seat-occupied">
-                      <span class="ic-seat-user">KS</span>
-                      <span class="ic-seat-host">A-04</span>
-                    </div>
-                    <div class="ic-seat ic-seat-free">
-                      <span class="ic-seat-user">FREE</span>
-                      <span class="ic-seat-host">A-05</span>
-                    </div>
-                  </div>
-                  <div class="ic-row">
-                    <div class="ic-seat ic-seat-occupied">
-                      <span class="ic-seat-user">LM</span>
-                      <span class="ic-seat-host">A-06</span>
-                    </div>
-                    <div class="ic-seat ic-seat-free">
-                      <span class="ic-seat-user">FREE</span>
-                      <span class="ic-seat-host">A-07</span>
-                    </div>
-                    <div class="ic-seat ic-seat-occupied">
-                      <span class="ic-seat-user">RN</span>
-                      <span class="ic-seat-host">A-08</span>
-                    </div>
-                    <div class="ic-seat ic-seat-occupied">
-                      <span class="ic-seat-user">MC</span>
-                      <span class="ic-seat-host">A-09</span>
-                    </div>
-                    <div class="ic-seat ic-seat-free">
-                      <span class="ic-seat-user">FREE</span>
-                      <span class="ic-seat-host">A-10</span>
-                    </div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r1s1</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r1s2</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r1s3</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r1s4</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r1s5</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r1s6</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r1s7</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r1s8</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r2s1</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r2s2</span></div>
+                  <div class="ic-seat ic-seat-occupied"><span class="ic-seat-user">yarmand</span><span class="ic-seat-host">c1r2s3</span></div>
+                  <div class="ic-seat ic-seat-occupied"><span class="ic-seat-user">apeguet</span><span class="ic-seat-host">c1r2s4</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r2s5</span></div>
+                  <div class="ic-seat ic-seat-occupied"><span class="ic-seat-user">ilintago</span><span class="ic-seat-host">c1r2s6</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r2s7</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r2s8</span></div>
+                </div>
+                <div class="ic-section">Bloc 2</div>
+                <div class="ic-table">
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r3s1</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r3s2</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r3s3</span></div>
+                  <div class="ic-seat ic-seat-occupied"><span class="ic-seat-user">mberraho</span><span class="ic-seat-host">c1r3s4</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r3s5</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r3s6</span></div>
+                  <div class="ic-seat ic-seat-self"><span class="ic-seat-user">bhanicot</span><span class="ic-seat-host">c1r3s7</span></div>
+                  <div class="ic-seat ic-seat-occupied"><span class="ic-seat-user">wboussah</span><span class="ic-seat-host">c1r3s8</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r4s1</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r4s2</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r4s3</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r4s4</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r4s5</span></div>
+                  <div class="ic-seat ic-seat-occupied"><span class="ic-seat-user">sizen</span><span class="ic-seat-host">c1r4s6</span></div>
+                  <div class="ic-seat ic-seat-occupied"><span class="ic-seat-user">jenicola</span><span class="ic-seat-host">c1r4s7</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c1r4s8</span></div>
+                </div>
+              </div>
+              <div class="ic-card">
+                <div class="ic-card-head">
+                  <div class="ic-card-title">Cluster 2</div>
+                  <div class="ic-card-stats">
+                    <span class="ic-pill">0 / 50 occupés</span>
+                    <span class="ic-pill">50 libres</span>
+                    <span class="ic-pill">0% rempli</span>
                   </div>
                 </div>
+                <div class="ic-section">Bloc 1</div>
+                <div class="ic-table">
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r1s1</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r1s2</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r1s3</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r1s4</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r1s5</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r1s6</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r1s7</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r1s8</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r2s1</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r2s2</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r2s3</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r2s4</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r2s5</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r2s6</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r2s7</span></div>
+                  <div class="ic-seat ic-seat-free"><span class="ic-seat-user">Available</span><span class="ic-seat-host">c2r2s8</span></div>
+                </div>
+              </div>
+              <div class="ic-summary-footer">
+                Clusters combinés 12 / 150 occupés (8%) • C1: 12/100 • C2: 0/50 • Libres: 138
               </div>
             </div>
             <div class="feature-controls">
@@ -373,247 +594,275 @@
               <p>Cache rapide, menu dédié et rafraîchissement à la demande.</p>
             </div>
             <div class="demo-panel demo-trombi trombi-demo">
-              <div class="trombi-menu">
-                <span>Menu</span>
-                <span class="trombi-menu-item">Trombinoscope</span>
+              <div class="trombi-header">
+                <div class="trombi-brand">
+                  <div class="trombi-logo-wrap">
+                    <img src="assets/logo.svg" alt="Logo 42+" class="trombi-logo">
+                  </div>
+                  <div>
+                    <div class="trombi-title">Trombinoscope</div>
+                    <div class="trombi-subtitle">Tous les élèves classés de A à Z.</div>
+                  </div>
+                  <span class="trombi-menu-pill">Menu</span>
+                </div>
+                <button class="trombi-refresh" type="button">Rafraîchir</button>
+              </div>
+              <div class="trombi-toolbar">
+                <label class="trombi-field">
+                  <span>Recherche</span>
+                  <input type="text" placeholder="Nom, prénom ou username">
+                </label>
+                <label class="trombi-field">
+                  <span>Tri</span>
+                  <select>
+                    <option>Prénom</option>
+                    <option>Nom</option>
+                    <option>Login</option>
+                  </select>
+                </label>
+                <button class="trombi-sort" type="button">A → Z</button>
+                <div class="trombi-meta">
+                  <span>129 élèves</span>
+                  <span>Mis à jour : 16/01/2026 21:22:26</span>
+                </div>
               </div>
               <div class="iPlusTrombi-grid" data-avatar-list>
                 <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Alpha</div>
+                  <div class="iPlusTrombi-card-title">Alice Dupont</div>
                   <div class="iPlusTrombi-card-inner">
                     <div class="iPlusTrombi-avatar">
                       <img src="pictures/001.jpg" alt="Portrait de Alice Dupont">
                     </div>
                     <div class="iPlusTrombi-info">
                       <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">Nom</span>
-                        <span class="iPlusTrombi-info-value">Alice Dupont</span>
+                        <span class="iPlusTrombi-info-label">User ID</span>
+                        <span class="iPlusTrombi-info-value">adupont</span>
                       </div>
-                      <span class="iPlusTrombi-username">@adupont</span>
+                      <span class="iPlusTrombi-username">GitHub: adupont</span>
                       <span class="iPlusTrombi-tag">Marseille</span>
                     </div>
                   </div>
                 </article>
                 <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Bravo</div>
+                  <div class="iPlusTrombi-card-title">Kamel Saïd</div>
                   <div class="iPlusTrombi-card-inner">
                     <div class="iPlusTrombi-avatar">
                       <img src="pictures/002.jpg" alt="Portrait de Kamel Saïd">
                     </div>
                     <div class="iPlusTrombi-info">
                       <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">Nom</span>
-                        <span class="iPlusTrombi-info-value">Kamel Saïd</span>
+                        <span class="iPlusTrombi-info-label">User ID</span>
+                        <span class="iPlusTrombi-info-value">ksaid</span>
                       </div>
-                      <span class="iPlusTrombi-username">@ksaid</span>
+                      <span class="iPlusTrombi-username">GitHub: ksaid</span>
                       <span class="iPlusTrombi-tag">Marseille</span>
                     </div>
                   </div>
                 </article>
                 <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Charlie</div>
+                  <div class="iPlusTrombi-card-title">Léa Martin</div>
                   <div class="iPlusTrombi-card-inner">
                     <div class="iPlusTrombi-avatar">
                       <img src="pictures/003.jpg" alt="Portrait de Léa Martin">
                     </div>
                     <div class="iPlusTrombi-info">
                       <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">Nom</span>
-                        <span class="iPlusTrombi-info-value">Léa Martin</span>
+                        <span class="iPlusTrombi-info-label">User ID</span>
+                        <span class="iPlusTrombi-info-value">lmartin</span>
                       </div>
-                      <span class="iPlusTrombi-username">@lmartin</span>
+                      <span class="iPlusTrombi-username">GitHub: lmartin</span>
                       <span class="iPlusTrombi-tag">Paris</span>
                     </div>
                   </div>
                 </article>
                 <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Delta</div>
+                  <div class="iPlusTrombi-card-title">Rami Nasser</div>
                   <div class="iPlusTrombi-card-inner">
                     <div class="iPlusTrombi-avatar">
                       <img src="pictures/004.jpg" alt="Portrait de Rami Nasser">
                     </div>
                     <div class="iPlusTrombi-info">
                       <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">Nom</span>
-                        <span class="iPlusTrombi-info-value">Rami Nasser</span>
+                        <span class="iPlusTrombi-info-label">User ID</span>
+                        <span class="iPlusTrombi-info-value">rnasser</span>
                       </div>
-                      <span class="iPlusTrombi-username">@rnasser</span>
+                      <span class="iPlusTrombi-username">GitHub: rnasser</span>
                       <span class="iPlusTrombi-tag">Lyon</span>
                     </div>
                   </div>
                 </article>
                 <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Echo</div>
+                  <div class="iPlusTrombi-card-title">Sarah Benali</div>
                   <div class="iPlusTrombi-card-inner">
                     <div class="iPlusTrombi-avatar">
                       <img src="pictures/005.jpg" alt="Portrait de Sarah Benali">
                     </div>
                     <div class="iPlusTrombi-info">
                       <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">Nom</span>
-                        <span class="iPlusTrombi-info-value">Sarah Benali</span>
+                        <span class="iPlusTrombi-info-label">User ID</span>
+                        <span class="iPlusTrombi-info-value">sbenali</span>
                       </div>
-                      <span class="iPlusTrombi-username">@sbenali</span>
+                      <span class="iPlusTrombi-username">GitHub: sbenali</span>
                       <span class="iPlusTrombi-tag">Marseille</span>
                     </div>
                   </div>
                 </article>
                 <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Foxtrot</div>
+                  <div class="iPlusTrombi-card-title">Hugo Petit</div>
                   <div class="iPlusTrombi-card-inner">
                     <div class="iPlusTrombi-avatar">
                       <img src="pictures/006.jpg" alt="Portrait de Hugo Petit">
                     </div>
                     <div class="iPlusTrombi-info">
                       <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">Nom</span>
-                        <span class="iPlusTrombi-info-value">Hugo Petit</span>
+                        <span class="iPlusTrombi-info-label">User ID</span>
+                        <span class="iPlusTrombi-info-value">hpetit</span>
                       </div>
-                      <span class="iPlusTrombi-username">@hpetit</span>
+                      <span class="iPlusTrombi-username">GitHub: hpetit</span>
                       <span class="iPlusTrombi-tag">Paris</span>
                     </div>
                   </div>
                 </article>
                 <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Golf</div>
+                  <div class="iPlusTrombi-card-title">Nour Amrani</div>
                   <div class="iPlusTrombi-card-inner">
                     <div class="iPlusTrombi-avatar">
                       <img src="pictures/007.jpg" alt="Portrait de Nour Amrani">
                     </div>
                     <div class="iPlusTrombi-info">
                       <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">Nom</span>
-                        <span class="iPlusTrombi-info-value">Nour Amrani</span>
+                        <span class="iPlusTrombi-info-label">User ID</span>
+                        <span class="iPlusTrombi-info-value">namrani</span>
                       </div>
-                      <span class="iPlusTrombi-username">@namrani</span>
+                      <span class="iPlusTrombi-username">GitHub: namrani</span>
                       <span class="iPlusTrombi-tag">Lille</span>
                     </div>
                   </div>
                 </article>
                 <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Hotel</div>
+                  <div class="iPlusTrombi-card-title">Lucas Morel</div>
                   <div class="iPlusTrombi-card-inner">
                     <div class="iPlusTrombi-avatar">
                       <img src="pictures/008.jpg" alt="Portrait de Lucas Morel">
                     </div>
                     <div class="iPlusTrombi-info">
                       <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">Nom</span>
-                        <span class="iPlusTrombi-info-value">Lucas Morel</span>
+                        <span class="iPlusTrombi-info-label">User ID</span>
+                        <span class="iPlusTrombi-info-value">lmorel</span>
                       </div>
-                      <span class="iPlusTrombi-username">@lmorel</span>
+                      <span class="iPlusTrombi-username">GitHub: lmorel</span>
                       <span class="iPlusTrombi-tag">Bordeaux</span>
                     </div>
                   </div>
                 </article>
                 <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">India</div>
+                  <div class="iPlusTrombi-card-title">Ines Caron</div>
                   <div class="iPlusTrombi-card-inner">
                     <div class="iPlusTrombi-avatar">
                       <img src="pictures/009.jpg" alt="Portrait de Ines Caron">
                     </div>
                     <div class="iPlusTrombi-info">
                       <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">Nom</span>
-                        <span class="iPlusTrombi-info-value">Ines Caron</span>
+                        <span class="iPlusTrombi-info-label">User ID</span>
+                        <span class="iPlusTrombi-info-value">icaron</span>
                       </div>
-                      <span class="iPlusTrombi-username">@icaron</span>
+                      <span class="iPlusTrombi-username">GitHub: icaron</span>
                       <span class="iPlusTrombi-tag">Nice</span>
                     </div>
                   </div>
                 </article>
                 <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Juliet</div>
+                  <div class="iPlusTrombi-card-title">Julien Moreau</div>
                   <div class="iPlusTrombi-card-inner">
                     <div class="iPlusTrombi-avatar">
                       <img src="pictures/010.jpg" alt="Portrait de Julien Moreau">
                     </div>
                     <div class="iPlusTrombi-info">
                       <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">Nom</span>
-                        <span class="iPlusTrombi-info-value">Julien Moreau</span>
+                        <span class="iPlusTrombi-info-label">User ID</span>
+                        <span class="iPlusTrombi-info-value">jmoreau</span>
                       </div>
-                      <span class="iPlusTrombi-username">@jmoreau</span>
+                      <span class="iPlusTrombi-username">GitHub: jmoreau</span>
                       <span class="iPlusTrombi-tag">Paris</span>
                     </div>
                   </div>
                 </article>
                 <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Kilo</div>
+                  <div class="iPlusTrombi-card-title">Karim Haddad</div>
                   <div class="iPlusTrombi-card-inner">
                     <div class="iPlusTrombi-avatar">
                       <img src="pictures/011.jpg" alt="Portrait de Karim Haddad">
                     </div>
                     <div class="iPlusTrombi-info">
                       <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">Nom</span>
-                        <span class="iPlusTrombi-info-value">Karim Haddad</span>
+                        <span class="iPlusTrombi-info-label">User ID</span>
+                        <span class="iPlusTrombi-info-value">khaddad</span>
                       </div>
-                      <span class="iPlusTrombi-username">@khaddad</span>
+                      <span class="iPlusTrombi-username">GitHub: khaddad</span>
                       <span class="iPlusTrombi-tag">Lyon</span>
                     </div>
                   </div>
                 </article>
                 <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Lima</div>
+                  <div class="iPlusTrombi-card-title">Lina Girard</div>
                   <div class="iPlusTrombi-card-inner">
                     <div class="iPlusTrombi-avatar">
                       <img src="pictures/012.jpg" alt="Portrait de Lina Girard">
                     </div>
                     <div class="iPlusTrombi-info">
                       <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">Nom</span>
-                        <span class="iPlusTrombi-info-value">Lina Girard</span>
+                        <span class="iPlusTrombi-info-label">User ID</span>
+                        <span class="iPlusTrombi-info-value">lgirard</span>
                       </div>
-                      <span class="iPlusTrombi-username">@lgirard</span>
+                      <span class="iPlusTrombi-username">GitHub: lgirard</span>
                       <span class="iPlusTrombi-tag">Toulouse</span>
                     </div>
                   </div>
                 </article>
                 <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Mike</div>
+                  <div class="iPlusTrombi-card-title">Maya Lefevre</div>
                   <div class="iPlusTrombi-card-inner">
                     <div class="iPlusTrombi-avatar">
                       <img src="pictures/013.jpg" alt="Portrait de Maya Lefevre">
                     </div>
                     <div class="iPlusTrombi-info">
                       <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">Nom</span>
-                        <span class="iPlusTrombi-info-value">Maya Lefevre</span>
+                        <span class="iPlusTrombi-info-label">User ID</span>
+                        <span class="iPlusTrombi-info-value">mlefevre</span>
                       </div>
-                      <span class="iPlusTrombi-username">@mlefevre</span>
+                      <span class="iPlusTrombi-username">GitHub: mlefevre</span>
                       <span class="iPlusTrombi-tag">Lille</span>
                     </div>
                   </div>
                 </article>
                 <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">November</div>
+                  <div class="iPlusTrombi-card-title">Noah Petit</div>
                   <div class="iPlusTrombi-card-inner">
                     <div class="iPlusTrombi-avatar">
                       <img src="pictures/014.jpg" alt="Portrait de Noah Petit">
                     </div>
                     <div class="iPlusTrombi-info">
                       <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">Nom</span>
-                        <span class="iPlusTrombi-info-value">Noah Petit</span>
+                        <span class="iPlusTrombi-info-label">User ID</span>
+                        <span class="iPlusTrombi-info-value">npetit</span>
                       </div>
-                      <span class="iPlusTrombi-username">@npetit</span>
+                      <span class="iPlusTrombi-username">GitHub: npetit</span>
                       <span class="iPlusTrombi-tag">Nantes</span>
                     </div>
                   </div>
                 </article>
                 <article class="iPlusTrombi-card is-revealed">
-                  <div class="iPlusTrombi-card-title">Oscar</div>
+                  <div class="iPlusTrombi-card-title">Omar Benkhaled</div>
                   <div class="iPlusTrombi-card-inner">
                     <div class="iPlusTrombi-avatar">
                       <img src="pictures/015.jpg" alt="Portrait de Omar Benkhaled">
                     </div>
                     <div class="iPlusTrombi-info">
                       <div class="iPlusTrombi-info-block">
-                        <span class="iPlusTrombi-info-label">Nom</span>
-                        <span class="iPlusTrombi-info-value">Omar Benkhaled</span>
+                        <span class="iPlusTrombi-info-label">User ID</span>
+                        <span class="iPlusTrombi-info-value">obenkhaled</span>
                       </div>
-                      <span class="iPlusTrombi-username">@obenkhaled</span>
+                      <span class="iPlusTrombi-username">GitHub: obenkhaled</span>
                       <span class="iPlusTrombi-tag">Grenoble</span>
                     </div>
                   </div>

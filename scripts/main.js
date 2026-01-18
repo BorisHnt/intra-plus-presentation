@@ -140,8 +140,16 @@ const setupGameTabs = () => {
     const screen = card.querySelector('[data-game-screen]');
     tabs.forEach((tab) => {
       tab.addEventListener('click', () => {
-        tabs.forEach((item) => item.classList.remove('is-active'));
+        tabs.forEach((item) => {
+          item.classList.remove('is-active');
+          if (item.hasAttribute('aria-pressed')) {
+            item.setAttribute('aria-pressed', 'false');
+          }
+        });
         tab.classList.add('is-active');
+        if (tab.hasAttribute('aria-pressed')) {
+          tab.setAttribute('aria-pressed', 'true');
+        }
         if (screen) {
           screen.textContent = tab.dataset.gameLabel || tab.textContent;
         }
@@ -229,12 +237,12 @@ const setupAttendanceDemo = () => {
   const monthlyChart = document.querySelector('#iPlusAtt-monthly .iPlusAttMonthly-chart');
   if (monthlyChart) {
     const months = [
-      { month: 'Mai', minutes: 7200 },
-      { month: 'Jun', minutes: 6840 },
-      { month: 'Jul', minutes: 7580 },
-      { month: 'Aou', minutes: 6420 },
-      { month: 'Sep', minutes: 7920 },
-      { month: 'Oct', minutes: 7020 },
+      { month: 'Aou', minutes: 8139 },
+      { month: 'Sep', minutes: 0 },
+      { month: 'Oct', minutes: 0 },
+      { month: 'Nov', minutes: 11867 },
+      { month: 'Dec', minutes: 16059 },
+      { month: 'Jan', minutes: 12064 },
     ];
     const points = months.map((entry) => ({
       month: entry.month,
@@ -246,31 +254,77 @@ const setupAttendanceDemo = () => {
 
   const goalFill = document.querySelector('#iPlusAtt-goal .iPlusAttGoal-fill');
   if (goalFill) {
-    goalFill.style.width = '68.9%';
+    goalFill.style.width = '67.02%';
   }
+
+  const heatmapGrid = document.querySelector('[data-heatmap-grid]');
+  if (heatmapGrid) {
+    const columns = 28;
+    const rows = 7;
+    const columnIntensity = [
+      0, 1, 1, 2, 3, 2, 4, 3, 2, 1, 0, 1, 2, 3,
+      4, 3, 2, 2, 1, 0, 1, 2, 3, 4, 3, 2, 1, 0,
+    ];
+    let cells = '';
+    for (let col = 0; col < columns; col += 1) {
+      for (let row = 0; row < rows; row += 1) {
+        const base = columnIntensity[col % columnIntensity.length];
+        const offset = (row % 3) - 1;
+        const level = Math.max(0, Math.min(4, base + offset));
+        cells += `<span class="att-heatmap-cell level-${level}"></span>`;
+      }
+    }
+    heatmapGrid.innerHTML = cells;
+  }
+
+  const weeklyChart = document.querySelector('[data-weekly-chart]');
+  if (weeklyChart) {
+    const weeklySamples = [
+      { label: 'S-4', hours: 60 },
+      { label: 'S-3', hours: 54 },
+      { label: 'S-2', hours: 77 },
+      { label: 'S. dernière', hours: 78 },
+    ];
+    const maxHours = Math.max(...weeklySamples.map((entry) => entry.hours), 1);
+    const avgHours =
+      weeklySamples.reduce((sum, entry) => sum + entry.hours, 0) / Math.max(weeklySamples.length, 1);
+    const avgPct = Math.min(100, (avgHours / maxHours) * 100);
+
+    const bars = weeklySamples
+      .map((entry) => {
+        const pct = Math.min(100, (entry.hours / maxHours) * 100);
+        return `<div class="att-weekly-bar" style="height:${pct}%" data-label="${entry.label}">
+          <span class="att-weekly-value">${Math.round(entry.hours)}h</span>
+        </div>`;
+      })
+      .join('');
+
+    weeklyChart.innerHTML = `<div class="att-weekly-avg" style="bottom:${avgPct.toFixed(2)}%;"></div>${bars}`;
+  }
+
+  const dailySamples = [
+    { day: 1, minutes: 709 },
+    { day: 2, minutes: 647 },
+    { day: 3, minutes: 786 },
+    { day: 4, minutes: 667 },
+    { day: 5, minutes: 671 },
+    { day: 6, minutes: 610 },
+    { day: 7, minutes: 700 },
+    { day: 8, minutes: 631 },
+    { day: 9, minutes: 589 },
+    { day: 10, minutes: 620 },
+    { day: 11, minutes: 692 },
+    { day: 12, minutes: 626 },
+    { day: 13, minutes: 693 },
+    { day: 14, minutes: 574 },
+    { day: 15, minutes: 621 },
+    { day: 16, minutes: 724 },
+    { day: 17, minutes: 764 },
+    { day: 18, minutes: 524 },
+  ];
 
   const dailyChart = document.getElementById('iPlusAtt-daily-chart');
   if (dailyChart) {
-    const dailySamples = [
-      { day: 1, minutes: 360 },
-      { day: 2, minutes: 420 },
-      { day: 3, minutes: 300 },
-      { day: 4, minutes: 480 },
-      { day: 5, minutes: 390 },
-      { day: 6, minutes: 0 },
-      { day: 7, minutes: 510 },
-      { day: 8, minutes: 450 },
-      { day: 9, minutes: 420 },
-      { day: 10, minutes: 360 },
-      { day: 11, minutes: 300 },
-      { day: 12, minutes: 540 },
-      { day: 13, minutes: 360 },
-      { day: 14, minutes: 420 },
-      { day: 15, minutes: 480 },
-      { day: 16, minutes: 240 },
-      { day: 17, minutes: 390 },
-      { day: 18, minutes: 450 },
-    ];
     const maxMinutes = Math.max(...dailySamples.map((entry) => entry.minutes), 1);
     const avgMinutes =
       dailySamples.reduce((sum, entry) => sum + entry.minutes, 0) / Math.max(dailySamples.length, 1);
@@ -295,7 +349,9 @@ const setupAttendanceDemo = () => {
 
   const meta = document.getElementById('iPlusAtt-daily-meta');
   if (meta) {
-    meta.textContent = 'Moyenne : 6h 12m • Jours comptés : 18';
+    const avgMinutes =
+      dailySamples.reduce((sum, entry) => sum + entry.minutes, 0) / Math.max(dailySamples.length, 1);
+    meta.textContent = `Moyenne : ${formatMinutes(avgMinutes)} • Jours comptés : ${dailySamples.length}`;
   }
 };
 
