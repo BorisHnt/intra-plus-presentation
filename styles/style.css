@@ -395,6 +395,28 @@ main {
   width: min(1520px, 100% - (var(--gutter) * 2));
 }
 
+#clusters {
+  width: min(1520px, 100% - (var(--gutter) * 2));
+}
+
+#clusters .story-card {
+  flex-direction: column;
+  align-items: center;
+}
+
+#clusters .story-content {
+  width: min(720px, 100%);
+}
+
+#clusters .story-media {
+  width: 100%;
+}
+
+#clusters .story-media .media-frame {
+  width: min(1520px, 100%);
+  margin: 0 auto;
+}
+
 .story-callout {
   margin-top: 24px;
   padding: 18px 22px;
