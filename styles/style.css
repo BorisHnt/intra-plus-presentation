@@ -439,9 +439,11 @@ main {
   width: min(1720px, 100%);
 }
 
+/*
 #events {
   width: min(1720px, 100% - (var(--gutter) * 2));
 }
+*/
 
 .story-callout {
   margin-top: 24px;
