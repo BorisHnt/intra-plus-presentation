@@ -125,6 +125,71 @@ if (clusterLayers.length >= 2) {
   window.setInterval(swapClusterShot, intervalDuration);
 }
 
+const reviewFade = document.querySelector('[data-review-fade]');
+const reviewLayers = reviewFade
+  ? Array.from(reviewFade.querySelectorAll('.review-shot'))
+  : [];
+
+if (reviewLayers.length >= 2) {
+  const reviewSources = [
+    'pictures/screenshots/ReviewsGiven001.png',
+    'pictures/screenshots/ReviewsReceived001.png',
+  ];
+
+  // Préchargement
+  reviewSources.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+
+  const fadeDuration = prefersReducedMotion ? 0 : 250;
+  const intervalDuration = 5000;
+
+  let reviewIndex = 0;
+  let activeLayer = 0;
+
+  const swapReviewShot = () => {
+    const nextIndex = (reviewIndex + 1) % reviewSources.length;
+    const nextLayerIndex = activeLayer === 0 ? 1 : 0;
+
+    const currentLayer = reviewLayers[activeLayer];
+    const nextLayer = reviewLayers[nextLayerIndex];
+
+    const activateNext = () => {
+      nextLayer.classList.add('is-active');
+      nextLayer.setAttribute('aria-hidden', 'false');
+
+      const finalizeSwap = () => {
+        currentLayer.classList.remove('is-active');
+        currentLayer.setAttribute('aria-hidden', 'true');
+        reviewIndex = nextIndex;
+        activeLayer = nextLayerIndex;
+      };
+
+      if (fadeDuration === 0) {
+        finalizeSwap();
+        return;
+      }
+
+      setTimeout(finalizeSwap, fadeDuration);
+    };
+
+    nextLayer.src = reviewSources[nextIndex];
+
+    if (nextLayer.complete) {
+      activateNext();
+    } else {
+      const onLoad = () => {
+        nextLayer.removeEventListener('load', onLoad);
+        activateNext();
+      };
+      nextLayer.addEventListener('load', onLoad);
+    }
+  };
+
+  setInterval(swapReviewShot, intervalDuration);
+}
+
 const parallaxItems = document.querySelectorAll('[data-parallax]');
 
 if (!prefersReducedMotion && parallaxItems.length) {

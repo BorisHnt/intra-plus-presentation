@@ -391,6 +391,21 @@ main {
   opacity: 1;
 }
 
+.review-fade {
+  display: grid;
+}
+
+.review-shot {
+  grid-area: 1 / 1;
+  opacity: 0;
+  transition: opacity 250ms ease;
+  will-change: opacity;
+}
+
+.review-shot.is-active {
+  opacity: 1;
+}
+
 .media-frame figcaption {
   margin-top: 12px;
   font-size: 0.8rem;
