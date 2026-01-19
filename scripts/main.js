@@ -61,6 +61,62 @@ if (prefersReducedMotion || !('IntersectionObserver' in window)) {
   revealElements.forEach((element) => revealObserver.observe(element));
 }
 
+const eventsDuo = document.querySelector('#events .image-duo');
+
+if (eventsDuo) {
+  const leftRatio = 918 / 468;
+  const rightRatio = 467 / 256;
+  const mediaFrame = eventsDuo.querySelector('.media-frame');
+  const duoGap = Number.parseFloat(getComputedStyle(eventsDuo).columnGap) || 24;
+  const frameStyles = mediaFrame ? getComputedStyle(mediaFrame) : null;
+  const frameChrome = frameStyles
+    ? Number.parseFloat(frameStyles.paddingLeft) +
+      Number.parseFloat(frameStyles.paddingRight) +
+      Number.parseFloat(frameStyles.borderLeftWidth) +
+      Number.parseFloat(frameStyles.borderRightWidth)
+    : 34;
+  let resizeTicking = false;
+
+  const updateEventsDuo = () => {
+    if (window.matchMedia('(max-width: 900px)').matches) {
+      eventsDuo.style.removeProperty('--events-height');
+      eventsDuo.style.removeProperty('--events-left-width');
+      eventsDuo.style.removeProperty('--events-right-width');
+      return;
+    }
+
+    const containerWidth = eventsDuo.clientWidth;
+    if (!containerWidth) {
+      return;
+    }
+
+    const availableWidth = Math.max(
+      containerWidth - duoGap - (frameChrome * 2),
+      0
+    );
+    const height = availableWidth / (leftRatio + rightRatio);
+    const leftWidth = (height * leftRatio) + frameChrome;
+    const rightWidth = (height * rightRatio) + frameChrome;
+
+    eventsDuo.style.setProperty('--events-height', `${height}px`);
+    eventsDuo.style.setProperty('--events-left-width', `${leftWidth}px`);
+    eventsDuo.style.setProperty('--events-right-width', `${rightWidth}px`);
+  };
+
+  const onResize = () => {
+    if (!resizeTicking) {
+      resizeTicking = true;
+      window.requestAnimationFrame(() => {
+        updateEventsDuo();
+        resizeTicking = false;
+      });
+    }
+  };
+
+  updateEventsDuo();
+  window.addEventListener('resize', onResize);
+}
+
 const clusterFade = document.querySelector('[data-cluster-fade]');
 const clusterLayers = clusterFade ? Array.from(clusterFade.querySelectorAll('.cluster-shot')) : [];
 

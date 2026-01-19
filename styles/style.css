@@ -389,17 +389,16 @@ main {
 
 .image-duo {
   --events-gap: 24px;
-  --events-ratio-left: 1.961538;
-  --events-ratio-right: 1.824219;
-  --events-frame-chrome: 34px;
-  --events-height-factor: 0.264148;
-  --events-height: calc((100% - var(--events-gap) - (var(--events-frame-chrome) * 2)) * var(--events-height-factor));
+  --events-left-width: 1fr;
+  --events-right-width: 1fr;
+  --events-height: auto;
   display: grid;
   gap: var(--events-gap);
   justify-content: center;
   align-items: start;
   width: 100%;
   margin: 0 auto;
+  grid-template-columns: var(--events-left-width) var(--events-right-width);
 }
 
 .image-duo .media-frame {
@@ -947,9 +946,7 @@ main {
   }
 
   .image-duo {
-    grid-template-columns:
-      calc((var(--events-height) * var(--events-ratio-left)) + var(--events-frame-chrome))
-      calc((var(--events-height) * var(--events-ratio-right)) + var(--events-frame-chrome));
+    grid-template-columns: var(--events-left-width) var(--events-right-width);
   }
 }
 
