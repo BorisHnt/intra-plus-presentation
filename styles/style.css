@@ -392,6 +392,8 @@ main {
   gap: 24px;
   justify-content: center;
   align-items: start;
+  width: min(1720px, 100%);
+  margin: 0 auto;
 }
 
 .image-duo .media-frame {
@@ -404,7 +406,7 @@ main {
 
 .image-duo .bento-shot {
   width: auto;
-  height: clamp(220px, 24vw, 320px);
+  height: clamp(240px, 28vw, 470px);
   max-width: 100%;
 }
 
@@ -434,7 +436,7 @@ main {
 }
 
 #clusters .story-content {
-  width: min(720px, 100%);
+  width: min(1720px, 100%);
 }
 
 .story-callout {
