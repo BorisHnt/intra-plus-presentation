@@ -12,7 +12,7 @@
   --shadow: 0 28px 60px rgba(0, 0, 0, 0.45);
   --radius: 22px;
   --gutter: clamp(22px, 6vw, 90px);
-  --max-width: 1200px;
+  --max-width: 1520px;
   --iPlusSets-card: rgba(15, 22, 40, 0.7);
   --iPlusSets-card-strong: rgba(12, 18, 32, 0.65);
   --iPlusSets-ink: var(--text);
@@ -356,6 +356,11 @@ main {
   box-shadow: var(--shadow);
 }
 
+.media-frame--narrow {
+  width: min(500px, 100%);
+  margin: 0 auto;
+}
+
 .media-frame img {
   border-radius: calc(var(--radius) - 10px);
   width: 100%;
@@ -393,32 +398,15 @@ main {
 }
 
 .trombi-shot .media-frame {
-  width: min(1520px, 100%);
-}
-
-#trombi {
-  width: min(1520px, 100% - (var(--gutter) * 2));
-}
-
-#clusters {
-  width: min(1382px, 100% - (var(--gutter) * 2));
-}
-
-#clusters .story-card {
-  flex-direction: column;
-  align-items: center;
-}
-
-#clusters .story-content {
-  width: min(1440px, 100%);
+  width: min(var(--max-width), 100%);
 }
 
 #clusters .story-media {
   width: 100%;
 }
 
-#clusters .story-media .media-frame {
-  width: min(1520px, 100%);
+.cluster-frame {
+  width: min(1382px, 100%);
   margin: 0 auto;
 }
 
