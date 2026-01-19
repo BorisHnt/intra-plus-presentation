@@ -361,14 +361,19 @@ main {
   width: 100%;
 }
 
-.cluster-shot {
-  opacity: 1;
+.cluster-frame .cluster-fade {
+  display: grid;
+}
+
+.cluster-frame .cluster-shot {
+  grid-area: 1 / 1;
+  opacity: 0;
   transition: opacity 250ms ease;
   will-change: opacity;
 }
 
-.cluster-shot.is-fading {
-  opacity: 0;
+.cluster-frame .cluster-shot.is-active {
+  opacity: 1;
 }
 
 .media-frame figcaption {

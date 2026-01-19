@@ -61,9 +61,10 @@ if (prefersReducedMotion || !('IntersectionObserver' in window)) {
   revealElements.forEach((element) => revealObserver.observe(element));
 }
 
-const clusterShot = document.querySelector('[data-cluster-shot]');
+const clusterFade = document.querySelector('[data-cluster-fade]');
+const clusterLayers = clusterFade ? Array.from(clusterFade.querySelectorAll('.cluster-shot')) : [];
 
-if (clusterShot) {
+if (clusterLayers.length >= 2) {
   const clusterSources = [
     'pictures/screenshots/ClusterDemo001.png',
     'pictures/screenshots/ClusterDemo002.png',
@@ -80,22 +81,45 @@ if (clusterShot) {
   const fadeDuration = prefersReducedMotion ? 0 : 250;
   const intervalDuration = 5000;
   let clusterIndex = 0;
+  let activeLayer = 0;
 
   const swapClusterShot = () => {
     const nextIndex = (clusterIndex + 1) % clusterSources.length;
+    const nextLayerIndex = activeLayer === 0 ? 1 : 0;
+    const nextLayer = clusterLayers[nextLayerIndex];
+    const currentLayer = clusterLayers[activeLayer];
 
-    if (fadeDuration === 0) {
-      clusterShot.src = clusterSources[nextIndex];
-      clusterIndex = nextIndex;
+    const activateNext = () => {
+      nextLayer.classList.add('is-active');
+      nextLayer.setAttribute('aria-hidden', 'false');
+      const finalizeSwap = () => {
+        currentLayer.classList.remove('is-active');
+        currentLayer.setAttribute('aria-hidden', 'true');
+        clusterIndex = nextIndex;
+        activeLayer = nextLayerIndex;
+      };
+
+      if (fadeDuration === 0) {
+        finalizeSwap();
+        return;
+      }
+
+      window.setTimeout(finalizeSwap, fadeDuration);
+    };
+
+    nextLayer.src = clusterSources[nextIndex];
+
+    if (nextLayer.complete) {
+      activateNext();
       return;
     }
 
-    clusterShot.classList.add('is-fading');
-    window.setTimeout(() => {
-      clusterShot.src = clusterSources[nextIndex];
-      clusterShot.classList.remove('is-fading');
-      clusterIndex = nextIndex;
-    }, fadeDuration);
+    const handleLoad = () => {
+      nextLayer.removeEventListener('load', handleLoad);
+      activateNext();
+    };
+
+    nextLayer.addEventListener('load', handleLoad);
   };
 
   window.setInterval(swapClusterShot, intervalDuration);
