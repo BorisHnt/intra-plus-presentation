@@ -480,12 +480,13 @@ main {
   max-width: 520px;
 }
 
-.story-callout-without-max-width {
+.story-callout-2 {
   margin-top: 24px;
   padding: 18px 22px;
   border-radius: 14px;
   border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.05);
+  max-width: 420px;
 }
 
 .callout-title {
