@@ -273,7 +273,7 @@ main {
   display: grid;
   gap: 12px;
   margin-bottom: 40px;
-  max-width: 720px;
+  /* max-width: 720px; */
 }
 
 .section-kicker {
@@ -281,10 +281,6 @@ main {
   letter-spacing: 0.32em;
   text-transform: uppercase;
   color: var(--violet);
-}
-
-.section-header-h2.full-width {
-  width: 100%;
 }
 
 .section-header h2 {
