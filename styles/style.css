@@ -4,12 +4,12 @@
   --blue: #0e2957;
   --anthracite: #1a1a1a;
   --surface: #11141a;
-  --surface-soft: #171b22;
+  --surface-soft: #101015;  /* #171b22; */
   --surface-bright: #1e2430;
   --text: #ffffff;
   --text-muted: rgba(255, 255, 255, 0.68);
   --border: rgba(255, 255, 255, 0.12);
-  --shadow: 0 28px 60px rgba(0, 0, 0, 0.45);
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
   --radius: 22px;
   --gutter: clamp(22px, 6vw, 90px);
   --max-width: 1520px;
@@ -346,6 +346,11 @@ main {
 .story-media {
   flex: 1;
   min-width: 0;
+}
+
+.story-media-medium {
+  display: flex;
+  justify-content: center;
 }
 
 .media-frame {
