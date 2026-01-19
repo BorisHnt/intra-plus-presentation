@@ -361,6 +361,11 @@ main {
   margin: 0 auto;
 }
 
+.media-frame--medium {
+  width: min(700px, 100%);
+  margin: 0 auto;
+}
+
 .media-frame img {
   border-radius: calc(var(--radius) - 10px);
   width: 100%;
