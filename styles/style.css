@@ -388,21 +388,18 @@ main {
 }
 
 .image-duo {
-  --events-gap: 24px;
-  --events-left-width: 1fr;
-  --events-right-width: 1fr;
-  --events-height: auto;
   display: grid;
-  gap: var(--events-gap);
+  gap: 24px;
   justify-content: center;
   align-items: start;
-  width: 100%;
+  width: fit-content;
+  max-width: 100%;
   margin: 0 auto;
-  grid-template-columns: var(--events-left-width) var(--events-right-width);
 }
 
 .image-duo .media-frame {
-  width: 100%;
+  width: max-content;
+  max-width: 100%;
   margin: 0 auto;
   justify-self: center;
   align-self: start;
@@ -410,7 +407,7 @@ main {
 
 .image-duo .bento-shot {
   width: auto;
-  height: var(--events-height);
+  height: auto;
   max-width: 100%;
 }
 
@@ -946,7 +943,7 @@ main {
   }
 
   .image-duo {
-    grid-template-columns: var(--events-left-width) var(--events-right-width);
+    grid-template-columns: repeat(2, max-content);
   }
 }
 
