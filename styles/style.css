@@ -362,8 +362,8 @@ main {
 }
 
 .media-frame--medium {
-  width: min(620px, 100%);
-  margin: 0 auto;
+  width: min(600px, 100%);
+/*  margin: 0 auto;*/
 }
 
 .media-frame img {
