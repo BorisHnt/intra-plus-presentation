@@ -388,17 +388,22 @@ main {
 }
 
 .image-duo {
+  --events-gap: 24px;
+  --events-ratio-left: 1.961538;
+  --events-ratio-right: 1.824219;
+  --events-frame-chrome: 34px;
+  --events-height-factor: 0.264148;
+  --events-height: calc((100% - var(--events-gap) - (var(--events-frame-chrome) * 2)) * var(--events-height-factor));
   display: grid;
-  gap: 24px;
+  gap: var(--events-gap);
   justify-content: center;
   align-items: start;
-  width: min(1720px, 100%);
+  width: 100%;
   margin: 0 auto;
 }
 
 .image-duo .media-frame {
-  width: fit-content;
-  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
   justify-self: center;
   align-self: start;
@@ -406,7 +411,7 @@ main {
 
 .image-duo .bento-shot {
   width: auto;
-  height: clamp(240px, 24vw, 430px);
+  height: var(--events-height);
   max-width: 100%;
 }
 
@@ -436,7 +441,11 @@ main {
 }
 
 #clusters .story-content {
-  width: min(1720px, 100%);
+  width: min(720px, 100%);
+}
+
+#events {
+  width: min(1720px, 100% - (var(--gutter) * 2));
 }
 
 .story-callout {
@@ -938,13 +947,9 @@ main {
   }
 
   .image-duo {
-    grid-template-columns: repeat(2, max-content);
-  }
-}
-
-@media (min-width: 1720px) {
-  .image-duo .bento-shot {
-    height: 430px;
+    grid-template-columns:
+      calc((var(--events-height) * var(--events-ratio-left)) + var(--events-frame-chrome))
+      calc((var(--events-height) * var(--events-ratio-right)) + var(--events-frame-chrome));
   }
 }
 
