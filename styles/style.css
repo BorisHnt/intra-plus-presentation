@@ -283,6 +283,10 @@ main {
   color: var(--violet);
 }
 
+.section-header-h2.full-width {
+  width: 100%;
+}
+
 .section-header h2 {
   font-size: clamp(2rem, 3.5vw, 3rem);
   line-height: 1.1;
