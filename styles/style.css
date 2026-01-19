@@ -286,6 +286,7 @@ main {
 .section-header h2 {
   font-size: clamp(2rem, 3.5vw, 3rem);
   line-height: 1.1;
+  max-width: 1720px;
 }
 
 .section-header p {
