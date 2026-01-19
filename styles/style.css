@@ -419,6 +419,8 @@ main {
 
 #clusters .story-media {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .cluster-frame {
@@ -426,9 +428,13 @@ main {
   margin: 0 auto;
 }
 
-#clusters .story-media {
-  display: flex;
-  justify-content: center;
+#clusters .story-card {
+  flex-direction: column;
+  align-items: center;
+}
+
+#clusters .story-content {
+  width: min(720px, 100%);
 }
 
 .story-callout {
@@ -931,19 +937,6 @@ main {
 
   .image-duo {
     grid-template-columns: repeat(2, max-content);
-  }
-
-  #clusters .story-card {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #clusters .story-content {
-    width: min(720px, 100%);
-  }
-
-  #clusters .story-media {
-    width: 100%;
   }
 }
 
