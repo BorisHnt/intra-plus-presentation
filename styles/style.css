@@ -396,7 +396,7 @@ main {
 }
 
 #clusters {
-  width: min(1520px, 100% - (var(--gutter) * 2));
+  width: min(1382px, 100% - (var(--gutter) * 2));
 }
 
 #clusters .story-card {
