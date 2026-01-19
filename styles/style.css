@@ -63,7 +63,7 @@ a {
 
 a:hover,
 a:focus-visible {
-  color: var(--pink);
+  color: var(--text);
 }
 
 :focus-visible {
