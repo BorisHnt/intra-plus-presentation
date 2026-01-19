@@ -406,7 +406,7 @@ main {
 
 .image-duo .bento-shot {
   width: auto;
-  height: clamp(240px, 28vw, 470px);
+  height: clamp(240px, 24vw, 430px);
   max-width: 100%;
 }
 
@@ -939,6 +939,12 @@ main {
 
   .image-duo {
     grid-template-columns: repeat(2, max-content);
+  }
+}
+
+@media (min-width: 1720px) {
+  .image-duo .bento-shot {
+    height: 430px;
   }
 }
 
