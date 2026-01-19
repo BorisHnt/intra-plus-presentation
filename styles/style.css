@@ -362,7 +362,7 @@ main {
 }
 
 .media-frame--medium {
-  width: min(700px, 100%);
+  width: min(620px, 100%);
   margin: 0 auto;
 }
 
