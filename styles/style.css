@@ -393,7 +393,7 @@ main {
 }
 
 .media-frame--game {
-  width: min(900px, 100%);
+  width: min(1000px, 100%);
   margin-left: 0px;
 }
 
