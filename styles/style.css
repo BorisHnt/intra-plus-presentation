@@ -312,6 +312,12 @@ main {
   gap: 12px;
 }
 
+.story-content-wide {
+  min-width: 0;
+  display: grid;
+  gap: 12px;
+}
+
 .story-content h3 {
   font-size: 1.6rem;
 }
@@ -361,7 +367,6 @@ main {
 
 .story-media-game {
   display: flex;
-  justify-content: center;
 }
 
 .media-frame {
@@ -388,7 +393,7 @@ main {
 }
 
 .media-frame--game {
-  width: min(1000px, 100%);
+  width: min(900px, 100%);
   margin: 0 auto;
 }
 
