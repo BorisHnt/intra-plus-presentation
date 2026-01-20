@@ -394,6 +394,7 @@ main {
 
 .media-frame--game {
   width: min(900px, 100%);
+  margin-left: 0px;
 }
 
 .media-frame img {
