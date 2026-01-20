@@ -359,6 +359,11 @@ main {
   justify-content: center;
 }
 
+.story-media-game {
+  display: flex;
+  justify-content: center;
+}
+
 .media-frame {
   border-radius: var(--radius);
   border: 1px solid var(--border);
