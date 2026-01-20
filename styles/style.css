@@ -354,12 +354,22 @@ main {
   justify-content: center;
 }
 
+.story-media-xtra-narrow {
+  display: flex;
+  justify-content: center;
+}
+
 .media-frame {
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: var(--surface-soft);
   padding: 16px;
   box-shadow: var(--shadow);
+}
+
+.media-frame--xtra-narrow {
+  width: min(238px, 100%);
+  margin: 0 auto;
 }
 
 .media-frame--narrow {
