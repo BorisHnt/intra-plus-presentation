@@ -134,6 +134,7 @@ if (reviewLayers.length >= 2) {
   const reviewSources = [
     'pictures/screenshots/ReviewsGiven001.png',
     'pictures/screenshots/ReviewsReceived001.png',
+    'pictures/screenshots/SameLevel001.png',
   ];
 
   // Préchargement
