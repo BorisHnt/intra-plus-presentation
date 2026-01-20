@@ -382,6 +382,11 @@ main {
   margin: 0 auto;
 }
 
+.media-frame--game {
+  width: min(1400px, 100%);
+  margin: 0 auto;
+}
+
 .media-frame img {
   border-radius: calc(var(--radius) - 10px);
   width: 100%;
