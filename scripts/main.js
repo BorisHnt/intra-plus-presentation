@@ -215,3 +215,51 @@ if (!prefersReducedMotion && parallaxItems.length) {
   window.addEventListener('scroll', onScroll, { passive: true });
   updateParallax();
 }
+
+// ===============================
+// Téléchargement bêta – vérification Intra 42
+// ===============================
+
+const DL_SCRIPT_URL =
+  'https://42-plus.boris-hanicotte.workers.dev/42-plus.user.js';
+
+document.addEventListener('click', async (e) => {
+  const link = e.target.closest('a[href]');
+  if (!link) return;
+
+  if (!link.href.startsWith(DL_SCRIPT_URL)) return;
+
+  e.preventDefault();
+
+  try {
+    const res = await fetch(
+      'https://code.42.tech/api/swr?href=%2Fv1%2Flearning%2Flearners%2Fme',
+      { credentials: 'include' }
+    );
+
+    if (!res.ok) {
+      alert('Tu dois être connecté à l’Intra 42 pour télécharger la bêta.');
+      return;
+    }
+
+    const data = await res.json();
+
+    const username = data.username;
+    const learnerId = data.id || data.learnerId;
+
+    if (!username || !learnerId) {
+      alert('Impossible de vérifier ton identité Intra.');
+      return;
+    }
+
+    const url =
+      BETA_SCRIPT_URL +
+      '?u=' + encodeURIComponent(username) +
+      '&id=' + encodeURIComponent(learnerId);
+
+    window.open(url, '_blank', 'noopener');
+  } catch (err) {
+    console.error('[42+] Erreur API Intra', err);
+    alert('Erreur lors de la vérification Intra.');
+  }
+});
