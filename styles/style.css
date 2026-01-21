@@ -13,14 +13,6 @@
   --radius: 22px;
   --gutter: clamp(22px, 6vw, 90px);
   --max-width: 1520px;
-  --iPlusSets-card: rgba(15, 22, 40, 0.7);
-  --iPlusSets-card-strong: rgba(12, 18, 32, 0.65);
-  --iPlusSets-ink: var(--text);
-  --iPlusSets-muted: rgba(255, 255, 255, 0.6);
-  --iPlusSets-border: rgba(255, 255, 255, 0.14);
-  --iPlusSets-radius: 8px;
-  --iPlusSets-radius-md: 3px;
-  --iPlusSets-font: inherit;
 }
 
 *,
