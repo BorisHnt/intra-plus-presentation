@@ -2,6 +2,7 @@ const splash = document.getElementById('splash');
 const enterButton = document.getElementById('enter-btn');
 const mainContent = document.getElementById('main');
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const splashAlreadySeen = sessionStorage.getItem('intraPlusSplashSeen');
 
 const revealMainContent = () => {
   document.body.classList.add('show-main');
@@ -13,14 +14,22 @@ const hideSplashInstantly = () => {
   splash.setAttribute('aria-hidden', 'true');
 };
 
-if (prefersReducedMotion) {
+// Si splash déjà vu → skip direct
+if (splashAlreadySeen) {
+  hideSplashInstantly();
+  revealMainContent();
+} else if (prefersReducedMotion) {
+  sessionStorage.setItem('intraPlusSplashSeen', 'true');
   hideSplashInstantly();
   revealMainContent();
 } else {
   enterButton.addEventListener('click', () => {
+
     if (document.body.classList.contains('is-transitioning')) {
       return;
     }
+
+	sessionStorage.setItem('intraPlusSplashSeen', 'true');
 
     document.body.classList.add('is-transitioning');
     splash.classList.add('is-exiting');
