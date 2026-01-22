@@ -3,38 +3,134 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Site de présentation pour l'extension 42+ : fonctionnalités, showroom et FAQ.">
-  <title>42+ | Extension</title>
-  <link rel="stylesheet" href="styles/style.css">
+  <meta name="description" content="À propos de Intra+ : origine du projet, philosophie, limites actuelles et contact.">
+  <title>À propos — Intra+</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../styles/style.css">
 </head>
+
 <body>
+
+  <!-- Splash -->
   <section id="splash" class="splash" aria-label="Écran d'accueil">
     <div class="splash-content">
-      <img src="assets/logo.svg" alt="Logo 42+" class="splash-logo">
-      <button id="enter-btn" class="btn btn-gradient" type="button">Présentation</button>
+      <img src="../assets/logo.svg" alt="Logo 42+" class="splash-logo">
+      <button id="enter-btn" class="btn btn-gradient" type="button">
+        Continuer
+      </button>
     </div>
   </section>
 
   <div id="main" class="main-content" aria-hidden="true">
+
+    <!-- Header -->
     <header class="site-header">
       <div class="site-header-inner">
+
         <div class="logo-mark">
-          <img src="assets/logo.svg" alt="Logo 42+" class="logo-small">
+          <img src="../assets/logo.svg" alt="Logo 42+" class="logo-small">
           <span class="logo-text">Intra+</span>
         </div>
+
+        <!-- NAV → renvoie vers la home -->
         <nav class="site-nav" aria-label="Navigation principale">
-          <a href="#overview">Aperçu</a>
-          <a href="#presence">Présence</a>
-          <a href="#objectif">Objectif Heures</a>
-          <a href="#new-menu">Menu augmnenté</a>
-          <a href="#clusters">Clusters</a>
-          <a href="#events">Events</a>
-          <a href="#trombi">Trombinoscope</a>
-		  <a href="#reviews">Reviews</a>
-          <a href="#games">Jeux</a>
-          <a href="#faq">FAQ</a>
-          <a href="#Contact">Contact</a>
+          <a href="/intra-plus-presentation/#overview">Aperçu</a>
+          <a href="/intra-plus-presentation/#presence">Présence</a>
+          <a href="/intra-plus-presentation/#objectif">Objectif Heures</a>
+          <a href="/intra-plus-presentation/#new-menu">Menu augmenté</a>
+          <a href="/intra-plus-presentation/#clusters">Clusters</a>
+          <a href="/intra-plus-presentation/#events">Events</a>
+          <a href="/intra-plus-presentation/#trombi">Trombinoscope</a>
+          <a href="/intra-plus-presentation/#reviews">Reviews</a>
+          <a href="/intra-plus-presentation/#games">Jeux</a>
+          <a href="/intra-plus-presentation/#faq">FAQ</a>
+          <a href="/intra-plus-presentation/#contact">Contact</a>
         </nav>
-        <a class="btn btn-ghost btn-small" href="https://42-plus.boris-hanicotte.workers.dev/42-plus.user.js" target="_blank" rel="noopener noreferrer">Télécharger la bêta</a>
+
+        <a
+          class="btn btn-ghost btn-small"
+          href="https://42-plus.boris-hanicotte.workers.dev/42-plus.user.js"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Télécharger la bêta
+        </a>
+
       </div>
     </header>
+
+    <!-- MAIN -->
+    <main>
+
+      <section class="story-section">
+
+        <div class="section-header">
+          <p class="section-kicker">À propos</p>
+          <h2>Pourquoi Intra+ existe</h2>
+          <p>
+            Intra+ est un projet personnel né d’un besoin réel&nbsp;: rendre certaines informations
+            de l’Intra plus lisibles, plus rapides à consulter et mieux adaptées à un usage quotidien.
+          </p>
+        </div>
+
+        <article class="story-card reveal">
+
+          <div class="story-content-wide">
+
+            <h3>Origine du projet</h3>
+            <p>
+              L’extension a été développée initialement pour le campus de 42 Marseille,
+              en observant les habitudes des étudiants et les limites pratiques de certaines pages.
+              L’objectif n’est pas de remplacer l’Intra, mais d’en proposer une lecture enrichie,
+              plus confortable et plus efficace.
+            </p>
+
+            <h3>Projet communautaire</h3>
+            <p>
+              Intra+ n’est pas un outil officiel de l’école 42.
+              Il s’agit d’un projet indépendant, développé à titre personnel,
+              avec une attention particulière portée à la confidentialité&nbsp;:
+              aucune donnée n’est envoyée à des serveurs externes.
+            </p>
+
+            <h3>Limites actuelles</h3>
+            <p>
+              Certaines fonctionnalités sont adaptées spécifiquement au fonctionnement du campus de Marseille.
+              Chaque école ayant ses propres usages, une extension multi-campus demande des ajustements précis
+              et des retours terrain.
+            </p>
+
+            <h3>Participer</h3>
+            <p>
+              Si vous souhaitez tester Intra+ sur votre campus, proposer des idées ou aider à son adaptation,
+              vous pouvez me contacter directement via Slack depuis la page principale.
+            </p>
+
+          </div>
+
+        </article>
+
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>© 2026 Intra+ Extension — Boris Hanicotte. Tous droits réservés.</p>
+
+      <div class="footer-links">
+        <a href="https://github.com/BorisHnt/" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="/intra-plus-presentation/">Accueil</a>
+        <a href="#top">Licence</a>
+        <a href="/intra-plus-presentation/#contact">Contact</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- JS -->
+  <script src="../scripts/main.js"></script>
+
+</body>
+</html>
