@@ -1,38 +1,53 @@
+// ===============================
+// JS READY FLAG (évite flash CSS)
+// ===============================
+
 document.addEventListener('DOMContentLoaded', () => {
-  // ===============================
-  // Splash screen (1 fois / session)
-  // ===============================
+  document.body.classList.add('js-ready');
 
   const splash = document.getElementById('splash');
   const enterButton = document.getElementById('enter-btn');
   const mainContent = document.getElementById('main');
-
   const prefersReducedMotion = window.matchMedia(
     '(prefers-reduced-motion: reduce)'
   ).matches;
 
-  const splashAlreadySeen =
-    sessionStorage.getItem('intraPlusSplashSeen');
+  const splashAlreadySeen = sessionStorage.getItem(
+    'intraPlusSplashSeen'
+  );
+
+  // ===============================
+  // Helpers
+  // ===============================
 
   const revealMainContent = () => {
     document.body.classList.add('show-main');
-    mainContent?.setAttribute('aria-hidden', 'false');
+    if (mainContent) {
+      mainContent.setAttribute('aria-hidden', 'false');
+    }
   };
 
   const hideSplashInstantly = () => {
-    splash?.classList.add('is-hidden');
-    splash?.setAttribute('aria-hidden', 'true');
+    if (!splash) return;
+    splash.classList.add('is-hidden');
+    splash.setAttribute('aria-hidden', 'true');
   };
 
-  // --- Skip immédiat ---
-  if (splashAlreadySeen) {
+  // ===============================
+  // Splash logic
+  // ===============================
+
+  if (!splash || !enterButton || !mainContent) {
+    // page sans splash (ou about)
+    revealMainContent();
+  } else if (splashAlreadySeen) {
     hideSplashInstantly();
     revealMainContent();
   } else if (prefersReducedMotion) {
     sessionStorage.setItem('intraPlusSplashSeen', 'true');
     hideSplashInstantly();
     revealMainContent();
-  } else if (enterButton && splash) {
+  } else {
     enterButton.addEventListener('click', () => {
       if (document.body.classList.contains('is-transitioning')) return;
 
@@ -44,16 +59,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const logoDuration = 600;
       const mainDuration = 800;
 
-      window.setTimeout(revealMainContent, logoDuration);
+      window.setTimeout(() => {
+        revealMainContent();
+      }, logoDuration);
 
       window.setTimeout(() => {
         hideSplashInstantly();
         document.body.classList.remove('is-transitioning');
       }, logoDuration + mainDuration);
     });
-  } else {
-    // fallback sécurité
-    revealMainContent();
   }
 
   // ===============================
@@ -63,9 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const revealElements = document.querySelectorAll('.reveal');
 
   if (prefersReducedMotion || !('IntersectionObserver' in window)) {
-    revealElements.forEach((el) =>
-      el.classList.add('is-visible')
-    );
+    revealElements.forEach((el) => el.classList.add('is-visible'));
   } else {
     const revealObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -133,22 +145,25 @@ document.addEventListener('DOMContentLoaded', () => {
           activeLayer = nextLayerIndex;
         };
 
-        fadeDuration === 0
-          ? finalizeSwap()
-          : setTimeout(finalizeSwap, fadeDuration);
+        if (fadeDuration === 0) {
+          finalizeSwap();
+          return;
+        }
+
+        setTimeout(finalizeSwap, fadeDuration);
       };
 
       nextLayer.src = clusterSources[nextIndex];
 
-      nextLayer.complete
-        ? activateNext()
-        : nextLayer.addEventListener(
-            'load',
-            function onLoad() {
-              nextLayer.removeEventListener('load', onLoad);
-              activateNext();
-            }
-          );
+      if (nextLayer.complete) {
+        activateNext();
+      } else {
+        const onLoad = () => {
+          nextLayer.removeEventListener('load', onLoad);
+          activateNext();
+        };
+        nextLayer.addEventListener('load', onLoad);
+      }
     };
 
     setInterval(swapClusterShot, intervalDuration);
@@ -201,22 +216,25 @@ document.addEventListener('DOMContentLoaded', () => {
           activeLayer = nextLayerIndex;
         };
 
-        fadeDuration === 0
-          ? finalizeSwap()
-          : setTimeout(finalizeSwap, fadeDuration);
+        if (fadeDuration === 0) {
+          finalizeSwap();
+          return;
+        }
+
+        setTimeout(finalizeSwap, fadeDuration);
       };
 
       nextLayer.src = reviewSources[nextIndex];
 
-      nextLayer.complete
-        ? activateNext()
-        : nextLayer.addEventListener(
-            'load',
-            function onLoad() {
-              nextLayer.removeEventListener('load', onLoad);
-              activateNext();
-            }
-          );
+      if (nextLayer.complete) {
+        activateNext();
+      } else {
+        const onLoad = () => {
+          nextLayer.removeEventListener('load', onLoad);
+          activateNext();
+        };
+        nextLayer.addEventListener('load', onLoad);
+      }
     };
 
     setInterval(swapReviewShot, intervalDuration);
@@ -272,7 +290,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const link = e.target.closest('a');
     if (!link) return;
 
-    if (link.textContent.trim() !== 'Télécharger la bêta')
+    if (
+      link.textContent.trim() !== 'Télécharger la bêta'
+    )
       return;
 
     e.preventDefault();

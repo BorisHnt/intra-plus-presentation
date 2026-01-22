@@ -79,12 +79,13 @@ button {
   display: grid;
   place-items: center;
   z-index: 10;
-  transition: opacity 300ms ease;
+  transition: opacity 300ms ease, visibility 0ms linear 300ms;
 }
 
 .splash.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 
 .splash-content {
@@ -642,6 +643,20 @@ main {
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ================================
+   JS bootstrapping anti flash
+================================ */
+
+body:not(.js-ready) .splash,
+body:not(.js-ready) .main-content {
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.show-main .splash {
+  display: none;
 }
 
 @keyframes float {
