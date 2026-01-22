@@ -110,17 +110,16 @@ button {
 
 .splash.is-exiting .btn {
   opacity: 0;
-  transform: translateY(12px);
+  transform: translateY(0px);
 }
 
 .main-content {
   position: relative;
   z-index: 1;
   opacity: 0;
-  transform: scale(1.2);
-  filter: blur(10px);
-  transition: opacity 800ms ease-out, transform 800ms ease-out, filter 800ms ease-out;
-  pointer-events: none;
+  transform: none;
+  filter: none;
+  transition: opacity 600ms ease-out;
 }
 
 body.show-main .main-content {
