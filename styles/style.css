@@ -311,7 +311,15 @@ main {
 }
 
 .story-content h3 {
-  font-size: 1.6rem;
+  font-size: 1.65rem;
+}
+
+.story-content-wide h3 {
+  font-size: 1.65rem;
+}
+
+.story-content-wide h4 {
+  font-size: 1.35rem;
 }
 
 .story-content p {
@@ -585,9 +593,13 @@ main {
   color: var(--text-muted);
 }
 
+.p1 {
+  text-indent: 2em;
+}
+
 .p2 {
   text-indent: 2em;
-  font-size: 0.6rem;
+  font-size: 0.9rem;
 }
 
 .contact-actions {
