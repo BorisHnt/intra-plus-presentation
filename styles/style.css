@@ -500,6 +500,17 @@ main {
   max-width: 501px;
 }
 
+.story-callout-wide {
+  margin-top: 32px;
+  padding: 28px 32px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+
+  width: 100%;
+  max-width: 100%;
+}
+
 .callout-title {
   font-weight: 700;
   margin-bottom: 6px;
