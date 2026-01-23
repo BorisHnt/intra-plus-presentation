@@ -706,6 +706,110 @@ body.show-main .splash {
   transform: translateY(-1px);
 }
 
+/* ================================
+   Login + Password
+================================ */
+
+/* Fond assombri */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: grid;
+  place-items: center;
+  z-index: 1000;
+}
+
+.popup-overlay {
+  display: none;
+}
+
+/* Fenêtre */
+.popup-window {
+  width: 420px;
+  background: var(--surface);
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  font-family: inherit;
+}
+
+/* Header */
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.02)
+  );
+  border-bottom: 1px solid var(--border);
+}
+
+.popup-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Boutons type Windows */
+.popup-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.popup-btn {
+  width: 28px;
+  height: 22px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.popup-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.popup-close:hover {
+  background: rgba(255, 80, 80, 0.25);
+}
+
+/* Body */
+.popup-body {
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+}
+
+.popup-body label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.85rem;
+}
+
+.popup-body input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface-soft);
+  color: var(--text);
+  font-family: inherit;
+}
+
+.popup-body input:focus {
+  outline: none;
+  border-color: var(--violet);
+}
+
+/* ================================
+   Autres
+================================ */
+
 @keyframes float {
   0%,
   100% {
