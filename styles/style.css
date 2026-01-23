@@ -669,6 +669,39 @@ body.show-main .splash {
   display: none;
 }
 
+/* ================================
+   Beta testeurs
+================================ */
+
+.beta-testers {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.beta-testers a {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-muted);
+
+  transition: transform 150ms ease, border-color 150ms ease,
+    box-shadow 150ms ease, color 150ms ease;
+}
+
+.beta-testers a:hover,
+.beta-testers a:focus-visible {
+  color: var(--text);
+  border-color: var(--violet);
+  box-shadow: 0 0 14px rgba(171, 159, 248, 0.25);
+  transform: translateY(-1px);
+}
+
 @keyframes float {
   0%,
   100% {
