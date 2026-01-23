@@ -307,4 +307,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.open(url, '_blank', 'noopener');
   });
+
+  // ===============================
+  // Popup User PW
+  // ===============================
+
+  document.addEventListener("DOMContentLoaded", () => {
+	const popup = document.querySelector(".popup-overlay");
+	const openBtns = document.querySelectorAll(".js-open-popup");
+	const closeBtn = document.querySelector(".popup-close");
+
+	if (!popup) return;
+
+	function openPopup() {
+	popup.style.display = "grid";
+	requestAnimationFrame(() => {
+		popup.classList.add("active");
+	});
+	}
+
+	function closePopup() {
+	popup.classList.remove("active");
+	setTimeout(() => {
+		popup.style.display = "none";
+	}, 200);
+	}
+
+	openBtns.forEach(btn => {
+		btn.addEventListener("click", e => {
+		e.preventDefault();
+		openPopup();
+		});
+	});
+
+	closeBtn.addEventListener("click", closePopup);
+
+	popup.addEventListener("click", e => {
+		if (e.target === popup) closePopup();
+	});
+  });
 });

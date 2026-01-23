@@ -806,6 +806,19 @@ body.show-main .splash {
   border-color: var(--violet);
 }
 
+/* Animation */
+
+.popup-window {
+  transform: scale(0.95);
+  opacity: 0;
+  transition: 200ms ease;
+}
+
+.popup-overlay.active .popup-window {
+  transform: scale(1);
+  opacity: 1;
+}
+
 /* ================================
    Autres
 ================================ */
