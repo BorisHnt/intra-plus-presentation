@@ -283,46 +283,36 @@ document.addEventListener('DOMContentLoaded', () => {
   // Téléchargement bêta
   // ===============================
 
+// ===============================
+// Téléchargement bêta – popup
+// ===============================
+
   const DL_SCRIPT_URL =
-  'https://42-plus.boris-hanicotte.workers.dev/42-plus.user.js';
+	"https://42-plus.boris-hanicotte.workers.dev/42-plus.user.js";
 
-  document.addEventListener('click', (e) => {
-  const link = e.target.closest('[data-dl-beta]');
-  if (!link) return;
+	const popupOverlay = document.getElementById("beta-popup-overlay");
+	const usernameInput = document.getElementById("beta-username");
+	const passwordInput = document.getElementById("beta-code");
+	const confirmBtn = document.querySelector(".js-confirm-popup");
+	const closeBtns = document.querySelectorAll(".js-close-popup");
 
-  e.preventDefault();
+	let popupOpener = null;
 
-  const username = prompt('Entre ton username 42 :');
-  if (!username) return;
-
-  const password = prompt('Mot de passe bêta :');
-  if (!password) return;
-
-  const url =
-	DL_SCRIPT_URL +
-	'?u=' +
-	encodeURIComponent(username.trim()) +
-	'&pw=' +
-	encodeURIComponent(password);
-
-  window.open(url, '_blank', 'noopener');
-  });
-
-  // ===============================
-  // Popup User PW
-  // ===============================
-
-  const popupOverlay = document.getElementById("beta-popup-overlay");
-
-  document.querySelectorAll(".js-open-popup").forEach(btn => {
+	// Ouvrir popup depuis boutons
+	document.querySelectorAll(".js-open-popup").forEach(btn => {
 	btn.addEventListener("click", e => {
 		e.preventDefault();
+		popupOpener = btn;
+
 		popupOverlay.classList.add("is-visible");
 		popupOverlay.setAttribute("aria-hidden", "false");
+
+		usernameInput.focus();
 	});
 	});
 
-	document.querySelectorAll(".js-close-popup").forEach(btn => {
+	// Fermer popup
+	closeBtns.forEach(btn => {
 	btn.addEventListener("click", closePopup);
 	});
 
@@ -335,15 +325,39 @@ document.addEventListener('DOMContentLoaded', () => {
 	function closePopup() {
 	popupOverlay.classList.remove("is-visible");
 	popupOverlay.setAttribute("aria-hidden", "true");
+
+	usernameInput.value = "";
+	passwordInput.value = "";
 	}
 
-	document.querySelector(".js-confirm-popup").addEventListener("click", () => {
-	const username = document.getElementById("beta-username").value.trim();
-	const code = document.getElementById("beta-code").value.trim();
+	// Validation OK
+	confirmBtn.addEventListener("click", () => {
+	const username = usernameInput.value.trim();
+	const password = passwordInput.value.trim();
 
-	console.log("Username:", username);
-	console.log("Code:", code);
+	if (!username || !password) {
+		shakePopup();
+		return;
+	}
+
+	const url =
+		DL_SCRIPT_URL +
+		"?u=" +
+		encodeURIComponent(username) +
+		"&pw=" +
+		encodeURIComponent(password);
+
+	window.open(url, "_blank", "noopener");
 
 	closePopup();
-  });
+	});
+
+	/* Petite animation si erreur
+	function shakePopup() {
+	const win = document.querySelector(".popup-window");
+
+	win.classList.remove("shake");
+	void win.offsetWidth;
+	win.classList.add("shake");
+  } */
 });
