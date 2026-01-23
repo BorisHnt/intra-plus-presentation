@@ -312,38 +312,38 @@ document.addEventListener('DOMContentLoaded', () => {
   // Popup User PW
   // ===============================
 
-  document.addEventListener("DOMContentLoaded", () => {
-	const popup = document.querySelector(".popup-overlay");
-	const openBtns = document.querySelectorAll(".js-open-popup");
-	const closeBtn = document.querySelector(".popup-close");
+  const popupOverlay = document.getElementById("beta-popup-overlay");
 
-	if (!popup) return;
-
-	function openPopup() {
-	popup.style.display = "grid";
-	requestAnimationFrame(() => {
-		popup.classList.add("active");
+  document.querySelectorAll(".js-open-popup").forEach(btn => {
+	btn.addEventListener("click", e => {
+		e.preventDefault();
+		popupOverlay.classList.add("is-visible");
+		popupOverlay.setAttribute("aria-hidden", "false");
 	});
+	});
+
+	document.querySelectorAll(".js-close-popup").forEach(btn => {
+	btn.addEventListener("click", closePopup);
+	});
+
+	popupOverlay.addEventListener("click", e => {
+	if (e.target === popupOverlay) {
+		closePopup();
 	}
+	});
 
 	function closePopup() {
-	popup.classList.remove("active");
-	setTimeout(() => {
-		popup.style.display = "none";
-	}, 200);
+	popupOverlay.classList.remove("is-visible");
+	popupOverlay.setAttribute("aria-hidden", "true");
 	}
 
-	openBtns.forEach(btn => {
-		btn.addEventListener("click", e => {
-		e.preventDefault();
-		openPopup();
-		});
-	});
+	document.querySelector(".js-confirm-popup").addEventListener("click", () => {
+	const username = document.getElementById("beta-username").value.trim();
+	const code = document.getElementById("beta-code").value.trim();
 
-	closeBtn.addEventListener("click", closePopup);
+	console.log("Username:", username);
+	console.log("Code:", code);
 
-	popup.addEventListener("click", e => {
-		if (e.target === popup) closePopup();
-	});
+	closePopup();
   });
 });

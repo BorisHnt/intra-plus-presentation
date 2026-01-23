@@ -404,33 +404,52 @@
     </footer>
   </div>
 
-  <script src="scripts/main.js"></script>
+  <div id="beta-popup-overlay" class="popup-overlay" aria-hidden="true">
 
-  <div class="popup-overlay">
-	<div class="popup-window">
+	<div class="popup-window" role="dialog" aria-modal="true">
 
-	  <div class="popup-header">
-		<span class="popup-title">Authentification</span>
-
-		<div class="popup-actions">
-			<button class="popup-btn popup-close" aria-label="Fermer">✕</button>
-		</div>
+		<!-- Header -->
+		<div class="popup-header">
+		<span class="popup-title">Télécharger la bêta</span>
+		<button class="popup-close js-close-popup" aria-label="Fermer">✕</button>
 		</div>
 
+		<!-- Body -->
 		<div class="popup-body">
+
 		<label>
-			<span>Username</span>
-			<input type="text" placeholder="Votre username">
+			Username
+			<input
+			type="text"
+			id="beta-username"
+			placeholder="ex: boris42"
+			autocomplete="off"
+			>
 		</label>
 
 		<label>
-			<span>Code</span>
-			<input type="password" placeholder="Code d’accès">
+			Code
+			<input
+			type="text"
+			id="beta-code"
+			placeholder="Code d’accès"
+			autocomplete="off"
+			>
 		</label>
-	  </div>
+
+		</div>
+
+		<!-- Footer -->
+		<div class="popup-footer">
+		<button class="btn btn-ghost js-close-popup">Annuler</button>
+		<button class="btn btn-gradient js-confirm-popup">OK</button>
+		</div>
 
 	</div>
+
   </div>
+
+  <script src="scripts/main.js"></script>
 
 </body>
 </html>
