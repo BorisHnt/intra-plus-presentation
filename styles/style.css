@@ -8,7 +8,8 @@
   --surface-bright: #1e2430;
   --text: #ffffff;
   --text-muted: rgba(255, 255, 255, 0.68);
-  --text-muted-2: rgba(255, 255, 255, 0.5);
+  --text-muted-1: rgba(255, 255, 255, 0.85);
+  --text-muted-2: rgba(255, 255, 255, 0.6);
   --border: rgba(255, 255, 255, 0.12);
   --shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
   --radius: 22px;
@@ -321,7 +322,7 @@ main {
 
 .story-content-wide h4 {
   font-size: 1.2rem;
-  color: var(--text-muted);
+  color: var(--text-muted-1);
 }
 
 .story-content p {
