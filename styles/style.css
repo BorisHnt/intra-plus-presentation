@@ -585,6 +585,11 @@ main {
   color: var(--text-muted);
 }
 
+.p2 {
+  text-indent: 2em;
+  font-size: 0.6rem;
+}
+
 .contact-actions {
   display: flex;
   flex-wrap: wrap;
