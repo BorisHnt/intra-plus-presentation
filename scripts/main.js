@@ -280,12 +280,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ===============================
-  // Téléchargement bêta
+  // Téléchargement bêta – popup
   // ===============================
-
-// ===============================
-// Téléchargement bêta – popup
-// ===============================
 
   const DL_SCRIPT_URL =
 	"https://42-plus.boris-hanicotte.workers.dev/42-plus.user.js";
