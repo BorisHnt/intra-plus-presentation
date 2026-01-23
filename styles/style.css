@@ -697,8 +697,8 @@ body.show-main .splash {
 .beta-testers a:hover,
 .beta-testers a:focus-visible {
   color: var(--text);
-  border-color: var(--violet);
-  box-shadow: 0 0 14px rgba(171, 159, 248, 0.25);
+  border-color: var(--pink);
+  box-shadow: 0 0 14px rgba(243, 112, 178, 0.15);
   transform: translateY(-1px);
 }
 
