@@ -511,7 +511,7 @@ main {
   max-width: 100%;
 }
 
-.story-callout-wide p + h2 {
+.story-callout-wide p + h2 + h3 {
   margin-top: 28px;
 }
 
