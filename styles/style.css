@@ -501,7 +501,7 @@ main {
 }
 
 .story-callout-wide {
-  margin-top: 32px;
+  margin-top: 10px;
   padding: 28px 32px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
