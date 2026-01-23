@@ -284,27 +284,27 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===============================
 
   const DL_SCRIPT_URL =
-    'https://42-plus.boris-hanicotte.workers.dev/42-plus.user.js';
+  'https://42-plus.boris-hanicotte.workers.dev/42-plus.user.js';
 
   document.addEventListener('click', (e) => {
-    const link = e.target.closest('a');
-    if (!link) return;
+  const link = e.target.closest('[data-dl-beta]');
+  if (!link) return;
 
-    if (
-      link.textContent.trim() !== 'Télécharger la bêta'
-    )
-      return;
+  e.preventDefault();
 
-    e.preventDefault();
+  const username = prompt('Entre ton username 42 :');
+  if (!username) return;
 
-    const username = prompt('Entre ton username 42 :');
-    if (!username) return;
+  const password = prompt('Mot de passe bêta :');
+  if (!password) return;
 
-    const url =
-      DL_SCRIPT_URL +
-      '?u=' +
-      encodeURIComponent(username.trim());
+  const url =
+	DL_SCRIPT_URL +
+	'?u=' +
+	encodeURIComponent(username.trim()) +
+	'&pw=' +
+	encodeURIComponent(password);
 
-    window.open(url, '_blank', 'noopener');
+  window.open(url, '_blank', 'noopener');
   });
 });
