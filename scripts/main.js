@@ -183,6 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'pictures/screenshots/ReviewsGiven001.png',
       'pictures/screenshots/ReviewsReceived001.png',
       'pictures/screenshots/SameLevel001.png',
+      'pictures/screenshots/SameExam001.png',
     ];
 
     reviewSources.forEach((src) => {
