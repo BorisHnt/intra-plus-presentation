@@ -815,9 +815,9 @@ body.show-main .splash {
 }
 
 .popup-note {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 .popup-check {
