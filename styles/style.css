@@ -805,12 +805,31 @@ body.show-main .splash {
   color: var(--text-muted);
 }
 
-.popup-body input {
+.popup-body input[type="text"],
+.popup-body input[type="password"] {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 10px 12px;
   color: white;
+}
+
+.popup-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.popup-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.popup-check input {
+  margin-top: 2px;
 }
 
 /* Footer */
