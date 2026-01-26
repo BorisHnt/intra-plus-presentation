@@ -820,7 +820,7 @@ body.show-main .splash {
   line-height: 1.2;
 }
 
-.popup-check {
+.popup-body label.popup-check {
   display: flex;
   align-items: flex-start;
   gap: 10px;
@@ -828,7 +828,7 @@ body.show-main .splash {
   color: var(--text-muted);
 }
 
-.popup-check input {
+.popup-body label.popup-check input {
   margin-top: 2px;
 }
 
