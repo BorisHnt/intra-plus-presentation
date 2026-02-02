@@ -1,4 +1,4 @@
-# 42+ Extension — Site vitrine
+# INTRA+Extension — Site vitrine
 
 Site vitrine moderne et responsive pour présenter l'extension 42+. Il inclut un écran d'accueil animé, une transition fluide vers la page principale et des sections features/showroom/FAQ.
 
