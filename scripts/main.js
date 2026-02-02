@@ -252,8 +252,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (updateIntraLayers.length >= 2) {
     const updateIntraSources = [
-      'pictures/screenshots/updateIntra001.png',
-      'pictures/screenshots/updateIntra002.png',
+      'pictures/screenshots/UpdateIntra001.png',
+      'pictures/screenshots/UpdateIntra002.png',
     ];
 
     updateIntraSources.forEach((src) => {
