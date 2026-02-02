@@ -307,6 +307,7 @@ main {
 }
 
 .story-content-wide {
+  flex: 1;
   min-width: 0;
   display: grid;
   gap: 12px;
