@@ -242,6 +242,76 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ===============================
+  // Update Intra fade
+  // ===============================
+
+  const updateIntraFade = document.querySelector('[data-updateIntra-fade]');
+  const updateIntraLayers = updateIntraFade
+    ? Array.from(updateIntraFade.querySelectorAll('.updateIntra-shot'))
+    : [];
+
+  if (updateIntraLayers.length >= 2) {
+    const updateIntraSources = [
+      'pictures/screenshots/updateIntra001.png',
+      'pictures/screenshots/updateIntra002.png',
+    ];
+
+    updateIntraSources.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+
+    const fadeDuration = prefersReducedMotion ? 0 : 250;
+    const intervalDuration = 5000;
+
+    let updateIntraIndex = 0;
+    let activeLayer = 0;
+
+    const swapupdateIntraShot = () => {
+      const nextIndex =
+        (updateIntraIndex + 1) % updateIntraSources.length;
+
+      const nextLayerIndex = activeLayer === 0 ? 1 : 0;
+
+      const currentLayer = updateIntraLayers[activeLayer];
+      const nextLayer = updateIntraLayers[nextLayerIndex];
+
+      const activateNext = () => {
+        nextLayer.classList.add('is-active');
+        nextLayer.setAttribute('aria-hidden', 'false');
+
+        const finalizeSwap = () => {
+          currentLayer.classList.remove('is-active');
+          currentLayer.setAttribute('aria-hidden', 'true');
+          updateIntraIndex = nextIndex;
+          activeLayer = nextLayerIndex;
+        };
+
+        if (fadeDuration === 0) {
+          finalizeSwap();
+          return;
+        }
+
+        setTimeout(finalizeSwap, fadeDuration);
+      };
+
+      nextLayer.src = updateIntraSources[nextIndex];
+
+      if (nextLayer.complete) {
+        activateNext();
+      } else {
+        const onLoad = () => {
+          nextLayer.removeEventListener('load', onLoad);
+          activateNext();
+        };
+        nextLayer.addEventListener('load', onLoad);
+      }
+    };
+
+    setInterval(swapupdateIntraShot, intervalDuration);
+  }
+
+  // ===============================
   // Parallax
   // ===============================
 
