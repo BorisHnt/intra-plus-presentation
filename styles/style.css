@@ -372,6 +372,10 @@ main {
   display: flex;
 }
 
+.story-media-update {
+  display: flex;
+}
+
 .media-frame {
   border-radius: var(--radius);
   border: 1px solid var(--border);
@@ -396,6 +400,11 @@ main {
 }
 
 .media-frame--game {
+  width: min(980px, 100%);
+  margin-left: 0px;
+}
+
+.media-frame--update {
   width: min(980px, 100%);
   margin-left: 0px;
 }
