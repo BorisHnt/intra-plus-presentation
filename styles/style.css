@@ -1,4 +1,5 @@
 :root {
+  --font-sans: "Noto Sans", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --pink: rgb(243, 112, 178);
   --violet: rgb(171, 159, 248);
   --blue: #0e2957;
@@ -31,13 +32,15 @@ html {
 
 body {
   min-height: 100vh;
-  font-family: "Sora", "Manrope", "Avenir Next", "Futura", "Trebuchet MS", sans-serif;
+  font-family: var(--font-sans);
   background: radial-gradient(1200px 600px at 10% -10%, rgba(14, 41, 87, 0.28), transparent 60%),
     #0f1115;
   color: var(--text);
   line-height: 1.6;
   letter-spacing: 0.01em;
   overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  font-synthesis: weight style;
 }
 
 body::after {
@@ -72,6 +75,17 @@ img {
 
 button {
   font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+  font-weight: 700;
 }
 
 .splash {
