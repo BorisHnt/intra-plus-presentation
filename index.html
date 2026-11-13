@@ -3,521 +3,106 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Site de présentation pour l'extension INTRA+: fonctionnalités, showroom et FAQ.">
-  <title>INTRA+ | Extension</title>
+  <meta name="description" content="Suivez l'avancement du développement d'Intra+ 2.0 Beta.">
+  <meta name="theme-color" content="#0f1115">
+  <title>Intra+ 2.0 | Travaux en cours</title>
   <link rel="icon" type="image/png" href="assets/logo.png">
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/maintenance.css">
+  <script src="scripts/maintenance.js" defer></script>
 </head>
 <body>
-  <section id="splash" class="splash" aria-label="Écran d'accueil">
-    <div class="splash-content">
-      <img src="assets/logo.svg" alt="Logo 42+" class="splash-logo">
-      <button id="enter-btn" class="btn btn-gradient" type="button">Présentation</button>
-    </div>
-  </section>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
 
-  <div id="main" class="main-content" aria-hidden="true">
-    <header class="site-header">
-      <div class="site-header-inner">
-        <div class="logo-mark">
-          <img src="assets/logo.svg" alt="Logo 42+" class="logo-small">
-          <span class="logo-text">Intra+</span>
-        </div>
-        <nav class="site-nav" aria-label="Navigation principale">
-          <a href="#overview">Aperçu</a>
-          <a href="#presence">Présence</a>
-          <a href="#objectif">Objectif Heures</a>
-          <a href="#new-menu">Menu augmenté</a>
-          <a href="#clusters">Clusters</a>
-          <a href="#updates">Updates</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
-          <a href="/intra-plus-presentation/changelogs">Changelogs</a>
-          <a href="/intra-plus-presentation/about">A Propos</a>
-        </nav>
-		  <a class="btn btn-ghost btn-small js-open-popup" href="#">Télécharger l'extension</a>
+  <header class="status-header">
+    <a class="brand" href="#top" aria-label="Intra+ 2.0 — retour en haut">
+      <img src="assets/logo.svg" alt="" width="46" height="46"><span>Intra+</span>
+    </a>
+    <div class="build-status" role="status"><span class="status-pulse" aria-hidden="true"></span><span>Build en cours</span></div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-logo-wrap" aria-hidden="true">
+        <span class="orbit orbit-one"></span><span class="orbit orbit-two"></span>
+        <img class="hero-logo" src="assets/logo.svg" alt="">
       </div>
-    </header>
-
-    <main>
-      <section id="overview" class="hero story-hero">
-        <div class="hero-content">
-          <p class="eyebrow">Extension Intra+</p>
-          <h1>Tout ce que l'Intra devrait afficher, en clair et en un seul regard.</h1>
-          <p class="hero-text">
-            Intra+ restructure votre tableau de bord, met en avant vos stats utiles et sublime chaque module
-            sans surcharger l'interface. Une interface légère qui met vos stats en avant, sans distraction, pensée pour l’usage quotidien.
-          </p>
-          <div class="hero-actions">
-
-			<a class="btn btn-gradient js-open-popup" href="#">Télécharger l'extension</a>
-            <a class="btn btn-ghost" href="#presence">Voir les modules</a>
-          </div>
-          <p class="hero-note">Version bêta : l'installation proposée télécharge la bêta de l'extension, pour l'instant disponible uniquement pour les étudiants de 42 Marseille.</p>
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <span class="hero-stat-value">10+</span>
-              <span class="hero-stat-label">modules visuels clés</span>
-            </div>
-            <div class="hero-stat">
-              <span class="hero-stat-value">100%</span>
-              <span class="hero-stat-label">de données stockées en local</span>
-            </div> <!--
-            <div class="hero-stat">
-              <span class="hero-stat-value">0</span>
-              <span class="hero-stat-label">bruit inutile</span>
-            </div> -->
-          </div>
-        </div>
-        <div class="hero-media" data-parallax>
-          <figure class="media-frame reveal">
-            <img src="pictures/screenshots/Intra+General002.png" alt="Interface générale et paramètres Intra+">
-            <figcaption>Vue générale et configuration par catégorie.</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section id="presence" class="story-section">
-        <div class="section-header">
-          <p class="section-kicker">Présence &amp; progression</p>
-          <h2>Des métriques simples et lisibles au premier coup d'œil.</h2>
-          <p>Suivez votre rythme au mois, à la semaine et au jour sans fouiller dans les pages.</p>
-        </div>
-        <article class="story-card reveal">
-          <div class="story-content">
-            <h3>Courbe mensuelle en un regard</h3>
-            <p>Une lecture directe des tendances, avec des repères clairs pour chaque mois.</p>
-            <ul class="story-list">
-              <li>Heures et minutes détaillées</li>
-              <li>Points clés visibles immédiatement</li>
-              <li>Affichage fidèle aux chiffres d'origine</li>
-              <li>Courbe claire pour comparer les heures de chaque mois</li>
-            </ul>
-          </div>
-          <div class="story-media">
-            <figure class="media-frame">
-              <img src="pictures/screenshots/HoursCurve001.png" alt="Courbe mensuelle de présence">
-            </figure>
-          </div>
-        </article>
-        <article class="story-card reveal reverse">
-          <div class="story-content">
-            <h3>Semaines comparées</h3>
-            <p>Visualisez votre cadence avec les barres hebdomadaires et les totaux cumulés.</p>
-            <ul class="story-list">
-              <li>Résumé hebdomadaire automatique</li>
-              <li>Comparaison multi-semaines</li>
-              <li>Synthèse claire en bas de bloc</li>
-            </ul>
-          </div>
-          <div class="story-media">
-            <figure class="media-frame">
-              <img src="pictures/screenshots/WeeksAddition001.png" alt="Comparatif hebdomadaire de présence">
-            </figure>
-          </div>
-        </article>
-      </section>
-
-      <section id="objectif" class="story-section">
-        <div class="section-header">
-          <p class="section-kicker">Objectif Heures</p>
-          <h2>Suivi des heures France Travail, sans stress supplémentaire.</h2>
-          <p>Le suivi d'objectif se lit en quelques secondes, avec les infos qui comptent.</p>
-        </div>
-        <article class="story-card reveal">
-          <div class="story-content">
-            <h3>Objectifs et progression instantanés</h3>
-            <p>Affichage dédié, barre de progression et estimations du rythme journalier en un seul bloc.</p>
-            <ul class="story-list">
-              <li>Reste à faire calculé automatiquement avec une vision claire grâce à la barre de progression</li>
-              <li>Moyenne d'heures à faire par jour ouvré incluant les jours fériés et les week-ends</li>
-              <li>Lecture claire, sans scrolling</li>
-              <li>3 modes à débloquer après dépassement : HARDCORE (France Travail), ULTIMATE (200h), DEAD END (300h)</li>
-            </ul>
-          </div>
-          <div class="story-media">
-            <figure class="media-frame media-frame--narrow">
-              <img src="pictures/screenshots/FranceTravail+Hours001.png" alt="Bloc objectif France Travail">
-            </figure>
-          </div>
-        </article>
-      </section>
-
-      <section id="new-menu" class="story-section">
-        <div class="section-header">
-          <p class="section-kicker">Menu augmenté</p>
-          <h2>Le même menu, avec de nouvelles fonctions.</h2>
-          <p>De nouveaux raccourcis et outils clés, à portée de clics.</p>
-        </div>
-        <article class="story-card reveal reverse">
-          <div class="story-content">
-			<h3>Un menu enrichi, sans rupture</h3>
-			<p>
-			Le menu conserve sa structure d’origine, mais intègre des informations
-			et raccourcis supplémentaires directement utiles au quotidien.
-			Aucune perte de repères, uniquement des gains.
-			</p>
-			<ul class="story-list">
-			  <li>Accès rapide aux modules clés sans multiplier les pages, avec la mise en place de nouveaux raccourcis</li>
-			  <li>Respect total des habitudes existantes, pour ne pas perdre l'utilisateur</li>
-			  <li>Informations essentielles accessibles directement par de nouveaux raccourcis dans le menu</li>
-			  <li>Navigation plus fluide, moins de clics inutiles</li>
-			</ul>
-          </div>
-          <div class="story-media-xtra-narrow">
-            <figure class="media-frame media-frame--xtra-narrow">
-              <img src="pictures/screenshots/NewMenu001.png" alt="Bloc objectif France Travail">
-            </figure>
-          </div>
-        </article>
-      </section>
-
-      <section id="clusters" class="story-section">
-        <div class="section-header">
-          <p class="section-kicker">Cluster Map+</p>
-          <h2>Voir les places libres ou les étudiants présents, sans effort.</h2>
-          <p>La map synthétise les postes disponibles, les étudiants présents et votre position en un coup d'œil.</p>
-        </div>
-        <article class="story-card reveal">
-          <div class="story-content">
-            <h3>Occupation en temps réel</h3>
-            <p>Chaque bloc est lisible, avec un code couleur clair inspiré de la Cluster Map d'origine.</p>
-            <ul class="story-list">
-              <li>Disponibilités visibles instantanément et rapidement</li>
-              <li>Résumé statistique global et par cluster pour connaître le taux de remplissage</li>
-              <li>Tooltip apparent avec le prénom, le nom et la photo de l'étudiant</li>
-            </ul>
-          </div>
-          <div class="story-media">
-            <figure class="media-frame cluster-frame">
-              <div class="cluster-fade" data-cluster-fade>
-                <img class="cluster-shot is-active" data-cluster-layer="0" src="pictures/screenshots/ClusterDemo001.png" alt="Cluster map enrichie">
-                <img class="cluster-shot" data-cluster-layer="1" src="pictures/screenshots/ClusterDemo002.png" alt="Cluster map enrichie" aria-hidden="true">
-              </div>
-            </figure>
-          </div>
-        </article>
-      </section>
-
-      <section id="events" class="story-section">
-        <div class="section-header">
-          <p class="section-kicker">Events &amp; examens</p>
-          <h2>Tout votre planning enrichi.</h2>
-          <p>Ajout direct au calendrier, statuts d'inscription et prochains examens visibles immédiatement.</p>
-        </div>
-        <div class="image-duo">
-		<div>
-          <figure class="media-frame reveal">
-            <img class="bento-shot" src="pictures/screenshots/NextExam001.png" alt="Bloc prochain examen">
-          </figure>
-          <div class="story-callout-2 reveal">
-            <h3>Accès direct aux nouvelles fonctionnalités</h3>
-			<ul class="story-list">
-				<li>Nouveaux boutons liés à Google Calendar</li>
-				<li>Fichiers ICS disponibles et téléchargeables</li>
-				<li>Accès direct à la date du prochain exam</li>
-			</ul>
-          </div>
-		</div>
-          <figure class="media-frame reveal">
-            <img class="bento-shot" src="pictures/screenshots/Events001.png" alt="Liste des événements enrichie">
-          </figure>
-        </div>
-      </section>
-
-      <section id="trombi" class="story-section">
-        <div class="section-header">
-          <p class="section-kicker">Trombinoscope</p>
-          <h2>Les profils, propres et rapides à consulter.</h2>
-          <p>Un affichage net pour parcourir les élèves et retrouver un visage en un clin d'œil.</p>
-        </div>
-        <div class="trombi-shot reveal">
-          <figure class="media-frame">
-            <img src="pictures/screenshots/TrombiDemo002.png" alt="Capture d'écran du trombinoscope">
-          </figure>
-        </div>
-      </section>
-
-	  <section id="reviews" class="story-section">
-		<div class="section-header">
-			<p class="section-kicker">Reviews</p>
-			<h2>Avoir les ratios de reviews et les étudiants au même niveau que vous, à portée de main</h2>
-			<p>Suivi en temps réel de vos reviews données et reçues, avec calcul automatique du ratio et affichage clair de votre progression.</p>
-		</div>
-
-		<article class="story-card reveal">
-			<div class="story-content">
-			<h3>Le ratio des reviews en instantané</h3>
-			<p>Visualisez en quelques clics le nombre de reviews données et reçues, sous forme simple et lisible.</p>
-
-			<ul class="story-list">
-			    <li>Score des reviews données depuis le début de la formation</li>
-			    <li>Score des reviews reçues avec personnalisation du nombre de reviews reçues avant abandon</li>
-			    <li>Affichage du ratio reviews données / reviews reçues sur les deux fenêtres</li>
-			</ul>
-
-			<h3>Vision claire des étudiants au même niveau que vous</h3>
-			<p>
-			Identifiez rapidement les étudiants qui ont un niveau ou une progression similaire à la vôtre,
-			qui ont déjà réussi les projets que vous préparez, ou les examens que vous avez essayé.
-			Cette vue comparative vous permet de trouver facilement des pairs avec qui échanger,
-			poser des questions ou collaborer, sans perdre de temps à chercher au hasard dans la communauté.
-			</p>
-
-			<ul class="story-list">
-				<li>Trouver des étudiants avec une progression similaire à la vôtre</li>
-				<li>Repérer ceux qui ont terminé des projets similaires aux vôtres</li>
-				<li>Repérer ceux qui ont essayé le même examen que vous</li>
-				<li>Accéder à des partenaires pour s’entraider ou échanger des conseils</li>
-				<li>Gagner du temps en ciblant les bonnes personnes pour progresser ensemble</li>
-			</ul>
-			</div>
-
-			<div class="story-media-medium">
-			  <figure class="media-frame media-frame--medium">
-				<div class="review-fade" data-review-fade>
-				<img
-					class="review-shot is-active"
-					src="pictures/screenshots/ReviewsGiven001.png"
-					alt="Bloc objectif et progression des reviews données"
-					aria-hidden="false"
-				>
-				<img
-					class="review-shot"
-					src="pictures/screenshots/ReviewsReceived001.png"
-					alt="Bloc objectif et progression des reviews reçues"
-					aria-hidden="true"
-				>
-				<img
-					class="review-shot"
-					src="pictures/screenshots/SameLevel001.png"
-					alt="Bloc objectif et progression des reviews reçues"
-					aria-hidden="true"
-				>
-				<img
-					class="review-shot"
-					src="pictures/screenshots/SameExam001.png"
-					alt="Bloc objectif et progression des reviews reçues"
-					aria-hidden="true"
-				>
-				</div>
-			  </figure>
-			</div>
-		</article>
-	  </section>
-
-      <section id="updates" class="story-section">
-        <div class="section-header">
-          <p class="section-kicker">Mise à jour</p>
-          <h2>Des mises à jour en un clic.</h2>
-          <p>Plus besoin de télécharger des scripts et de suivre le fil des updates.</p>
-        </div>
-        <article class="story-card reveal reverse">
-          <div class="story-content-wide">
-            <h3>Le bouton directement disponible dans les options de l'Intra</h3>
-			<p>
-			Les mises à jour d’Intra+ sont centralisées dans les options de l’extension.
-			Il est possible de vérifier la version installée et d’installer les nouveautés
-			en un clic, sans téléchargement manuel ni manipulation technique.
-			</p>
-			<p>
-			Ce système évite les versions obsolètes et garantit une extension toujours à jour,
-			avec des correctifs, des améliorations de stabilité et de nouvelles fonctionnalités
-			issues des retours des étudiants.
-			</p>
-			<ul class="story-list">
-			  <li>Vérification automatique de la version installée</li>
-			  <li>Indication claire lorsqu’une mise à jour est disponible</li>
-			  <li>Installation en un clic depuis les paramètres</li>
-			  <li>Corrections et améliorations continues</li>
-			</ul>
-          </div>
-          <div class="story-media-update">
-            <figure class="media-frame media-frame--update">
-              <div class="updateIntra-fade" data-updateIntra-fade>
-                <img
-                  class="updateIntra-shot is-active"
-                  src="pictures/screenshots/UpdateIntra001.png"
-                  alt="Bloc update"
-                  aria-hidden="false"
-                >
-                <img
-                  class="updateIntra-shot"
-                  src="pictures/screenshots/UpdateIntra002.png"
-                  alt="Bloc update"
-                  aria-hidden="true"
-                >
-              </div>
-            </figure>
-          </div>
-        </article>
-      </section>
-
-      <section id="games" class="story-section">
-        <div class="section-header">
-          <p class="section-kicker">Pause intelligente</p>
-          <h2>Mini-jeux intégrés, sans sortir du flow.</h2>
-          <p>Breakout, Tetris et Snake sont accessibles instantanément depuis l'Intra.</p>
-        </div>
-        <article class="story-card reveal">
-          <div class="story-content-wide">
-            <h3>Bibliothèque de jeux intégrée</h3>
-            <p>Une interface légère pour relancer la concentration entre deux sessions.</p>
-			<ul class="story-list">
-			  <li>Navigation rapide entre les jeux sans quitter le site internet de l’Intra</li>
-			  <li>Petit scoreboard intégré pour garder une trace de vos performances</li>
-			  <li>Design discret et homogène, cohérent au reste du site internet, sans casser le flow de travail</li>
-			</ul>
-          </div>
-          <div class="story-media-game">
-            <figure class="media-frame media-frame--game">
-              <img src="pictures/screenshots/VideoGames002.png" alt="Bibliothèque de mini-jeux">
-            </figure>
-          </div>
-        </article>
-      </section>
-
-      <section id="faq" class="section faq">
-        <div class="section-header">
-          <p class="section-kicker">FAQ</p>
-          <h2>Questions fréquentes</h2>
-          <p>Les réponses aux points essentiels avant d'installer l'extension.</p>
-        </div>
-        <div class="faq-list">
-		  <details class="faq-item reveal">
-		    <summary>Puis-je diffuser cette extension librement ?</summary>
-			<p>
-			L’extension est développée pour les étudiants de l’école et certaines de ses fonctionnalités 
-			reposent sur des contextes propres à cette communauté. Bien qu’il soit techniquement possible 
-			de partager le fichier, je recommande de ne pas la publier sur des plateformes publiques 
-			ou des stores d’extensions. Pensez à respecter l’esprit et l’usage pour lesquels elle a été créée.
-			</p>
-		  </details>
-          <details class="faq-item reveal">
-            <summary>Est-ce compatible avec toutes les pages 42 ?</summary>
-            <p>Oui, l'extension détecte les pages principales et adapte l'interface en conséquence.</p>
-          </details>
-          <details class="faq-item reveal">
-            <summary>Peut-on activer seulement certains modules ?</summary>
-            <p>Oui : chaque module peut être activé ou masqué selon vos besoins.</p>
-          </details>
-		  <details class="faq-item reveal">
-			<summary>Quelles données sont collectées ?</summary>
-			<p>Aucune donnée personnelle n’est collectée ou envoyée à des serveurs : toutes les données utilisées sont stockées en local dans votre navigateur.</p>
-		  </details>
-		  <details class="faq-item reveal">
-			<summary>L’extension ralentit-t-elle l’Intra ?</summary>
-			<p>Non : les modifications sont légères et optimisées pour ne pas affecter les performances de l’interface de l'Intra.</p>
-		  </details>
-		  <details class="faq-item reveal">
-			<summary>Est-ce compatible avec les autres extensions ?</summary>
-			<p>En général, oui. L’extension est conçue pour être compatible avec la plupart des outils populaires. Mais si un conflit survient, signalez-moi le problème.</p>
-		  </details>
-		  <details class="faq-item reveal">
-			<summary>Est-ce que l’extension est disponible pour les autres campus de 42&nbsp;?</summary>
-			<p>
-				Pas pour le moment. Je n’ai pas encore eu accès aux versions de Tirana et d’Irbid, ce qui est nécessaire pour adapter correctement l’extension aux spécificités de chaque école.
-			</p>
-			<p>
-				Chaque campus fonctionnant différemment selon la ville, les besoins sur place peuvent varier. 
-				Si vous souhaitez aider au développement d’une version adaptée à votre campus, n'hésitez pas à
-				<a href="#contact">me contacter</a> sur Slack.
-			</p>
-		  </details>
-		  <details class="faq-item reveal">
-			<summary>Comment signaler un bug ou une suggestion ?</summary>
-			<p>Vous pouvez <a href="#contact">me contacter</a> via Slack pour me soumettre un bug ou une amélioration.</p>
-		  </details>
-        </div>
-      </section>
-
-      <section id="contact" class="section contact">
-        <div class="section-header">
-          <p class="section-kicker">Contact</p>
-          <h2>Accéder à la bêta</h2>
-          <p>Une question, une démo complète ou une collaboration ? Parlons-en.</p>
-        </div>
-        <div class="contact-card reveal">
-          <p>Contactez-moi pour rejoindre la liste des bêta testeurs.</p>
-          <div class="contact-actions">
-            <a class="btn btn-gradient" href="https://42born2code.slack.com/team/U09Q6EU6NFM" target="_blank" rel="noreferrer">Me contacter sur Slack</a>
-            <a class="btn btn-ghost" href="https://github.com/BorisHnt/" target="_blank" rel="noreferrer">GitHub</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p>© 2026 Intra+ Extension by B.H., tous droits réservés.</p>
-      <div class="footer-links">
-        <a href="https://github.com/BorisHnt/" target="_blank" rel="noreferrer">GitHub</a>
-		<a href="/intra-plus-presentation/about/">A propos</a>
-		<a href="/intra-plus-presentation/changelogs/">Versions</a>
-		<a href="/intra-plus-presentation/licence/">Licence</a>
-        <a href="#contact">Contact</a>
+      <p class="eyebrow">Intra+ 2.0 Beta</p>
+      <h1 id="page-title">On reconstruit tout.<br><span>Proprement.</span></h1>
+      <p class="hero-copy">Intra+ évolue vers une architecture plus rapide, modulaire et fiable, tout en conservant les fonctionnalités et le design qui ont fait la version 1.2.4.</p>
+      <div class="release-card">
+        <div><span class="release-label">Fin des travaux estimée</span><strong>1<sup>er</sup> trimestre 2027</strong></div>
+        <p>Estimation révisable selon les tests du LMS et des API.</p>
       </div>
-    </footer>
-  </div>
+    </section>
 
-  <div id="beta-popup-overlay" class="popup-overlay" aria-hidden="true">
+    <section class="progress-section" aria-labelledby="progress-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">Progression globale</p><h2 id="progress-title">Le chantier avance.</h2></div>
+        <div class="overall-value" aria-hidden="true"><span>42</span><small>%</small></div>
+      </div>
+      <div class="progress-shell progress-shell-large" data-progress="42" role="progressbar" aria-label="Progression globale d'Intra+ 2.0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="42">
+        <div class="progress-track"><div class="progress-fill"><span class="progress-shine"></span><span class="particle particle-one"></span><span class="particle particle-two"></span><span class="particle particle-three"></span></div></div>
+        <div class="progress-meta"><span>Version 1.2.4</span><span>Version 2.0 Beta</span></div>
+      </div>
+    </section>
 
-	<div class="popup-window" role="dialog" aria-modal="true">
+    <section class="work-section" aria-labelledby="work-title">
+      <div class="section-heading compact">
+        <div><p class="section-kicker">État des modules</p><h2 id="work-title">Ce qui tourne déjà. Ce qui arrive ensuite.</h2></div>
+        <p class="last-update">Mise à jour : <time datetime="2026-11-13">13 novembre 2026</time></p>
+      </div>
+      <div class="module-grid">
+        <article class="module-card is-near" data-progress="90">
+          <div class="module-head"><span class="module-index">01</span><span class="module-state">Finalisation</span></div>
+          <h3>Présence &amp; statistiques</h3><p>Courbes, semaines, objectifs France Travail et meilleurs temps.</p>
+          <div class="progress-shell" role="progressbar" aria-label="Présence et statistiques" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90"><div class="progress-track"><div class="progress-fill"><span class="progress-shine"></span></div></div><span class="module-percent">90%</span></div>
+        </article>
+        <article class="module-card is-active" data-progress="68">
+          <div class="module-head"><span class="module-index">02</span><span class="module-state">En cours</span></div>
+          <h3>Shell, RTM &amp; responsive</h3><p>Topbar, navigation, dock et adaptation mobile ou écran partagé.</p>
+          <div class="progress-shell" role="progressbar" aria-label="Shell RTM et responsive" aria-valuemin="0" aria-valuemax="100" aria-valuenow="68"><div class="progress-track"><div class="progress-fill"><span class="progress-shine"></span></div></div><span class="module-percent">68%</span></div>
+        </article>
+        <article class="module-card is-active" data-progress="62">
+          <div class="module-head"><span class="module-index">03</span><span class="module-state">En cours</span></div>
+          <h3>Architecture &amp; chunks</h3><p>Chargement distant signé, cache Tampermonkey et modules indépendants.</p>
+          <div class="progress-shell" role="progressbar" aria-label="Architecture et chunks" aria-valuemin="0" aria-valuemax="100" aria-valuenow="62"><div class="progress-track"><div class="progress-fill"><span class="progress-shine"></span></div></div><span class="module-percent">62%</span></div>
+        </article>
+        <article class="module-card" data-progress="30">
+          <div class="module-head"><span class="module-index">04</span><span class="module-state">Implantation</span></div>
+          <h3>Mini-apps &amp; outils</h3><p>Annuaire, reviews, étudiants du même projet ou examen et outils pratiques.</p>
+          <div class="progress-shell" role="progressbar" aria-label="Mini-apps et outils" aria-valuemin="0" aria-valuemax="100" aria-valuenow="30"><div class="progress-track"><div class="progress-fill"><span class="progress-shine"></span></div></div><span class="module-percent">30%</span></div>
+        </article>
+        <article class="module-card" data-progress="35">
+          <div class="module-head"><span class="module-index">05</span><span class="module-state">Optimisation</span></div>
+          <h3>API &amp; performances</h3><p>Moins de requêtes, caches cohérents et comportement plus fiable.</p>
+          <div class="progress-shell" role="progressbar" aria-label="API et performances" aria-valuemin="0" aria-valuemax="100" aria-valuenow="35"><div class="progress-track"><div class="progress-fill"><span class="progress-shine"></span></div></div><span class="module-percent">35%</span></div>
+        </article>
+        <article class="module-card" data-progress="20">
+          <div class="module-head"><span class="module-index">06</span><span class="module-state">À intensifier</span></div>
+          <h3>Tests &amp; stabilisation</h3><p>Chrome, Firefox, mobile, navigation SPA et scénarios de panne.</p>
+          <div class="progress-shell" role="progressbar" aria-label="Tests et stabilisation" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20"><div class="progress-track"><div class="progress-fill"><span class="progress-shine"></span></div></div><span class="module-percent">20%</span></div>
+        </article>
+      </div>
+    </section>
 
-		<!-- Header -->
-		<div class="popup-header">
-		<span class="popup-title">Télécharger la bêta</span>
-		<button class="popup-close js-close-popup" aria-label="Fermer">✕</button>
-		</div>
+    <section class="timeline-section" aria-labelledby="timeline-title">
+      <div class="section-heading compact"><div><p class="section-kicker">Pipeline de livraison</p><h2 id="timeline-title">La route vers la 2.0.</h2></div></div>
+      <ol class="build-timeline">
+        <li class="is-done"><span class="timeline-marker" aria-hidden="true">✓</span><div><strong>Fondations techniques</strong><p>Découpage du monolithe et Worker de sources.</p></div><span class="timeline-status">Terminé</span></li>
+        <li class="is-running"><span class="timeline-marker" aria-hidden="true"></span><div><strong>Portage fidèle de la 1.2.4</strong><p>Chaque fonctionnalité revient, module après module.</p></div><span class="timeline-status">Compilation…</span></li>
+        <li><span class="timeline-marker" aria-hidden="true">03</span><div><strong>Optimisations et finitions</strong><p>Responsive, API, accessibilité et performances.</p></div><span class="timeline-status">Planifié</span></li>
+        <li><span class="timeline-marker" aria-hidden="true">04</span><div><strong>Beta publique</strong><p>Validation multi-navigateurs et ouverture progressive.</p></div><span class="timeline-status">T1 2027</span></li>
+      </ol>
+    </section>
 
-		<!-- Body -->
-		<div class="popup-body">
+    <section class="closing-card">
+      <p class="section-kicker">Pas de panique</p><h2>Intra+ revient plus solide.</h2>
+      <p>La version 2.0 doit reprendre tout ce que fait la 1.2.4, sans sacrifier la stabilité. Cette page sera mise à jour au fil des prochaines étapes.</p>
+      <span class="terminal-line"><span aria-hidden="true">$</span> build intra-plus@2.0 --carefully<span class="terminal-cursor" aria-hidden="true"></span></span>
+    </section>
+  </main>
 
-		<label>
-			Username
-			<input
-			type="text"
-			id="beta-username"
-			placeholder="username 42"
-			autocomplete="off"
-			>
-		</label>
-
-		<label>
-			Code
-			<input
-			type="text"
-			id="beta-code"
-			placeholder="Code d’accès"
-			autocomplete="off"
-			>
-		</label>
-
-		<p class="popup-note">
-			Avant de continuer, veuillez verifier que Tampermonkey est installé dans le navigateur.
-			Pensez à désactiver ou désinstaller les autres extensions avant l'installation.
-			L'ouverture d'une page blanche est normale, vous pouvez la fermer une fois l'extension installée.
-		</p>
-		<p class="popup-note">
-			L'extension est disponible uniquement pour les étudiants de l'École 42 Marseille.
-		</p>
-		<label class="popup-check">
-			<input type="checkbox" id="beta-ack">
-			<span class="popup-note">Je confirme avoir lu les instructions.</span>
-		</label>
-
-		</div>
-
-		<!-- Footer -->
-		<div class="popup-footer">
-		<button class="btn btn-ghost js-close-popup">Annuler</button>
-		<button class="btn btn-gradient js-confirm-popup">OK</button>
-		</div>
-
-	</div>
-
-  </div>
-
-  <script src="scripts/main.js"></script>
-
+  <footer><span>Intra+ 2.0 Beta</span><span>Développé à Marseille, avec beaucoup trop de CSS.</span></footer>
 </body>
 </html>

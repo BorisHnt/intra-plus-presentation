@@ -1,6 +1,14 @@
-# INTRA+Extension — Site vitrine
+# Intra+ — Site public
 
-Site vitrine moderne et responsive pour présenter l'extension 42+. Il inclut un écran d'accueil animé, une transition fluide vers la page principale et des sections features/showroom/FAQ.
+> L'accueil affiche temporairement le suivi de développement d'Intra+ 2.0.
+> L'ancien showroom, ses pages et ses captures restent conservés dans le dépôt
+> pendant le chantier.
+
+La page publique présente l'avancement global, les modules en cours, la
+pipeline de livraison et l'estimation de disponibilité de la Beta 2.0.
+
+Les pourcentages se mettent à jour dans `index.html` en modifiant simplement
+les attributs `data-progress` et les valeurs visibles associées.
 
 ## Démarrage rapide
 
