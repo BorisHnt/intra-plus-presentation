@@ -46,11 +46,13 @@ const paypalNote = donationModal?.querySelector('[data-paypal-note]');
 let complaintCount = 0;
 let tooltipTimer;
 
-const messages = [
-  { threshold: 7, text: 'Le bouton commence à envisager un arrêt maladie.' },
-  { threshold: 4, text: 'Tu sais que cliquer ne compile pas plus vite ?' },
-  { threshold: 1, text: 'MDR' }
-];
+const messages = new Map([
+  [1, 'mdr'],
+  [2, 'okay frr'],
+  [4, "t'as cru ca allait avancer plus vite ?"],
+  [6, 'mais'],
+  [8, 'zeubi']
+]);
 
 const showTooltip = (message) => {
   if (!complaintTooltip || !complaintMessage) return;
@@ -94,12 +96,22 @@ const openModal = () => {
 
 complaintButton?.addEventListener('click', () => {
   complaintCount += 1;
-  complaintButton.classList.remove('is-pressed');
-  requestAnimationFrame(() => complaintButton.classList.add('is-pressed'));
-  window.setTimeout(() => complaintButton.classList.remove('is-pressed'), 220);
-  const currentMessage = messages.find(({ threshold }) => complaintCount >= threshold)?.text || 'MDR';
-  showTooltip(currentMessage);
-  if (complaintCount >= 10) openModal();
+  if (complaintCount === 10) {
+    window.clearTimeout(tooltipTimer);
+    complaintTooltip?.classList.remove('is-visible');
+    complaintTooltip?.setAttribute('aria-hidden', 'true');
+    openModal();
+    complaintCount = 0;
+    return;
+  }
+  const currentMessage = messages.get(complaintCount);
+  if (currentMessage) {
+    showTooltip(currentMessage);
+  } else {
+    window.clearTimeout(tooltipTimer);
+    complaintTooltip?.classList.remove('is-visible');
+    complaintTooltip?.setAttribute('aria-hidden', 'true');
+  }
 });
 
 donationModal?.querySelectorAll('[data-close-modal]').forEach((element) => element.addEventListener('click', closeModal));

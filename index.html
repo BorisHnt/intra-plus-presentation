@@ -106,11 +106,16 @@
       <p class="section-kicker">Service réclamations</p>
       <h2 id="complaint-title">Toujours trop long&nbsp;?</h2>
       <div class="complaint-control">
-        <button class="complaint-button" id="complaint-button" type="button" aria-describedby="complaint-tooltip">
-          <span class="complaint-button-shadow" aria-hidden="true"></span>
-          <span class="complaint-button-face"><span>SE PLAINDRE DU DELAIS</span><span class="complaint-arrow" aria-hidden="true">→</span></span>
+        <button class="complaint-button pushable" id="complaint-button" type="button" aria-describedby="complaint-tooltip">
+          <span class="shadow" aria-hidden="true"></span>
+          <span class="edge" aria-hidden="true"></span>
+          <span class="front">SE PLAINDRE DU DELAIS</span>
         </button>
-        <div class="complaint-tooltip" id="complaint-tooltip" role="status" aria-live="polite" aria-hidden="true"><span data-complaint-message>MDR</span></div>
+        <div class="complaint-tooltip" id="complaint-tooltip" role="status" aria-live="polite" aria-hidden="true">
+          <span class="tooltip-glow" aria-hidden="true"></span>
+          <span class="tooltip-content"><span data-complaint-message>mdr</span></span>
+          <span class="tooltip-arrow" aria-hidden="true"></span>
+        </div>
       </div>
     </section>
   </main>
