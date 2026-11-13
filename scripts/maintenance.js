@@ -49,8 +49,11 @@ let tooltipTimer;
 const messages = new Map([
   [1, 'mdr'],
   [2, 'okay frr'],
+  [3, 'heh'],
   [4, "t'as cru ca allait avancer plus vite ?"],
+  [5, 'ah ouaaaai'],
   [6, 'mais'],
+  [7, '...'],
   [8, 'zeubi']
 ]);
 
